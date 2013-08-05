@@ -1,55 +1,130 @@
 = render(:partial => "common/header")
 
-#header-panel.lt-gray-bg.span_12_of_12
+#three-ways-panel.white-bg.span_12_of_12
+	%h2.three-ways.span_12_of_12 THREE WAYS OF ENJOYING A RIP VAN WAFEL
 
 // Threeways to enjoy Panel ----------------------------------------*
 #enjoy-panel
 	.left-enjoy.orange-bg.span_3_of_12
+		%h2.enjoy-text.white.centered.span_12_of_12 TOP
+		= image_tag( 'product-page/eat-cup.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
 	.right-enjoy.blue-bg.span_9_of_12
+		%h3.product-text.white.centered.span_12_of_12 FOR BEVERAGES THAT ARE TOO HOT TO DRINK AND DON'T HAVE A FROTH LAYER
+		%tr
+			%td
+			%td
+			%td
 
 #enjoy-panel
 	.left-enjoy.orange-bg.span_3_of_12
+		%h2.enjoy-text.white.centered.span_12_of_12 DIP
+		= image_tag( 'product-page/eat-dip.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
 	.right-enjoy.blue-bg.span_9_of_12
+		%h3.product-text.white.centered.span_12_of_12 FOR ALL HOT BEVERAGES
+		%tr
+			%td
+			%td
+			%td
 
 #enjoy-panel
 	.left-enjoy.orange-bg.span_3_of_12
+		%h2.enjoy-text.white.centered.span_12_of_12 SNACK
+		= image_tag( 'product-page/eat-bite.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
 	.right-enjoy.blue-bg.span_9_of_12
+		= image_tag( 'product-page/plate.png', alt: "way-to-eat", :class => "way-to-eat span_8_of_12")
+		%h3.product-text.white.centered.span_12_of_12 ENJOY AS YOU LIKE
 
 // Header-Panel --------------------------------------------------*
 #header-panel.lt-gray-bg.span_12_of_12
+	%h2.share-text.span_12_of_12 SHARE WITH US SECTION
 
 // Video-Panel --------------------------------------------------*
 #video-panel.video-bg.span_12_of_12
-	.play
+	.headline.span_12_of_12 
+		%h1.video-text.span_6_of_12
+			RIP VAN WAFEL 
+			IS A SPECIAL WAFEL PRODUCED 
+			BY AN UNIQUE PROCESS
+	.play2
 		.sprite
 
 // Header-Panel --------------------------------------------------*
-#header-panel.lt-gray-bg.span_12_of_12
+#header-panel.white-bg.span_12_of_12
+	.headline.span_12_of_12
+		%h2.mission-text.span_10_of_12 
+			WE BELIEVE TAKING A QUALITY BREAK ALSO MEANS INDULGING RESPONSIBLY. 
+			EACH RIP VAN WAFEL CONTAINS ONLY 8g OF SUGAR AND IS 150 CALORIES. 
+			RIP VAN WAFELS ARE CRAFTED WITH QUALITY INGREDIENTS.
+
 
 // Ingredients-Panel --------------------------------------------------*
 #ingredients-panel
 	%table#actual-table-ingredients
 		%tr
 			%td
+				= image_tag( 'product-page/ingredient-wheat.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-glucose.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-butter_margarine.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-sugar.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-eggs.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-soy.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 		%tr
 			%td
+				= image_tag( 'product-page/ingredient-salt.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-molasses.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-cocoa.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-spices.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-extract.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 			%td
+				= image_tag( 'product-page/ingredient-baking_soda.png', alt: "ingredient", :class => "ingredient span_8_of_12")
 
 // Portions-Panel --------------------------------------------------*
-#caramel-panel.orange-bg.span_6_of_12
-#cocoa-panel.blue-bg.span_6_of_12
+
+%table#actual-table-portions
+	%tr
+		%td
+			#caramel-panel.orange-bg.span_12_of_12
+				%h2.ingredient-text.span_12_of_12 CARAMEL
+			
+		%td
+			#cocoa-panel.blue-bg.span_12_of_12
+				%h2.ingredient-text.span_12_of_12 COCOA
+		
 
 // Header-Panel --------------------------------------------------*
-#header-panel.lt-gray-bg.span_12_of_12
+#nutrition-panel-header.white-bg.span_12_of_12
+	%h2.nutrition-text.span_12_of_12 SEE HOW WE COMPARE WITH EVERYDAY PRODUCTS YOU KNOW
 
 // Nutrition-Panel --------------------------------------------------*
 #nutrition-panel.span_12_of_12
+	#nutrition-column.rvw.span_4_of_12
+		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+		%p.nutrient-text Rip Van Wafels
+
+	#nutrition-column.span_4_of_12
+		%p.nutrient-text CALORIES
+		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+
+		%p.nutrient-text FAT
+		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+
+		%p.nutrient-text SUGAR
+		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+	#nutrition-column.span_4_of_12
+		= image_tag( 'product-page/nutrient-muffin.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+		= image_tag( 'product-page/nutrient-cake.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+		= image_tag( 'product-page/nutrient-croissant.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+		= image_tag( 'product-page/nutrient-energybar.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+	%p.footnote.span_12_of_12 * Nutrition figures are taken from the food section from the Starbucks website
+
+
+	

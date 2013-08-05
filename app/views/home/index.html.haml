@@ -22,28 +22,31 @@
 
 		%p.wafel-filling FILLING (CHEWY)
 
+	.centered.span_12_of_12
+		%h2.white 
+			ONLY 
+			%span{:style => "font-weight: 700"}8g 
+			OF SUGAR AND 
+			%span{:style => "font-weight: 700"}150 
+			CALORIES, 
+			%span{:style => "font-weight: 700"}ALL NATURAL 
+			INGREDIENTS.
+
 
 // Cup-Panel --------------------------------------------------*
 #cup-panel.gray-bg.span_12_of_12
 	.panel-content
-		%h2.explanation-text WHEN YOUR COFFEE IS TOO HOT TO DRINK
+		%h2.explanation-text.dkgray WHEN YOUR COFFEE IS TOO HOT TO DRINK
 
 		.centered-cup.span_9_of_12
 			%span.cup-padding.span_1_of_12
 			= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup span_5_of_12")
 			%span.cup-padding.span_1_of_12
 			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup span_5_of_12")
-
-		%h2.explanation-text HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
+			
+		%h2.explanation-text.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
 		.learn-more
 			.sprite
-
-
-// Break-Panel --------------------------------------------------*
-#break-panel.blue-bg.span_12_of_12
-	.panel-content
-		%h2.break-text.span_12_of_12 A LITTLE BREAK CAN GO A LONG WAY
-
 
 // Break-Animation-Panel ----------------------------------------*
 #break-animation-panel
@@ -52,30 +55,26 @@
 %table#actual-table
 	%tr
 		%td
-			= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "animation-element")
-			%p.animation-text 02:00
-			
+			= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "clock")			
 
 		%td
 			= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "animation-element")
-			%p.animation-text The steam is warming the filling
+			%p.animation-text THE STEAM IS WARMING THE FILLING
 
-			
 		%td
 			= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "animation-element")
-			%p.animation-text The wafel is capturing the aroma
+			%p.animation-text THE WAFEL IS CAPTURING THE AROMA
 
 		%td
 			= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "animation-element")
-			%p.animation-text Ready to eat!
-
+			%p.animation-text READY!
 
 
 
 // Coffeeshop-Header-Panel --------------------------------------*
 #coffeeshop-header-panel.lt-gray-bg.span_12_of_12
 	.panel-content.span_12_of_12
-		%h2.coffeeshop-text.span_12_of_12 ENJOY YOUR WAFEL AT HOME OR IN A SHOP
+		%h2.coffeeshop-text.dkgray.span_12_of_12 WE BELIEVE A SHORT BREAK CAN GO A LONG WAY
 
 
 // Coffeeshop-Panel ----------------------------------------------*
@@ -84,14 +83,15 @@
 		.left-panel.span_6_of_12
 			.shop-button
 				.sprite
-
+			%h2.overlay-text.span_6_of_12 ENJOY AT HOME
 			= image_tag( 'dutch-girl.jpg', alt: "dutch-girl", :class => "dutch-girl")
+
 		.right-panel.span_6_of_12
 			.shop-button
 				.sprite
-
-
+			%h2.overlay-text.span_6_of_12 ENJOY AT A SHOP
 			= image_tag( 'dutch-girl.jpg', alt: "dutch-girl", :class => "dutch-girl")
+
 // TODO: get the image here.
 
 
@@ -103,3 +103,5 @@
 		= image_tag( 'shop2.png', alt: "shop2", :class => "shop span_2_of_12")
 		= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_2_of_12")
 		= image_tag( 'shop4.png', alt: "shop4", :class => "shop span_2_of_12")
+		= image_tag( 'shop5.png', alt: "shop3", :class => "shop span_2_of_12")
+		= image_tag( 'shop6.png', alt: "shop4", :class => "shop span_2_of_12")
