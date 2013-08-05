@@ -12,6 +12,7 @@ gem 'simple_form'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'hub'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

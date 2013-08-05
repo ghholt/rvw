@@ -82,6 +82,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.23)
     multi_json (1.7.8)
+    pg (0.16.0)
     polyglot (0.3.3)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
@@ -155,6 +156,7 @@ DEPENDENCIES
   html2haml
   hub
   jquery-rails
+  pg
   quiet_assets
   rails (= 3.2.13)
   rolify
