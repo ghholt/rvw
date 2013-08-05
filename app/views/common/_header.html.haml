@@ -1,0 +1,13 @@
+// Header --------------------------------------------------* TODO: make this a partial 
+#header.span_12_of_12
+	%ul.header-list
+		%li.nav.span_2_of_12
+			= link_to image_tag( 'rvw-logo.png', alt: "home", :class => "header-logo"), root_path
+		%li.nav.span_2_of_12
+			= link_to "WAFELS", wafel_path, :class => 'header-nav span_2_of_12'
+		%li.nav.span_2_of_12
+			= link_to "STORE", store_path, :class => 'header-nav span_2_of_12'
+		%li.nav.span_2_of_12
+			= link_to "WHOLESALE", wholesale_path, :class => 'header-nav span_2_of_12'
+		%li.nav.span_2_of_12 
+			= link_to "ABOUT US", about_path, :class => 'header-nav span_2_of_12'

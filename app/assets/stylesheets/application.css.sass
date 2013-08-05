@@ -1,0 +1,485 @@
+
+// TODO: switch this to Futura
+h1
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+h2
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+h3
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+p 
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+li
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+
+
+.brand
+  float: left
+  padding-right: 8px
+
+ul.nav
+  list-style: none
+  margin: 0 0 2em
+  padding: 0
+
+ul.nav li
+  display: inline
+
+#flash_notice, #flash_alert
+  padding: 5px 8px
+  margin: 10px 0
+
+#flash_notice
+  background-color: #CFC
+  border: solid 1px #6C6
+
+#flash_alert
+  background-color: #FCC
+  border: solid 1px #C66
+
+
+$blue: #3399cc 
+
+
+// Backgrounds --------------------------------------------------*
+.lt-gray-bg
+  background
+  margin: 0px
+  padding: 0px
+  background-image: url(backgrounds/coffeeshop-panel.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+.video-bg
+  // background
+  background-image: url(backgrounds/video-panel.jpg)
+  position: relative 
+  top: 0 
+  left: 0 
+  right: 0 
+  bottom: 0 
+  margin: 0 auto 
+  min-width: 50%
+  min-height: 50%
+
+.orange-bg
+  position: relative
+  margin: 0px
+  background-image: url(backgrounds/wafel-panel.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+.gray-bg
+  // background
+  margin: 0px
+  padding: 0px
+  background-image: url(backgrounds/cup-panel.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+.blue-bg
+  // background
+  margin: 0px
+  padding: 0px
+  background-image: url(backgrounds/break-panel.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+
+// Video-Panel --------------------------------------------------*
+
+#video-panel
+  height: 800px
+  .insignia
+    float: right
+    padding: 11em 3em
+    position-relative
+    width: 120px
+  .play
+    padding-top: 22em
+    .sprite
+      margin-left: auto
+      margin-right: auto
+      display: block
+      width: 8em
+      height: 8em
+      overflow: hidden
+      background: url('buttons/play-button.png') -8em -8em
+      background-size: contain
+
+      &:hover
+        background: url('buttons/play-button-hover.png') -8em -8em
+        background-size: contain
+        cursor: pointer
+
+// Wafel-Panel --------------------------------------------------*
+
+#wafel-panel
+  padding: 5em 0
+  
+  .centered-wafel
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    display: block
+    color: white
+
+    img.wafel-in-half
+      margin-left: auto
+      margin-right: auto
+      display: block
+
+    
+    .wafel-pattern
+      position: absolute
+      top: 0px
+      left: 0px
+
+    .wafel-filling
+      position: absolute
+      bottom: 0px
+      right: 0px
+
+
+// Cup-Panel --------------------------------------------------*
+
+#cup-panel
+  position: relative
+  padding: 3em 0
+
+  .panel-content
+    padding: 3em 0
+
+    .explanation-text
+      padding-left: 2em
+
+    .centered-cup
+      padding: 4em 0
+      position: relative
+      margin-left: auto
+      margin-right: auto
+      display: block
+
+      .red-full-cup
+        // margin-left: 5em
+
+      .cup-padding
+        display: inline-block
+        height: 200px
+
+      .red-half-cup
+        // margin-left: 5em
+
+
+    .learn-more
+      position: absolute
+      bottom: 3em
+      right: 3em
+
+      .sprite
+        margin-left: auto
+        margin-right: auto
+        display: block
+        width: 8em
+        height: 8em
+        overflow: hidden
+        background: url('buttons/learn-more-button.png') -8em -8em
+        background-size: contain
+
+        &:hover
+          background: url('buttons/learn-more-button-hover.png') -8em -8em
+          background-size: contain
+          cursor: pointer
+
+
+// Break-Panel --------------------------------------------------*
+
+#break-panel
+  position: relative
+  
+  .panel-content
+    padding: 4em 0
+
+    .break-text
+      position: relative
+      margin-left: auto
+      margin-right: auto
+      display: block
+
+      text-align: center
+
+
+// Break-Animation-Panel --------------------------------------------------*
+
+#break-animation-panel
+  position: relative
+
+  // background
+  left: 0px
+  right: 0px
+  padding: 0px
+  background-image: url(backgrounds/break-animation-panel.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+#actual-table
+  border-collapse: collapse 
+
+#actual-table td  
+  width: 20% 
+  padding: 10px 
+  vertical-align: top
+  position: relative
+
+  .animation-element
+    width: 80%
+    padding: 4em 1em 
+    margin-top: 3em
+    margin-left: auto
+    margin-right: auto
+    display: block
+  .animation-text
+    text-align: center
+    padding-bottom: 3em
+
+#actual-table td:nth-child(even)  
+  // background
+  left: 0px
+  right: 0px
+  padding: 0px
+  background-image: url(backgrounds/animation_panel_orange.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+  
+#actual-table td:nth-child(odd)  
+  // background
+  left: 0px
+  right: 0px
+  padding: 0px
+  background-image: url(backgrounds/animation_panel_blue.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+
+
+// Coffeeshop-Header-Panel --------------------------------------------------*
+
+#coffeeshop-header-panel
+  .panel-content
+    padding: 1em 0
+
+    .coffeeshop-text
+      position: relative
+      margin-left: auto
+      margin-right: auto
+      display: block
+
+      text-align: center
+
+
+// Coffeeshop-Panel --------------------------------------------------*
+
+#coffeeshop-panel
+  .coffeeshop-images
+    display: block
+
+    .left-panel
+      left: 0
+      display: inline-block
+      .dutch-girl
+        width: 100%
+        position: relative
+      .shop-button
+        position: absolute
+        z-index: 3
+        margin-left: 25%
+        left: -4em
+        margin-top: 15%
+        width: 8em
+
+        .sprite
+          margin-left: auto
+          margin-right: auto
+          display: block
+          width: 8em
+          height: 8em
+          overflow: hidden
+          background: url('buttons/shop-online-button.png') -8em -8em
+          background-size: contain
+
+          &:hover
+            background: url('buttons/shop-online-button-hover.png') -8em -8em
+            background-size: contain
+            cursor: pointer
+        
+        
+    .right-panel
+      right: 0
+      display: inline-block
+      float: right
+      .dutch-girl
+        width: 100%
+      .shop-button
+        position: absolute
+        z-index: 3
+        margin-right: 25%
+        right: -4em
+        margin-top: 15%
+        width: 8em
+
+
+        .sprite
+          margin-left: auto
+          margin-right: auto
+          display: block
+          width: 8em
+          height: 8em
+          overflow: hidden
+          background: url('buttons/wholesale-button.png') -8em -8em
+          background-size: contain
+
+          &:hover
+            background: url('buttons/wholesale-button-hover.png') -8em -8em
+            background-size: contain
+            cursor: pointer
+
+      
+// Coffeeshop-Footer-Panel --------------------------------------------------*
+
+#coffeeshop-footer-panel
+  position: relative
+
+  
+
+  .panel-content
+    padding-top: 1em
+    padding-bottom: 5em
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    display: block
+
+    .shop
+      padding: 0 2.5em
+
+
+// Header --------------------------------------------------*
+
+#header
+  ul.header-list
+    list-style: none
+    .nav
+      display: inline
+      position: relative
+      vertical-align: middle
+
+      .header-logo 
+        width: 12em
+        vertical-align: middle
+        
+      .header-nav
+        margin: 2em
+        color: $blue
+        text-decoration: none
+        height: 1em
+        display: inline
+
+
+// Footer --------------------------------------------------*
+
+#footer
+  border-top: thick double $blue
+
+  .contact-text
+    margin-left: 4em
+    padding-top: 2em
+    display: inline-block
+
+  .social-icons
+    padding-top: 2em
+    position: absolute
+    display: inline-block
+    right: 0
+    .social-logo
+      padding-left: 0.5em
+      &:hover
+        opacity: 0.6
+        cursor: pointer
+
+
+// Wafels Page --------------------------------------------------*
+//TODO: Refactor to new stylesheet
+
+
+// Header-Panel --------------------------------------------------*
+#header-panel
+  padding: 2em 0
+
+// Enjoy-Panel --------------------------------------------------*
+#enjoy-panel
+  .left-enjoy
+    padding: 2em 0
+    left: 0
+    display: inline-block
+
+  .right-enjoy
+    padding: 2em 0
+    right: 0
+    display: inline-block
+    float: right
+
+// Ingredients-Panel --------------------------------------------------*
+#ingredients-panel
+  
+#actual-table-ingredients
+  border-collapse: collapse 
+  width: 100%
+  
+#actual-table-ingredients td  
+  width: 16.66666666%
+  height: 100px
+  padding: 2%
+
+#actual-table-ingredients td:nth-child(even)  
+  // background
+  left: 0px
+  right: 0px
+  padding: 0px
+  background-image: url(backgrounds/animation_panel_orange.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+  
+#actual-table-ingredients td:nth-child(odd)  
+  // background
+  left: 0px
+  right: 0px
+  padding: 0px
+  background-image: url(backgrounds/animation_panel_blue.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+// Portions-Panel --------------------------------------------------*
+#caramel-panel
+  padding: 2em 0
+  left: 0
+  display: inline-block
+  float: left
+
+#cocoa-panel
+  padding: 2em 0
+  right: 0
+  display: inline-block
+  float: right
+
+
+// Nutrition-Panel --------------------------------------------------*
+#nutrition-panel
+  padding: 2em 0
+
+

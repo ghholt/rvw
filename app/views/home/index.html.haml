@@ -1,0 +1,105 @@
+
+
+// Video-Panel --------------------------------------------------*
+#video-panel.video-bg.span_12_of_12
+	.play
+		.sprite
+
+	= image_tag( 'rvw-stamp.png', alt: "Stamp", :class => "insignia span_12_of_12")
+
+// Header-Panel --------------------------------------------------*	
+= render(:partial => "common/header")
+
+
+// Wafel-Panel --------------------------------------------------*
+#wafel-panel.orange-bg.span_12_of_12
+
+	.centered-wafel.span_6_of_12
+
+		%p.wafel-pattern WAFEL PATTERN (BAKED)
+
+		= image_tag( 'wafel-in-half.png', alt: "Learn More", :class => "wafel-in-half span_10_of_12")
+
+		%p.wafel-filling FILLING (CHEWY)
+
+
+// Cup-Panel --------------------------------------------------*
+#cup-panel.gray-bg.span_12_of_12
+	.panel-content
+		%h2.explanation-text WHEN YOUR COFFEE IS TOO HOT TO DRINK
+
+		.centered-cup.span_9_of_12
+			%span.cup-padding.span_1_of_12
+			= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup span_5_of_12")
+			%span.cup-padding.span_1_of_12
+			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup span_5_of_12")
+
+		%h2.explanation-text HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
+		.learn-more
+			.sprite
+
+
+// Break-Panel --------------------------------------------------*
+#break-panel.blue-bg.span_12_of_12
+	.panel-content
+		%h2.break-text.span_12_of_12 A LITTLE BREAK CAN GO A LONG WAY
+
+
+// Break-Animation-Panel ----------------------------------------*
+#break-animation-panel
+	.panel-content
+
+%table#actual-table
+	%tr
+		%td
+			= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "animation-element")
+			%p.animation-text 02:00
+			
+
+		%td
+			= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "animation-element")
+			%p.animation-text The steam is warming the filling
+
+			
+		%td
+			= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "animation-element")
+			%p.animation-text The wafel is capturing the aroma
+
+		%td
+			= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "animation-element")
+			%p.animation-text Ready to eat!
+
+
+
+
+// Coffeeshop-Header-Panel --------------------------------------*
+#coffeeshop-header-panel.lt-gray-bg.span_12_of_12
+	.panel-content.span_12_of_12
+		%h2.coffeeshop-text.span_12_of_12 ENJOY YOUR WAFEL AT HOME OR IN A SHOP
+
+
+// Coffeeshop-Panel ----------------------------------------------*
+#coffeeshop-panel.gray-bg.span_12_of_12
+	.coffeeshop-images
+		.left-panel.span_6_of_12
+			.shop-button
+				.sprite
+
+			= image_tag( 'dutch-girl.jpg', alt: "dutch-girl", :class => "dutch-girl")
+		.right-panel.span_6_of_12
+			.shop-button
+				.sprite
+
+
+			= image_tag( 'dutch-girl.jpg', alt: "dutch-girl", :class => "dutch-girl")
+// TODO: get the image here.
+
+
+
+// Coffeeshop-Footer-Panel --------------------------------------------------*
+#coffeeshop-footer-panel.lt-gray-bg.span_12_of_12
+	.panel-content.span_8_of_12
+		= image_tag( 'shop1.png', alt: "shop1", :class => "shop span_2_of_12")
+		= image_tag( 'shop2.png', alt: "shop2", :class => "shop span_2_of_12")
+		= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_2_of_12")
+		= image_tag( 'shop4.png', alt: "shop4", :class => "shop span_2_of_12")
