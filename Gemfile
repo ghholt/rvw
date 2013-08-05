@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+
 gem 'rails', '3.2.13'
 gem 'jquery-rails'
 gem 'cancan'
@@ -18,11 +19,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
  
-group :development do
+group :development, :test do
   gem 'sqlite3'
   gem 'html2haml'
   gem 'quiet_assets'
-end
-group :development, :test do
   gem 'factory_girl_rails'
 end
