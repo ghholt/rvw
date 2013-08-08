@@ -1,9 +1,21 @@
 !!!
 %html
   %head
+
+    / Fonts
     %script{:src => "//use.typekit.net/kmb0sfe.js", :type => "text/javascript"}
     :javascript
       try{Typekit.load();}catch(e){}
+
+    / Sticky header
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", :type => "text/javascript"}
+      %script{:src => "jquery.sticky.js", :type => "text/javascript"}
+      :javascript
+        $(window).load(function(){
+          $("#header").sticky({ topSpacing: 0 });
+        });
+    
+    / Meta
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
       %title= content_for?(:title) ? yield(:title) : "Rip Van Wafels"
       %meta{:content => content_for?(:description) ? yield(:description) : "Rip Van Wafels", :name => "description"}
