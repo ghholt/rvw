@@ -42431,3 +42431,224 @@ ActionController::RoutingError (No route matches [GET] "/assets/backgrounds/brea
   /Users/gilesholt/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
 
 
+
+
+Started GET "/" for 127.0.0.1 at 2013-08-08 16:45:49 -0400
+Processing by HomeController#index as HTML
+  Rendered common/_header.html.haml (1.0ms)
+  Rendered home/index.html.haml within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.haml (0.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.3ms)
+Completed 200 OK in 21ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/backgrounds/break-animation-panel.jpg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.2) lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/gilesholt/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/gilesholt/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/gilesholt/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+
+Started GET "/about" for 127.0.0.1 at 2013-08-08 16:49:19 -0400
+Processing by PagesController#about as HTML
+  Rendered common/_header.html.haml (1.5ms)
+  Rendered pages/about.html.haml within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.haml (0.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.3ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:16:48 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (4.2ms)
+  Rendered pages/wafel.html.haml within layouts/application (21.3ms)
+WARNING on line 88 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 141 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 621 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Compiled application.css  (214ms)  (pid 31420)
+Compiled steam.js  (0ms)  (pid 31420)
+Compiled application.js  (96ms)  (pid 31420)
+  Rendered layouts/_navigation.html.haml (0.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.3ms)
+Completed 200 OK in 405ms (Views: 403.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:17:39 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (1.3ms)
+  Rendered pages/wafel.html.haml within layouts/application (3.4ms)
+WARNING on line 88 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 141 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 620 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Compiled application.css  (161ms)  (pid 31420)
+Compiled steam.js  (0ms)  (pid 31420)
+Compiled application.js  (3ms)  (pid 31420)
+  Rendered layouts/_navigation.html.haml (0.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.6ms)
+Completed 200 OK in 287ms (Views: 286.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:17:43 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (0.9ms)
+  Rendered pages/wafel.html.haml within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.haml (0.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.3ms)
+Completed 200 OK in 17ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:17:53 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (1.0ms)
+  Rendered pages/wafel.html.haml within layouts/application (2.7ms)
+WARNING on line 88 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 141 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 621 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Compiled application.css  (112ms)  (pid 31420)
+  Rendered layouts/_navigation.html.haml (0.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.5ms)
+Completed 200 OK in 138ms (Views: 138.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:18:23 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (1.0ms)
+  Rendered pages/wafel.html.haml within layouts/application (2.8ms)
+WARNING on line 88 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 141 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 620 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Compiled application.css  (109ms)  (pid 31420)
+Compiled steam.js  (0ms)  (pid 31420)
+Compiled application.js  (3ms)  (pid 31420)
+  Rendered layouts/_navigation.html.haml (0.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.3ms)
+Completed 200 OK in 202ms (Views: 201.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:18:37 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (1.4ms)
+  Rendered pages/wafel.html.haml within layouts/application (15.1ms)
+  Rendered layouts/_navigation.html.haml (0.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.4ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:19:00 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (1.5ms)
+  Rendered pages/wafel.html.haml within layouts/application (4.0ms)
+WARNING on line 88 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 141 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 621 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Compiled application.css  (141ms)  (pid 31420)
+  Rendered layouts/_navigation.html.haml (0.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.3ms)
+Completed 200 OK in 169ms (Views: 168.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:19:13 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (0.9ms)
+  Rendered pages/wafel.html.haml within layouts/application (2.7ms)
+WARNING on line 88 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 141 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 621 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Compiled application.css  (123ms)  (pid 31420)
+  Rendered layouts/_navigation.html.haml (0.1ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.3ms)
+Completed 200 OK in 150ms (Views: 149.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:19:25 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (1.0ms)
+  Rendered pages/wafel.html.haml within layouts/application (3.6ms)
+WARNING on line 88 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 141 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 620 of /Users/gilesholt/Sites/rvw/app/assets/stylesheets/application.css.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Compiled application.css  (130ms)  (pid 31420)
+  Rendered layouts/_navigation.html.haml (0.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.3ms)
+Completed 200 OK in 155ms (Views: 154.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wafel" for 127.0.0.1 at 2013-08-08 17:23:44 -0400
+Processing by PagesController#wafel as HTML
+  Rendered common/_header.html.haml (0.9ms)
+  Rendered pages/wafel.html.haml within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.haml (0.0ms)
+  Rendered layouts/_messages.html.haml (0.1ms)
+  Rendered common/_footer.html.haml (0.5ms)
+Completed 200 OK in 21ms (Views: 20.7ms | ActiveRecord: 0.0ms)
