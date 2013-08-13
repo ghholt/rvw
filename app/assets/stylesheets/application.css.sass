@@ -87,6 +87,9 @@ $dkgray: #575757
 .centered
   text-align: center
 
+html, body
+  height: 100%
+
 
 // Backgrounds --------------------------------------------------*
 .lt-gray-bg
@@ -134,6 +137,7 @@ $dkgray: #575757
   background-image: url(backgrounds/break-panel.jpg)
   background-size: 100%
   background-repeat: repeat
+
 
 
 // Video-Panel --------------------------------------------------*
@@ -464,7 +468,7 @@ $dkgray: #575757
 // Coffeeshop-Footer-Panel --------------------------------------------------*
 
 #coffeeshop-footer-panel
-  position: relative3
+  position: relative
 
   .panel-content
     padding-top: 1em
@@ -509,23 +513,31 @@ $dkgray: #575757
 
 #footer
   border-top: thick double $blue
+  position: absolute
 
   .contact-text
     margin-left: 4em
     padding-top: 2em
     padding-bottom: 3em
     display: inline-block
+    float: left
+
 
   .social-icons
-    padding-top: 2em
-    position: absolute
+    position: relative
     display: inline-block
-    right: 0
+    float: left
+    padding: 2em 0
     .social-logo
       padding-left: 0.5em
       &:hover
         opacity: 0.6
         cursor: pointer
+
+  .footer-logo
+    display: inline-block
+    float: right
+    padding: 2em 2em
 
   .footer-text 
     color: $dkgray
@@ -563,21 +575,6 @@ $dkgray: #575757
       text-align: center
       color: $dkgray
       font-weight: 400
-// Steam
-#steam 
-  position: relative
-  width: 400px
-  height: 300px
-  margin: 100px auto
-  overflow: hidden
-
-#steam .smoke 
-  position: absolute
-  width: 20px
-  height: 80px
-  background: rgba(0, 0, 0, 0.5)
-  bottom: 0px
-
 
 // Three-Ways-Panel --------------------------------------------------*
 #three-ways-panel
@@ -590,16 +587,20 @@ $dkgray: #575757
 
 // Enjoy-Panel --------------------------------------------------*
 #enjoy-panel
+  margin: 0.25em 0.25em 0.25em 0em
+  display: inline-block
+  width: 100%
 
   .enjoy-text
     color: $white
     font-size: 2.5em
+    margin: 0 0
 
   .left-enjoy
     padding: 2em 0
-    left: 0
+    // left: 0
     display: inline-block
-    margin: 0.25em 0.25em 0.25em 0em
+    
 
     .way-to-eat
       margin-left: auto
@@ -607,10 +608,11 @@ $dkgray: #575757
       display: block
 
   .right-enjoy
-    padding: 2em 0
+    padding: 2em 0em
     right: 0
     display: inline-block
     float: right
+
 
     .product-text
       color: $white
@@ -621,21 +623,59 @@ $dkgray: #575757
       margin-right: auto
       display: block
 
+    .drink
+      display: inline-block
+
+    .drink-image
+      display: inline-block
+      margin-left: auto
+      margin-right: auto
+
+    .drink-text
+      display: block
+      color: $white
+      text-align: center
+      font-size: 1.2em
+
 // Ingredients-Panel --------------------------------------------------*
 
 // hover to text animation
+td
+  position: relative
+  margin: 0px
+  background-image: url(backgrounds/break-panel.jpg)
+  background-size: 100%
+  background-repeat: repeat
+  
+  #one p span 
+    display: none
+
+
+td:hover 
+  position: relative
+  margin: 0px
+  background-image: url(backgrounds/wafel-panel.jpg)
+  background-size: 100%
+  background-repeat: repeat
+
+  #one p span
+    display: block
+    height: 100%
+    width: 100%
+    
+    // font
+    font-size: 1.25em
+    color: white
+
+  #one p img
+    display: none
+  
+
 #one p
   display: inline
-#one p span 
-  display: none
-  height: 100px
-  width: 100px
-#one p:hover span 
-  display: inline-block
-  height: 100px
-  width: 100px
-#one p:hover img 
-  display: none
+  height: 100%
+  width: 100%
+
 
 #ingredients-panel
   
@@ -645,17 +685,10 @@ $dkgray: #575757
   
 #actual-table-ingredients td  
   width: 16.66666666%
-  height: 100px
-  padding: 2%
+  // height: 100px
+  // padding: 2%
   border: 5px solid $white
 
-  // background
-  left: 0px
-  right: 0px
-  padding: 0px
-  background-image: url(backgrounds/animation_panel_blue.jpg)
-  background-size: 100%
-  background-repeat: repeat
 
   .ingredient 
     margin-right: auto

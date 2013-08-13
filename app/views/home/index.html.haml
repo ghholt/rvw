@@ -1,5 +1,3 @@
-
-
 // Video-Panel --------------------------------------------------*
 #video-panel.video-bg.span_12_of_12
 	.play
@@ -33,7 +31,8 @@
 			%span{:style => "font-weight: 700"}150 
 			CALORIES, 
 			%span{:style => "font-weight: 700"}ALL NATURAL 
-			INGREDIENTS.
+			INGREDIENTS. 
+			%span.tk-futura-pt Question?
 
 
 // Cup-Panel --------------------------------------------------*
@@ -44,8 +43,10 @@
 
 		.centered-cup.span_9_of_12
 			%span.cup-padding.span_1_of_12
+			.steam
 			= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup span_5_of_12")
 			%span.cup-padding.span_1_of_12
+			.steam
 			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup span_5_of_12")
 			
 		%h2.explanation-text.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
@@ -63,14 +64,17 @@
 			= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "clock")			
 
 		%td
+			.steam
 			= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "animation-element")
 			%p.animation-text THE STEAM IS WARMING THE FILLING
 
 		%td
+			.steam
 			= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "animation-element")
 			%p.animation-text THE WAFEL IS CAPTURING THE AROMA
 
 		%td
+			.steam
 			= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "animation-element")
 			%p.animation-text READY!
 
