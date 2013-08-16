@@ -1,5 +1,64 @@
+//TODO: add shopify in here 
+
 // Header-Panel --------------------------------------------------*	
 #header.span_12_of_12
 	= render(:partial => "common/header")
 	
-this is the store
+#are-you.lt-gray-bg.span_12_of_12
+	%h2.header.span_4_of_12 ARE YOU A
+	= image_tag( 'wholesale-page/wholesaler.jpg', alt: "wholesaler", :class => "wholesaler span_6_of_12")
+		%h2.span_12_of_12 RETAILERS / FOOD SERVICE PROVIDER
+	%h2.or.span_1_of_12 OR
+	= image_tag( 'wholesale-page/wholesaler.jpg', alt: "wholesaler", :class => "wholesaler span_6_of_12")
+		%h2.span_12_of_12 RETAILERS / FOOD SERVICE PROVIDER
+
+// Slideshow-Panel --------------------------------------------------*
+
+#container.slideshow.span_10_of_12
+	#banner-slide
+		%ul.bjqs
+			%li
+				%a{:href => ""}
+					= image_tag( 'about-page/timeline/timelineimage0.jpg', alt: "timeline", :class => "timeline-image", :title => "One")
+					.description-right
+						%h2 BLAH BLAH
+						%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+			%li
+				.description-right
+					%h2 BLAH BLAH
+					%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+					= image_tag( 'about-page/timeline/timelineimage1.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+			%li
+				.slide-content
+					= image_tag( 'about-page/timeline/timelineimage2.png', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+					.description-right
+						%h2 BLAH BLAH
+						%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+			%li= image_tag( 'about-page/timeline/timelineimage3.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+			%li= image_tag( 'about-page/timeline/timelineimage4.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+			%li= image_tag( 'about-page/timeline/timelineimage5.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+			%li= image_tag( 'about-page/timeline/timelineimage6.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+			%li= image_tag( 'about-page/timeline/timelineimage7.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+
+
+// Learn-More-Panel --------------------------------------------------*
+#learnmore-panel.lt-gray-bg.span_12_of_12
+	%h2.learn-text.blue.span_10_of_12 AND WOULD YOU LIKE TO LEARN MORE ABOUT OUR PRODUCT OFFERING, PRICING & LOGISTICS?
+	%h2.learn-text.blue.orange.span_10_of_12 PLEASE FILL OUT THE FORM SO WE CAN GET BACK TO YOU WITH THE AP
+
+// Contact-Panel --------------------------------------------------*
+#contact-panel.lt-gray-bg.span_12_of_12
+	%h2.learn-text.blue.span_8_of_12 IF YOU LIKE TO PLACE AN ORDER OR SIMPLY HAVE A CHAT WITH US, PLEASE GET IN TOUCH:
+
+	#contact
+		= image_tag( 'wholesale-page/contact1.jpg', alt: "contact", :class => "contact-image span_2_of_12")
+		%span.contact.span_3_of_12 XXXXXXXXXXXXX
+
+	#contact
+		= image_tag( 'wholesale-page/contact2.jpg', alt: "contact", :class => "contact-image span_2_of_12")
+		%span.person.span_3_of_12 XXXXXXXXXXXXX
+
+
+
+	
+

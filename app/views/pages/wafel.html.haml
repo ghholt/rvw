@@ -9,7 +9,6 @@
 / #steam
 / 	= render(:partial => "common/steam")
 
-
 // Threeways to enjoy Panel ----------------------------------------*
 #enjoy-panel
 	.left-enjoy.orange-bg.span_3_of_12
@@ -29,8 +28,8 @@
 					%span.drink-text TEA
 			%td
 				%p.drink.span_3_of_12
-					= image_tag( 'product-page/drink-hot-chocolate.png', alt: "drink", :class => "drink-image span_10_of_12")
-					%span.drink-text HOT CHOCOLATE
+					= image_tag( 'product-page/drink-milk.png', alt: "drink", :class => "drink-image span_10_of_12")
+					%span.drink-text MILK
 			%td
 				%p.drink.span_3_of_12
 					= image_tag( 'product-page/drink-hot-cider.png', alt: "drink", :class => "drink-image span_10_of_12")
@@ -100,6 +99,7 @@
 // Ingredients-Panel --------------------------------------------------*
 
 // hover to text animation
+//TODO: make these square
 #ingredients-panel
 	%table#actual-table-ingredients
 		%tr
@@ -185,7 +185,7 @@
 // Nutrition-Panel --------------------------------------------------*
 
 / Image swap
-= image_tag( 'product-page/rvw_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_1_of_12")
+/ = image_tag( 'product-page/rvw_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_1_of_12")
 
 #nutrition-panel.span_12_of_12
 	#nutrition-column.rvw.span_4_of_12
@@ -202,10 +202,10 @@
 		%p.nutrient-text SUGAR
 		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
 	#nutrition-column.span_4_of_12
-		= image_tag( 'product-page/nutrient-muffin.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
-		= image_tag( 'product-page/nutrient-cake.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
-		= image_tag( 'product-page/nutrient-croissant.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
-		= image_tag( 'product-page/nutrient-energybar.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+		= image_tag( 'product-page/nutrient-muffin_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
+		= image_tag( 'product-page/nutrient-cake_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
+		= image_tag( 'product-page/nutrient-croissant_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
+		= image_tag( 'product-page/nutrient-energybar_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
 	%p.footnote.span_12_of_12 * Nutrition figures are taken from the food section from the Starbucks website
 
 

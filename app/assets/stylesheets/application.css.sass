@@ -84,6 +84,10 @@ $blue: #3399cc
 $white: white
 $dkgray: #575757
 
+$orange: orange
+.orange
+  color: $orange
+
 .centered
   text-align: center
 
@@ -146,9 +150,9 @@ html, body
   height: 800px
   .insignia
     float: right
-    padding: 11em 3em
+    padding: 6em 3em
     position-relative
-    width: 120px
+    width: 180px
   .headline
     .video-text 
       margin-left: auto
@@ -179,27 +183,24 @@ html, body
 
   .play
     padding-top: 22em
-    .sprite
-      margin-left: auto
-      margin-right: auto
-      display: block
-      width: 8em
-      height: 8em
-      overflow: hidden
-      background: url('buttons/play-button.png') -8em -8em
-      background-size: contain
+    margin-left: auto
+    margin-right: auto
+    display: block
+    width: 8em
+    height: 8em
 
-      &:hover
-        background: url('buttons/play-button-hover.png') -8em -8em
-        background-size: contain
-        cursor: pointer
 
 // Wafel-Panel --------------------------------------------------*
 
 #wafel-panel
-  padding: 5em 0
-  margin-top: 10px
+  padding: 2em 0
+  margin-top: 1em
   
+  .ingredient-icons
+    float: right
+    top: 0 
+    right: 0
+
   .centered-wafel
     position: relative
     margin-left: auto
@@ -235,50 +236,50 @@ html, body
   position: relative
   padding: 3em 0
 
-  .panel-content
-    padding: 3em 0
 
-    .explanation-text
-      padding-left: 2em
-      color: $dkgray
 
-    .centered-cup
-      padding: 4em 0
-      position: relative
+  .explanation-text
+    padding-left: 2em
+    color: $dkgray
+
+  .centered-cup
+    padding: 4em 0
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    display: block
+
+    .red-full-cup
+      // margin-left: 5em
+
+    .cup-padding
+      display: inline-block
+      height: 200px
+
+    .red-half-cup
+      // margin-left: 5em
+
+
+  .learn-more
+    position: absolute
+    bottom: 2em
+    right: 2em
+    float: right
+
+    .sprite
       margin-left: auto
       margin-right: auto
       display: block
+      width: 8em
+      height: 8em
+      overflow: hidden
+      background: url('buttons/learn-more-button.png') -8em -8em
+      background-size: contain
 
-      .red-full-cup
-        // margin-left: 5em
-
-      .cup-padding
-        display: inline-block
-        height: 200px
-
-      .red-half-cup
-        // margin-left: 5em
-
-
-    .learn-more
-      position: absolute
-      bottom: 3em
-      right: 3em
-
-      .sprite
-        margin-left: auto
-        margin-right: auto
-        display: block
-        width: 8em
-        height: 8em
-        overflow: hidden
-        background: url('buttons/learn-more-button.png') -8em -8em
+      &:hover
+        background: url('buttons/learn-more-button-hover.png') -8em -8em
         background-size: contain
-
-        &:hover
-          background: url('buttons/learn-more-button-hover.png') -8em -8em
-          background-size: contain
-          cursor: pointer
+        cursor: pointer
 
 
 // Break-Panel --------------------------------------------------*
@@ -397,9 +398,9 @@ html, body
       .shop-button
         position: absolute
         z-index: 3
-        margin-left: 40%
+        margin-left: 42%
         left: -4em
-        margin-top: 35%
+        margin-top: 38%
         width: 8em
 
         .sprite
@@ -422,7 +423,7 @@ html, body
         position: absolute
         z-index: 3
         text-align: center
-        margin-top: 15em
+        margin-top: 7em
         font-weight: 700
         
         
@@ -435,9 +436,9 @@ html, body
       .shop-button
         position: absolute
         z-index: 3
-        margin-right: 40%
-        right: -4em
-        margin-top: 35%
+        margin-left: 42%
+        right: 4em
+        margin-top: 38%
         width: 8em
 
 
@@ -461,7 +462,7 @@ html, body
         position: absolute
         z-index: 3
         text-align: center
-        margin-top: 15em
+        margin-top: 7em
         font-weight: 700
 
       
@@ -480,6 +481,8 @@ html, body
 
     .shop
       padding: 0 2.5em
+      margin-left: auto
+      margin-right: auto
 
 
 // Header --------------------------------------------------*
@@ -685,8 +688,6 @@ td:hover
   
 #actual-table-ingredients td  
   width: 16.66666666%
-  // height: 100px
-  // padding: 2%
   border: 5px solid $white
 
 
@@ -784,4 +785,52 @@ td:hover
     font-size: 0.75em
     padding-bottom: 2em
     color: $dkgray
+
+
+// About Page --------------------------------------------------*
+//TODO: Refactor to new stylesheet
+
+// Header-Panel --------------------------------------------------* 
+#header.span_12_of_12  
+#short-break.lt-gray-bg.span_12_of_12
+  %h2.short-break.span_8_of_12 
+  %h3.short-break.span_10_of_12
+  %h2.short-break.span_8_of_12 
+  
+// About-Panel --------------------------------------------------*
+#header-panel.lt-gray-bg.span_12_of_12
+  %ul.header-list
+    %li.nav.span_2_of_12
+    %li.nav.span_2_of_12
+    %li.nav.span_2_of_12
+
+// Slideshow-Panel --------------------------------------------------*
+
+// Enhance-the-Break-Panel --------------------------------------------------*
+#enhance-the-break
+  .short-break
+
+  .history-image
+
+// Our-Team-Panel --------------------------------------------------*
+#team-panel
+  .team-header
+#person
+  .bio-image
+  .person-bio
+
+// #container .slideshow
+//   margin-left: auto
+//   margin-right: auto
+
+.timeline-image
+.description-right
+  right: 0
+  display: block
+
+
+
+
+
+
 
