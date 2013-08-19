@@ -4,14 +4,6 @@
 @import "compass/layout/sticky-footer";
 @import "animation";
 
-// @import "animation/animate";
-// @import "animation/animate/classes";
-
-// body {
-//   background: #18d0f0;
-//   height: 500px;
-// }
-
 /* Smoke container */
 
 #smoke {
@@ -38,13 +30,22 @@
 .cssanimations #smoke span { 
   display: block;
   position: absolute;
-  bottom: -35px; left: 50%; margin-left:-20px;
-  height: 0px; width: 0px;
-  border: 35px solid #4b4b4b;
+  bottom: -130px; left: 50%; margin-left:-100px;
+  height: 200px; width: 200px;
+  border: 0px solid rgba(255,255,255, 0.31);
   border-radius: 35px;
   left: -14px; opacity: 0;
   transform: scale(0.2);
+
+  background-image: -moz-radial-gradient(50% 50%, ellipse closest-side, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
+  background-image: -webkit-radial-gradient(50% 50%, ellipse closest-side, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
+  background-image: -o-radial-gradient(50% 50%, ellipse closest-sider, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
+  background-image: -ms-radial-gradient(50% 50%, ellipse closest-side, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
+  background-image: radial-gradient(50% 50%, ellipse closest-side, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
+
+
 }
+
 
 /* Smoke animation */
 
@@ -85,13 +86,5 @@
 #smoke .s7 { @include animation(smokeR 10s 7s infinite) }
 #smoke .s8 { @include animation(smokeL 10s 8s infinite) }
 #smoke .s9 { @include animation(smokeR 10s 9s infinite) }
-
-//   // smoke shape
-//   background-image: -moz-radial-gradient(50% 50%, ellipse closest-side, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
-//   background-image: -webkit-radial-gradient(50% 50%, ellipse closest-side, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
-//   background-image: -o-radial-gradient(50% 50%, ellipse closest-sider, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
-//   background-image: -ms-radial-gradient(50% 50%, ellipse closest-side, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
-//   background-image: radial-gradient(50% 50%, ellipse closest-side, rgba(255,255,255, 0.31), rgba(255,255,255,0) 100%);
-
 
 
