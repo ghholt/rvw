@@ -1,88 +1,147 @@
 // Header-Panel --------------------------------------------------*	
 #header.span_12_of_12
 	= render(:partial => "common/header")
-	
-#short-break.lt-gray-bg.span_12_of_12
-	%h2.short-break.span_8_of_12 A SHORT BREAK GOES A LONG WAY
-	%h3.short-break.span_10_of_12
-		Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-	%h2.short-break.span_8_of_12 WE BELIEVE A SHORT BREAK GOES A LONG WAY. A REAL QUIET BREAK TO RELAX AND ENJOY THAT YOU REVITALIZE YOURSELF.
 
 // About-Panel --------------------------------------------------*
 / TODO: get these to jump to positions on the page
-#header-panel.lt-gray-bg.span_12_of_12
-	%ul.header-list
-		%li.nav.span_2_of_12
-			= link_to "OUR STORY", about_path, :class => 'header-nav span_2_of_12'
-		%li.nav.span_2_of_12
-			= link_to "OUR VISION", about_path, :class => 'header-nav span_2_of_12'
-		%li.nav.span_2_of_12
-			= link_to "OUR TEAM", about_path, :class => 'header-nav span_2_of_12'
+#about-panel-nav.solid-blue-bg.span_12_of_12
+	%ul.about-list
+		%li.about-link.span_4_of_12
+			= link_to "OUR STORY", about_path, :class => 'about-nav span_12_of_12'
+		%li.about-link.span_4_of_12
+			= link_to "OUR VISION", about_path, :class => 'about-nav span_12_of_12'
+		%li.about-link.span_4_of_12
+			= link_to "OUR TEAM", about_path, :class => 'about-nav span_12_of_12'
+	
+#short-break.lt-gray-bg.span_12_of_12
+	%h1.short-break.orange.centered.span_6_of_12 
+		%span{:style => "font-weight: 700"} OUR VISION 
+		%span{:style => "font-weight: 200"}IS TO 
+		%span{:style => "font-weight: 700"}REVOLUTIONIZE 
+		%span{:style => "font-weight: 200"}THE FORGETTABLE 
+		%span{:style => "font-weight: 700"}AMERICAN COFFEE RUN
+
+/ %h2.short-break.span_8_of_12 A SHORT BREAK GOES A LONG WAY
+/ %h3.short-break.span_10_of_12
+/ 	Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+/ %h2.short-break.span_8_of_12 WE BELIEVE A SHORT BREAK GOES A LONG WAY. A REAL QUIET BREAK TO RELAX AND ENJOY THAT YOU REVITALIZE YOURSELF.
+
+#five-minutes-panel.centered
+	%h2.five-minutes.centered.span_10_of_12 FIVE MINUTES OUTSIDE THE OFFICE AT A LOCAL MORNING COFFEE SPOT. A HALF HOUR BETWEEN CLASSES. A LUNCH ENJOYED SOMEWHERE BESIDES A DESK. WE RELY ON THESE BRIEF MOMENTS TO CARRY US THROUGH THE DAY. 
+
 
 // Slideshow-Panel --------------------------------------------------*
+/ %li#slide
+.content.lt-gray-bg
+	.main.lt-gray-bg
+		#gallery.span_10_of_12
+			%a{:href => "#{asset_path 'history1.jpg'}", :id => 'this'}
+				= image_tag "history1.jpg", :class => "thumbnail span_2_of_12"
+			/
+			%a{:href => "#{asset_path 'history2.jpg'}", :id => 'this'}
+				= image_tag "history2.jpg", :class => "thumbnail span_2_of_12"
+			/
+			%a{:href => "#{asset_path 'history3.jpg'}", :id => 'this'}
+				= image_tag "history3.jpg", :class => "thumbnail span_2_of_12"
+			/
+			%a{:href => "#{asset_path 'history4.jpg'}", :id => 'this'}
+				= image_tag "history4.jpg", :class => "thumbnail span_2_of_12"
+			/
+			%a{:href => "#{asset_path 'history5.jpg'}", :id => 'this'}
+				= image_tag "history5.jpg", :class => "thumbnail span_2_of_12"
+			/
+			%a{:href => "#{asset_path 'history6.jpg'}", :id => 'this'}
+				= image_tag "history6.jpg", :class => "thumbnail span_2_of_12"
+			/
+	#gallery.span_10_of_12
+		#photo.timeline-image.span_5_of_12
+		%span.filler.span_1_of_12
+		#text.description-right.span_5_of_12
+			%h2 This is the initial title. 
+			%p this is the initial paragraph. 
 
-#container.slideshow.span_10_of_12
-	#banner-slide
-		%ul.bjqs
-			%li
-				%a{:href => ""}
-					= image_tag( 'about-page/timeline/timelineimage0.jpg', alt: "timeline", :class => "timeline-image", :title => "One")
-					.description-right
-						%h2 BLAH BLAH
-						%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-			%li
-				.description-right
-					%h2 BLAH BLAH
-					%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-					= image_tag( 'about-page/timeline/timelineimage1.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-			%li
-				.slide-content
-					= image_tag( 'about-page/timeline/timelineimage2.png', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-					.description-right
-						%h2 BLAH BLAH
-						%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-			%li= image_tag( 'about-page/timeline/timelineimage3.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-			%li= image_tag( 'about-page/timeline/timelineimage4.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-			%li= image_tag( 'about-page/timeline/timelineimage5.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-			%li= image_tag( 'about-page/timeline/timelineimage6.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-			%li= image_tag( 'about-page/timeline/timelineimage7.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+
+
+
+/ #slide.span_10_of_12
+/ 	= image_tag( 'about-page/timeline/timelineimage1.png', alt: "timeline", :class => "timeline-image span_5_of_12", :title => "this is the title")
+/ 	%span.filler.span_1_of_12
+/ 	.description-right.span_5_of_12
+/ 		%h2 IT ALL STARTED IN A SHORT BREAK
+/ 		%span RIP DURING A SUMMER IN ITALY WHILE TAKING MANY BREAKS DECIDES IT'S TIME TO START SOMETHING
+
+/ #container.slideshow.span_10_of_12
+/ 	#banner-slide
+/ 		%ul.bjqs
+/ 			%li
+/ 				%a{:href => ""}
+/ 					= image_tag( 'about-page/timeline/timelineimage0.jpg', alt: "timeline", :class => "timeline-image", :title => "One")
+/ 					.description-right
+/ 						%h2 BLAH BLAH
+/ 						%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+/ 			%li
+/ 				.description-right
+/ 					%h2 BLAH BLAH
+/ 					%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+/ 					= image_tag( 'about-page/timeline/timelineimage1.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+/ 			%li
+/ 				.slide-content
+/ 					= image_tag( 'about-page/timeline/timelineimage2.png', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+/ 					.description-right
+/ 						%h2 BLAH BLAH
+/ 						%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+/ 			%li= image_tag( 'about-page/timeline/timelineimage3.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+/ 			%li= image_tag( 'about-page/timeline/timelineimage4.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+/ 			%li= image_tag( 'about-page/timeline/timelineimage5.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+/ 			%li= image_tag( 'about-page/timeline/timelineimage6.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
+/ 			%li= image_tag( 'about-page/timeline/timelineimage7.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
 
 
 // Enhance-the-Break-Panel --------------------------------------------------*
-#enhance-the-break.lt-gray-bg.span_12_of_12
+/ #enhance-the-break.lt-gray-bg.span_12_of_12
 
-	%h2.short-break.span_10_of_12 A RIP VAN WAFEL WITH COFFEE ENHANCES THE COFFEE BREAK.
-	%h2.short-break.orange.span_10_of_12 A RIP VAN WAFEL WITH COFFEE ENHANCES THE COFFEE BREAK.
-	#line.span_10_of_12
-		= image_tag( 'about-page/image1.jpg', alt: "history", :class => "history-image span_3_of_12")
-		= image_tag( 'about-page/image2.jpg', alt: "history", :class => "history-image span_3_of_12")
-		= image_tag( 'about-page/image3.jpg', alt: "history", :class => "history-image span_3_of_12")
-		= image_tag( 'about-page/image4.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 	%h2.short-break.span_10_of_12 A RIP VAN WAFEL WITH COFFEE ENHANCES THE COFFEE BREAK.
+/ 	%h2.short-break.orange.span_10_of_12 A RIP VAN WAFEL WITH COFFEE ENHANCES THE COFFEE BREAK.
+/ 	#line.span_10_of_12
+/ 		= image_tag( 'about-page/image1.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 		= image_tag( 'about-page/image2.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 		= image_tag( 'about-page/image3.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 		= image_tag( 'about-page/image4.jpg', alt: "history", :class => "history-image span_3_of_12")
 	
-	#line.span_10_of_12
-		%p.history-text.span_6_of_12 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
-		= image_tag( 'about-page/image5.jpg', alt: "history", :class => "history-image span_3_of_12")
-		= image_tag( 'about-page/image6.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 	#line.span_10_of_12
+/ 		%p.history-text.span_6_of_12 Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
+/ 		= image_tag( 'about-page/image5.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 		= image_tag( 'about-page/image6.jpg', alt: "history", :class => "history-image span_3_of_12")
 	
-	#line.span_10_of_12
-		= image_tag( 'about-page/image7.jpg', alt: "history", :class => "history-image span_3_of_12")
-		= image_tag( 'about-page/image8.jpg', alt: "history", :class => "history-image span_3_of_12")
-		= image_tag( 'about-page/image9.jpg', alt: "history", :class => "history-image span_3_of_12")
-		= image_tag( 'about-page/image10.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 	#line.span_10_of_12
+/ 		= image_tag( 'about-page/image7.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 		= image_tag( 'about-page/image8.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 		= image_tag( 'about-page/image9.jpg', alt: "history", :class => "history-image span_3_of_12")
+/ 		= image_tag( 'about-page/image10.jpg', alt: "history", :class => "history-image span_3_of_12")
 
 // Our-Team-Panel --------------------------------------------------*
-#team-panel
-	%h2.team-header.span_4_of_12 MEET OUR TEAM
+#team-panel.lt-gray-bg
 	#person
-		= image_tag( 'about-page/rip.jpg', alt: "bio", :class => "bio-image span_6_of_12")
-		%span.person-bio.span_6_of_12 LALALALALALALALALALALALA
+		= image_tag( 'about-page/bio-rip.jpg', alt: "bio-rip", :class => "bio-image-rip span_5_of_12")
+		#details.rip.span_4_of_12
+			%p.person-name.span_6_of_12 Rip Pruisken
+			%span.person-title.span_6_of_12 Little Dutch Boy (LDBA)
+			%p.title-pairings.span_6_of_12 PAIRINGS:
+			%span.person-pairing.span_6_of_12 Rip van Wafels + Americano 
+			%br/
+			%span.person-pairing.span_6_of_12 Rip van Wafels + Earl Grey
+			%p.title-facts.span_6_of_12 FACTS:
+			%span.person-facts.span_6_of_12 Has eaten more than a 1000 Rip van Wafels- living proof that the Rip van Wafel competes with the paleo diet.
 
 	#person
-		= image_tag( 'about-page/marco.jpg', alt: "bio", :class => "bio-image span_6_of_12")
-		%span.person-bio.span_6_of_12 LALALALALALALALALALALALA
-
-
-
+		= image_tag( 'about-page/bio-marco.jpg', alt: "bio-marco", :class => "bio-image-marco span_5_of_12")
+		#details.marco.span_4_of_12
+			%p.person-name.span_6_of_12 Marco De Leon
+			%span.person-title.span_6_of_12 Cookie Monster 
+			%p.title-pairings.span_6_of_12 PAIRINGS:
+			%span.person-pairing.span_6_of_12 Rip van Wafels +
+			%p.title-facts.span_6_of_12 FACTS:
+			%span.person-facts.span_6_of_12 Had a Rip van Wafel on Mt. Kilimanjaro (19,341 feet)  - the highest point on land a Rip van Wafels has been consumed.
 
 	
 

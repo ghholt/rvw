@@ -1,7 +1,12 @@
-#container
-	#banner-slide
-		%ul.bjqs
-			%li
-				%a{:href => ""}= image_tag "banner01.jpg", :title => "Automatically generated caption"
-			%li= image_tag "banner02.jpg", :title => "Automatically generated caption"
-			%li= image_tag "banner03.jpg", :title => "Automatically generated caption"
+.content
+	.main
+		#gallery
+			%a{:href => "#{asset_path 'banner01.jpg'}"}
+				= image_tag "banner01.jpg", :class => "thumbnail span_2_of_12", :title => "Automatically generated"
+			/
+			%a{:href => "#{asset_path 'banner02.jpg'}"}
+				= image_tag "banner02.jpg", :class => "thumbnail span_2_of_12", :title => "Automatically generated"
+			/ 
+		#photo
+
+= render(:partial => "common/steam")

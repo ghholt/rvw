@@ -2,13 +2,12 @@
   "use strict";
 
   var i = 0;
-  console.log("loaded")
   for (; i < 5; i += 1) {
     setTimeout(function addSmoke() {
       var
         time = Math.random() * 2000 + 3500,
         smoke = $('<div />', {
-          class: 'smoke' + i,
+          class: 'smoke',
           css: {
             opacity: 0,
             left: Math.random() * 175 + 50
@@ -16,7 +15,6 @@
         });
       
       // add to steam
-      console.log ("appending")
       $(smoke).appendTo('.steam');
 
       // animate
@@ -52,7 +50,6 @@
 
       // when all done, remove and add new random smoke
       ).then(function () {
-        console.log ("remove")
           $(smoke).remove();
         addSmoke();
       });

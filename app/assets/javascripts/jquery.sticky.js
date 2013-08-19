@@ -26,7 +26,7 @@
     scroller = function() {
       var scrollTop = $window.scrollTop(),
         documentHeight = $document.height(),
-        dwh = documentHeight - windowHeight,
+        dwh = documentHeight - windowHeight,x
         extra = (scrollTop > dwh) ? dwh - scrollTop : 0;
 
       for (var i = 0; i < sticked.length; i++) {

@@ -1,4 +1,8 @@
-
+@import "compass/css3"
+@import "compass/utilities"
+@import "compass/reset/utilities"
+@import "compass/layout/sticky-footer"
+// @import "animation"
 
 $sans-serif: 'futura-pt', sans-serif
 
@@ -53,6 +57,7 @@ li
   font-family: $sans-serif
   font-style: normal
   font-weight: 700
+  list-style: none
 
 
 .brand
@@ -80,19 +85,44 @@ ul.nav li
   border: solid 1px #C66
 
 
-$blue: #3399cc 
+$blue: #3399cc
+.blue
+  color: $blue
 $white: white
-$dkgray: #575757
 
-$orange: orange
+$dkgray: #575757
+.dkgray
+  color: $dkgray
+
+$orange: #ff6633
 .orange
   color: $orange
 
 .centered
   text-align: center
 
+.bold
+  font-weight: 700
+
 html, body
   height: 100%
+  text-decoration: none !important
+
+a
+  text-decoration: none
+
+#steam
+  display: inline-block
+  margin-left: auto
+  margin-right: auto
+  position: relative
+
+#steam-little-cups
+  margin-left: 10%
+
+#steam-big-cups
+  // margin-left: 10%
+  display: inline-block
 
 
 // Backgrounds --------------------------------------------------*
@@ -142,6 +172,12 @@ html, body
   background-size: 100%
   background-repeat: repeat
 
+.solid-blue-bg
+  // background
+  margin: 0px
+  padding: 0px
+  background-color: $blue
+
 
 
 // Video-Panel --------------------------------------------------*
@@ -183,6 +219,13 @@ html, body
 
   .play
     padding-top: 22em
+    margin-left: auto
+    margin-right: auto
+    display: block
+    width: 8em
+    height: 8em
+  .play2
+    padding-top: 8em
     margin-left: auto
     margin-right: auto
     display: block
@@ -236,8 +279,6 @@ html, body
   position: relative
   padding: 3em 0
 
-
-
   .explanation-text
     padding-left: 2em
     color: $dkgray
@@ -250,15 +291,13 @@ html, body
     display: block
 
     .red-full-cup
-      // margin-left: 5em
+      margin-right: 5em
 
     .cup-padding
       display: inline-block
       height: 200px
 
     .red-half-cup
-      // margin-left: 5em
-
 
   .learn-more
     position: absolute
@@ -321,6 +360,18 @@ html, body
   vertical-align: top
   position: relative
 
+  .animation-element
+    width: 80%
+    padding: 4em 1em 
+    margin-top: 3em
+    margin-left: auto
+    margin-right: auto
+    display: block
+
+  .cup
+    z-index: 99999
+    // TODO: put the steam behind these
+
   .clock
     width: 100%
     padding: 1em 1em 
@@ -329,13 +380,6 @@ html, body
     margin-right: auto
     display: block
 
-  .animation-element
-    width: 80%
-    padding: 4em 1em 
-    margin-top: 3em
-    margin-left: auto
-    margin-right: auto
-    display: block
   .animation-text
     text-align: center
     padding-left: 2em
@@ -511,6 +555,9 @@ html, body
         height: 1em
         display: inline
 
+        &:hover 
+          color: $orange
+
 
 // Footer --------------------------------------------------*
 
@@ -626,19 +673,20 @@ html, body
       margin-right: auto
       display: block
 
-    .drink
+    #drink
       display: inline-block
 
-    .drink-image
-      display: inline-block
-      margin-left: auto
-      margin-right: auto
+      .drink-image
+        display: inline-block
+        margin-left: auto
+        margin-right: auto
 
-    .drink-text
-      display: block
-      color: $white
-      text-align: center
-      font-size: 1.2em
+      .drink-text
+        display: block
+        color: $white
+        text-align: center
+        font-size: 1.2em
+
 
 // Ingredients-Panel --------------------------------------------------*
 
@@ -789,6 +837,41 @@ td:hover
 
 // About Page --------------------------------------------------*
 //TODO: Refactor to new stylesheet
+#about-panel-nav
+  display: block
+  height: auto
+  text-align: center
+
+  .about-list
+    list-style: none
+    padding: 0em 0em
+    margin: 1em 0 0 0
+
+    .about-link
+      display: inline-block
+
+      .about-nav
+        display: inline-block
+        color: $white
+        font-weight: 200
+        text-decoration: none
+        height: 1.25em
+        position: relative
+        vertical-align: middle
+        padding: 2em 0em 
+
+// Five-Minutes-Panel --------------------------------------------------* 
+#five-minutes-panel
+  padding: 1em 0em 
+  border-top: 0.5em double $blue
+  border-bottom: 0.5em double $blue
+  margin-left: auto
+  margin-right: auto
+  display: inline-block
+
+  .five-minutes
+    font-weight: 300
+    display: inline-block
 
 // Header-Panel --------------------------------------------------* 
 #header.span_12_of_12  
@@ -805,32 +888,217 @@ td:hover
     %li.nav.span_2_of_12
 
 // Slideshow-Panel --------------------------------------------------*
+#gallery
+  padding: 3em 0em
 
 // Enhance-the-Break-Panel --------------------------------------------------*
 #enhance-the-break
   .short-break
+    font-size: 1.5em
 
   .history-image
 
+#short-break
+  padding: 3em 0em
+  top: 0
+  .short-break
+    margin-left: auto
+    margin-right: auto
+    font-size: 3.5em
+
+#five-minutes
+  .five-minutes
+    margin-left: auto
+    margin-right: auto
+    font-size: 1.5em
+
 // Our-Team-Panel --------------------------------------------------*
 #team-panel
+  border-top: 0.5em double $blue
+  overflow: hidden
   .team-header
-#person
-  .bio-image
-  .person-bio
+  .rip 
+    float: left
+  .marco
+    float: right
+  #person
+    padding: 2em 0
+    .bio-image-rip
+      border-radius: 50%
+      float: left
+      margin-left: -5em
+      margin-top: -5em
+    .bio-image-marco
+      border-radius: 50%
+      float: right
+      margin-right: -5em
+      margin-bottom: -5em
+    #details
+      display: inline-block
+      margin-left: 3em
+      vertical-align: top
+      padding: 2em 0 
+      .person-name 
+        color: $blue
+        font-weight: 700
+        font-size: 1.5em
+        margin: 0.25em 0em
+      .person-title 
+        font-weight: 200 
+      .title-pairings
+        font-weight: 700
+        color: $orange
+        font-size: 1.5em
+        margin: 0.25em 0em
+      .person-pairing 
+        font-weight: 700
+      .person-pairing
+        font-weight: 200
+      .title-facts
+        font-weight: 700
+        color: $orange
+        font-size: 1.5em
+        margin: 0.25em 0em
+      .person-facts 
+        font-weight: 200
+
+
 
 // #container .slideshow
 //   margin-left: auto
 //   margin-right: auto
 
-.timeline-image
+
 .description-right
   right: 0
   display: block
 
+#slide
+  .slide
+    margin-right: auto
+    margin-left: auto
+    .timeline-image
+      display: inline-block
+      vertical-align: top
+
+    .description-right
+      padding-top: 5em
+      color: $dkgray
+      display: inline-block
+      vertical-align: top
+      text-align: left
+
+    .filler
+      display: inline-block
+
+      h2 
+        font-weight: 700
+      span 
+        font-weight: 200
+#photo
+
+#text
 
 
 
+// Wholesale-Page --------------------------------------------------*
 
 
+
+//TODO: add shopify in here 
+// Header-Panel --------------------------------------------------* 
+#are-you
+  margin-top: 1em
+  #wholesaler
+    margin-right: auto
+    margin-left: auto
+
+    #distributor
+      display: inline-block
+      .wholesale-title
+        text-align: center
+        display: block
+        font-weight: 700
+        color: $dkgray
+    .wholesaler
+      margin-right: auto
+      margin-left: auto
+      text-align: center
+    .header
+      display: inline-block
+      font-weight: 700
+      color: $dkgray
+    .or
+      display: inline-block
+      text-align: center
+      vertical-align: top
+      margin-top: 7em
+      font-weight: 700
+      color: $dkgray
+
+// Slideshow-Panel --------------------------------------------------*
+#locations-panel
+  border-top: 0.5em double $blue
+  border-bottom: 0.5em double $blue
+  padding: 2em 0
+  .location-text
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+// Slideshow-Panel --------------------------------------------------*
+.content-wholesale
+  padding: 1em 0em 
+  border-top: 0.5em double $blue
+  border-bottom: 0.5em double $blue
+  .main
+    #gallery
+      .thumbnail 
+
+  #gallery
+    #photo
+    #text .description-right
+
+
+// Learn-More-Panel --------------------------------------------------*
+#learnmore-panel
+  padding: 1em 0em 
+  border-top: 0.5em double $blue
+  border-bottom: 0.5em double $blue
+  // #learn
+  //   margin-left: auto
+  //   margin-right: auto
+  //   display: inline-block
+  .learn-text
+    display: inline-block
+    text-align: center
+    font-weight: 400
+    #learn
+      margin-left: auto
+      margin-right: auto
+
+
+// Contact-Panel --------------------------------------------------*
+#contact-panel
+  padding: 2em 0
+  .contact-header
+    color: $dkgray
+    font-weight: 700
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+  #contact-methods
+    margin-left: auto
+    margin-right: auto
+    #contact
+      text-align: center
+      display: inline-block
+      position: relative
+      .contact-image
+        display: inline-block
+        position: relative
+      .contact-text
+        vertical-align: top
+        margin: 3em 0
+        position: relative
 

@@ -43,10 +43,13 @@
 	%h2.explanation-text.dkgray WHEN YOUR COFFEE IS TOO HOT TO DRINK
 
 	.centered-cup.span_9_of_12
-		.steam
-		= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup span_6_of_12")
-		.steam
-		= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup span_6_of_12")
+		#steam-big-cups.span_6_of_12
+			= render(:partial => "common/steam")
+			= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup span_12_of_12")
+		%span.filler.span_1_of_12
+		#steam-big-cups.span_6_of_12
+			= render(:partial => "common/steam")
+			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup span_12_of_12")
 		
 	%h2.explanation-text.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
 
@@ -64,19 +67,25 @@
 			= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "clock")			
 
 		%td
-			.steam
-			= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "animation-element")
-			%p.animation-text THE STEAM IS WARMING THE FILLING
+			.animation-element.span_3_of_12
+				#steam-little-cups
+					= render(:partial => "common/steam")
+					= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "span_10_of_12")
+				%p.animation-text THE STEAM IS WARMING THE FILLING
 
 		%td
-			.steam
-			= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "animation-element")
-			%p.animation-text THE WAFEL IS CAPTURING THE AROMA
+			.animation-element.span_3_of_12
+				#steam-little-cups
+					= render(:partial => "common/steam")
+					= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "span_10_of_12")
+				%p.animation-text THE WAFEL IS CAPTURING THE AROMA
 
 		%td
-			.steam
-			= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "animation-element")
-			%p.animation-text READY
+			.animation-element.span_3_of_12
+				#steam-little-cups
+					= render(:partial => "common/steam")
+					= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "span_10_of_12")
+				%p.animation-text READY
 
 
 

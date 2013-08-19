@@ -1,0 +1,50 @@
+$dkgray: #575757
+$blue: #3399cc
+$orange: #ff6633
+
+.content
+	.main
+		#gallery
+			.main-image
+				margin: 10em 
+				background-color: red
+			#thumbnail
+				display: inline-block
+				.thumbnail 
+					display: inline-block
+				.title 
+					display: block
+					text-align: center
+					color: $blue
+					&:hover
+						color: $orange
+
+			#photo .timeline-image
+				overflow: hidden
+				width: 200px
+
+#gallery
+	margin-left: auto
+	margin-right: auto
+	#photo
+		overflow: hidden
+		display: inline-block
+	.filler
+		display: inline-block
+	#text 
+		vertical-align: top
+		padding-top: 5em
+		display: inline-block
+		color: $dkgray
+
+		h2
+			font-weight: 700
+			font-size: 1.25em
+		p
+			font-weight: 300
+			font-size: 1.25em
+
+
+
+		.description-right
+		display: inline-block

@@ -13,46 +13,67 @@
 #enjoy-panel
 	.left-enjoy.orange-bg.span_3_of_12
 		%h2.enjoy-text.white.centered.span_12_of_12 TOP
-		.steam
+		= render(:partial => "common/steam")
 		= image_tag( 'product-page/eat-cup.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
 	.right-enjoy.blue-bg.span_9_of_12
 		%h3.product-text.white.centered.span_12_of_12 FOR BEVERAGES THAT ARE TOO HOT TO DRINK AND DON'T HAVE A FROTH LAYER
 		%tr
 			%td
-				%p.drink.span_3_of_12
-					= image_tag( 'product-page/drink-coffee.png', alt: "drink", :class => "drink-image span_10_of_12")
+				#drink.span_3_of_12
+					.cssanimations
+						.steam
+							= render(:partial => "common/steam")
+					= image_tag( 'product-page/drink-coffee.png', alt: "drink", :class => "drink-image span_12_of_12")
 					%span.drink-text COFFEE
 			%td
-				%p.drink.span_3_of_12
-					= image_tag( 'product-page/drink-tea.png', alt: "drink", :class => "drink-image span_10_of_12")
+				#drink.span_3_of_12
+					.cssanimations
+						.steam
+							= render(:partial => "common/steam")
+					= image_tag( 'product-page/drink-tea.png', alt: "drink", :class => "drink-image span_12_of_12")
 					%span.drink-text TEA
 			%td
-				%p.drink.span_3_of_12
-					= image_tag( 'product-page/drink-milk.png', alt: "drink", :class => "drink-image span_10_of_12")
+				#drink.span_3_of_12
+					.cssanimations
+						.steam
+							= render(:partial => "common/steam")
+					= image_tag( 'product-page/drink-milk.png', alt: "drink", :class => "drink-image span_12_of_12")
 					%span.drink-text MILK
 			%td
-				%p.drink.span_3_of_12
-					= image_tag( 'product-page/drink-hot-cider.png', alt: "drink", :class => "drink-image span_10_of_12")
+				#drink.span_3_of_12
+					.cssanimations
+						.steam
+							= render(:partial => "common/steam")
+					= image_tag( 'product-page/drink-hot-cider.png', alt: "drink", :class => "drink-image span_12_of_12")
 					%span.drink-text HOT CIDER
 
 #enjoy-panel
 	.left-enjoy.orange-bg.span_3_of_12
 		%h2.enjoy-text.white.centered.span_12_of_12 DIP
-		.steam
+		= render(:partial => "common/steam")
 		= image_tag( 'product-page/eat-dip.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
 	.right-enjoy.blue-bg.span_9_of_12
 		%h3.product-text.white.centered.span_12_of_12 FOR ALL HOT BEVERAGES
 		%tr
-			%td
-				%p.drink.span_4_of_12
+			%td.span_4_of_12
+				#drink.span_4_of_12
+					.cssanimations
+						.steam
+							= render(:partial => "common/steam")
 					= image_tag( 'product-page/drink-espresso-dip.png', alt: "drink", :class => "drink-image span_10_of_12")
 					%span.drink-text ESPRESSO
-			%td
-				%p.drink.span_4_of_12
+			%td.span_4_of_12
+				#drink.span_4_of_12
+					.cssanimations
+						.steam
+							= render(:partial => "common/steam")
 					= image_tag( 'product-page/drink-mocha-dip.png', alt: "drink", :class => "drink-image span_10_of_12")
 					%span.drink-text MOCHA
-			%td
-				%p.drink.span_4_of_12
+			%td.span_4_of_12
+				#drink.span_4_of_12
+					.cssanimations
+						.steam
+							= render(:partial => "common/steam")
 					= image_tag( 'product-page/drink-cappuccino-dip.png', alt: "drink", :class => "drink-image span_10_of_12")
 					%span.drink-text CAPPUCCINO
 
@@ -65,11 +86,11 @@
 		%h3.product-text.white.centered.span_12_of_12 WITHOUT ANY BEVERAGE
 		%tr
 			%td
-				%p.drink.span_6_of_12
+				#drink.span_6_of_12
 					= image_tag( 'product-page/bike.png', alt: "drink", :class => "drink-image span_10_of_12")
 					%span.drink-text ON THE RUN
 			%td
-				%p.drink.span_6_of_12
+				#drink.span_6_of_12
 					= image_tag( 'product-page/chair.png', alt: "drink", :class => "drink-image span_10_of_12")
 					%span.drink-text SITTING DOWN
 
@@ -85,7 +106,7 @@
 			IS A SPECIAL WAFEL PRODUCED 
 			BY AN UNIQUE PROCESS
 	.play2
-		.sprite
+		= link_to image_tag( 'buttons/play-button_off.png', alt: "home", :class => "img-swap span_12_of_12"), root_path
 
 // Header-Panel --------------------------------------------------*
 #header-panel.white-bg.span_12_of_12
@@ -107,63 +128,63 @@
 				#one
 					%p
 						%span.centered WHEAT
-						= image_tag( 'product-page/ingredient-wheat.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-wheat.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered GLUCOSE
-						= image_tag( 'product-page/ingredient-glucose.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-glucose.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered BUTTER
-						= image_tag( 'product-page/ingredient-butter.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-butter.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered SUGAR
-						= image_tag( 'product-page/ingredient-sugar.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-sugar.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered EGGS
-						= image_tag( 'product-page/ingredient-egg.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-egg.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered SOY
-						= image_tag( 'product-page/ingredient-soy.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-soy.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 		%tr
 			%td
 				#one
 					%p
 						%span.centered SALT
-						= image_tag( 'product-page/ingredient-salt.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-salt.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered MOLASSES
-						= image_tag( 'product-page/ingredient-molasses.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-molasses.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered COCOA
-						= image_tag( 'product-page/ingredient-cocoa.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-cocoa.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered SPICES
-						= image_tag( 'product-page/ingredient-spices.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-spices.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered VANILLA EXTRACT
-						= image_tag( 'product-page/ingredient-extract.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-extract.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 			%td
 				#one
 					%p
 						%span.centered BAKING SODA
-						= image_tag( 'product-page/ingredient-baking_soda.png', alt: "ingredient", :class => "ingredient span_8_of_12")
+						= image_tag( 'product-page/ingredient-baking_soda.png', alt: "ingredient", :class => "ingredient span_12_of_12")
 
 // Portions-Panel --------------------------------------------------*
 
@@ -190,7 +211,7 @@
 #nutrition-panel.span_12_of_12
 	#nutrition-column.rvw.span_4_of_12
 		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
-		%p.nutrient-text Rip Van Wafels
+		%h3.nutrient-text Rip Van Wafels
 
 	#nutrition-column.span_4_of_12
 		%p.nutrient-text CALORIES
@@ -201,12 +222,19 @@
 
 		%p.nutrient-text SUGAR
 		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
-	#nutrition-column.span_4_of_12
+	#nutrition-column.rvw.span_4_of_12
 		= image_tag( 'product-page/nutrient-muffin_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
-		= image_tag( 'product-page/nutrient-cake_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
+		%p.nutrient-text MUFFIN
+		= render(:partial => "common/steam")
 		= image_tag( 'product-page/nutrient-croissant_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
+		%p.nutrient-text CAKE
+		= render(:partial => "common/steam")
+		= image_tag( 'product-page/nutrient-cake_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
+		%p.nutrient-text CROISSANT
+		= render(:partial => "common/steam")
 		= image_tag( 'product-page/nutrient-energybar_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
+		%p.nutrient-text ODWALLA
 	%p.footnote.span_12_of_12 * Nutrition figures are taken from the food section from the Starbucks website
-
+//TODO: Change this to Odwalla
 
 	
