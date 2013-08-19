@@ -5,9 +5,34 @@ $orange: #ff6633
 .content
 	.main
 		#gallery
+			padding: 1em
+			margin-left: auto
+			margin-right: auto
 			.main-image
-				margin: 10em 
+				margin: 5em 
 				background-color: red
+			#thumbnail-about1
+				display: inline-block
+				padding: 0em 0em
+				padding-right: 2em
+				.title 
+					display: block
+					text-align: center
+					color: $dkgray
+					font-weight: 700
+					&:hover
+						color: $orange
+
+			#thumbnail-about
+				display: inline-block
+				padding: 0em 2em
+				.title 
+					display: block
+					text-align: center
+					color: $dkgray
+					font-weight: 700
+					&:hover
+						color: $orange
 			#thumbnail
 				display: inline-block
 				.thumbnail 
@@ -26,6 +51,7 @@ $orange: #ff6633
 #gallery
 	margin-left: auto
 	margin-right: auto
+	padding-top: 2em
 	#photo
 		overflow: hidden
 		display: inline-block
@@ -44,7 +70,5 @@ $orange: #ff6633
 			font-weight: 300
 			font-size: 1.25em
 
-
-
 		.description-right
-		display: inline-block
+			display: inline-block

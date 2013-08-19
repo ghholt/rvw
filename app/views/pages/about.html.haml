@@ -26,39 +26,53 @@
 / 	Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
 / %h2.short-break.span_8_of_12 WE BELIEVE A SHORT BREAK GOES A LONG WAY. A REAL QUIET BREAK TO RELAX AND ENJOY THAT YOU REVITALIZE YOURSELF.
 
-#five-minutes-panel.centered
+#five-minutes-panel.centered.lt-gray-bg
 	%h2.five-minutes.centered.span_10_of_12 FIVE MINUTES OUTSIDE THE OFFICE AT A LOCAL MORNING COFFEE SPOT. A HALF HOUR BETWEEN CLASSES. A LUNCH ENJOYED SOMEWHERE BESIDES A DESK. WE RELY ON THESE BRIEF MOMENTS TO CARRY US THROUGH THE DAY. 
 
 
 // Slideshow-Panel --------------------------------------------------*
 / %li#slide
 .content.lt-gray-bg
-	.main.lt-gray-bg
-		#gallery.span_10_of_12
-			%a{:href => "#{asset_path 'history1.jpg'}", :id => 'this'}
-				= image_tag "history1.jpg", :class => "thumbnail span_2_of_12"
-			/
-			%a{:href => "#{asset_path 'history2.jpg'}", :id => 'this'}
-				= image_tag "history2.jpg", :class => "thumbnail span_2_of_12"
-			/
-			%a{:href => "#{asset_path 'history3.jpg'}", :id => 'this'}
-				= image_tag "history3.jpg", :class => "thumbnail span_2_of_12"
-			/
-			%a{:href => "#{asset_path 'history4.jpg'}", :id => 'this'}
-				= image_tag "history4.jpg", :class => "thumbnail span_2_of_12"
-			/
-			%a{:href => "#{asset_path 'history5.jpg'}", :id => 'this'}
-				= image_tag "history5.jpg", :class => "thumbnail span_2_of_12"
-			/
-			%a{:href => "#{asset_path 'history6.jpg'}", :id => 'this'}
-				= image_tag "history6.jpg", :class => "thumbnail span_2_of_12"
-			/
 	#gallery.span_10_of_12
 		#photo.timeline-image.span_5_of_12
+			= image_tag "history1.jpg", :class => "thumbnail span_12_of_12"
 		%span.filler.span_1_of_12
 		#text.description-right.span_5_of_12
-			%h2 This is the initial title. 
-			%p this is the initial paragraph. 
+			%h2 WHERE ARE THE WAFELS? 
+			%p Amsterdam native Rip Pruisken arrives at Brown University. Rip heads to the dining hall for koffietijd—a midmorning coffee break enjoyed with a warm wafel. Finding decent coffee but no wafels, Rip is horrified to learn that most America is without his favorite snack. 
+
+	.main
+		#gallery.span_10_of_12
+			%a{:href => "#{asset_path 'history1.jpg'}", :id => 'this'}
+				#thumbnail-about1.span_1_of_12
+					= image_tag "history1.jpg", :class => "thumbnail span_12_of_12"
+					%p.title 2006
+			/
+			%a{:href => "#{asset_path 'history2.jpg'}", :id => 'this'}
+				#thumbnail-about.span_1_of_12
+					= image_tag "history2.jpg", :class => "thumbnail span_12_of_12"
+					%p.title 2009
+			/
+			%a{:href => "#{asset_path 'history3.jpg'}", :id => 'this'}
+				#thumbnail-about.span_1_of_12
+					= image_tag "history3.jpg", :class => "thumbnail span_12_of_12"
+					%p.title 2010
+			/
+			%a{:href => "#{asset_path 'history4.jpg'}", :id => 'this'}
+				#thumbnail-about.span_1_of_12
+					= image_tag "history4.jpg", :class => "thumbnail span_12_of_12"
+					%p.title 2011
+			/
+			%a{:href => "#{asset_path 'history5.jpg'}", :id => 'this'}
+				#thumbnail-about.span_1_of_12
+					= image_tag "history5.jpg", :class => "thumbnail span_12_of_12"
+					%p.title 20012
+			/
+			%a{:href => "#{asset_path 'history6.jpg'}", :id => 'this'}
+				#thumbnail-about.span_1_of_12
+					= image_tag "history6.jpg", :class => "thumbnail span_12_of_12"
+					%p.title 2013
+			/
 
 
 

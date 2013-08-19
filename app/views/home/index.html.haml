@@ -1,4 +1,5 @@
 // Video-Panel --------------------------------------------------*
+/ TODO: add the video here
 #video-panel.video-bg.span_12_of_12
 	.play
 		= link_to image_tag( 'buttons/play-button_off.png', alt: "home", :class => "img-swap span_12_of_12"), root_path
@@ -45,11 +46,11 @@
 	.centered-cup.span_9_of_12
 		#steam-big-cups.span_6_of_12
 			= render(:partial => "common/steam")
-			= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup span_12_of_12")
+			= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup cup span_12_of_12")
 		%span.filler.span_1_of_12
 		#steam-big-cups.span_6_of_12
 			= render(:partial => "common/steam")
-			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup span_12_of_12")
+			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup cup span_12_of_12")
 		
 	%h2.explanation-text.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
 
@@ -70,21 +71,21 @@
 			.animation-element.span_3_of_12
 				#steam-little-cups
 					= render(:partial => "common/steam")
-					= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "span_10_of_12")
+					= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "cup span_10_of_12")
 				%p.animation-text THE STEAM IS WARMING THE FILLING
 
 		%td
 			.animation-element.span_3_of_12
 				#steam-little-cups
 					= render(:partial => "common/steam")
-					= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "span_10_of_12")
+					= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "cup span_10_of_12")
 				%p.animation-text THE WAFEL IS CAPTURING THE AROMA
 
 		%td
 			.animation-element.span_3_of_12
 				#steam-little-cups
 					= render(:partial => "common/steam")
-					= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "span_10_of_12")
+					= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "cup span_10_of_12")
 				%p.animation-text READY
 
 

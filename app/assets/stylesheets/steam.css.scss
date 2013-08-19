@@ -8,7 +8,7 @@
 
 #smoke {
   // position: absolute;
-  z-index: 999999999;
+  z-index: 333333;
   margin-left: auto;
   margin-right: auto;
   width: 1px;
@@ -45,23 +45,6 @@
 
 
 }
-
-
-/* Smoke animation */
-
-// @mixin keyframes($name) {
-//     @-webkit-keyframes #{$name} { @content; }
-//     @-moz-keyframes #{$name} { @content; }
-//     @-o-keyframes #{$name} { @content; }
-//     @keyframes #{$name} { @content; }
-// }
-
-// @mixin animation($parameters) {
-//     -webkit-animation: $parameters;
-//     -moz-animation: $parameters;
-//     -o-animation: $parameters;
-//     animation: $parameters;
-// }
 
 @include keyframes(smokeL) {
   0%   { @include transform(scale(0.2) translate(0, 0)) }

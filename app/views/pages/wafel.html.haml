@@ -11,88 +11,85 @@
 
 // Threeways to enjoy Panel ----------------------------------------*
 #enjoy-panel
-	.left-enjoy.orange-bg.span_3_of_12
-		%h2.enjoy-text.white.centered.span_12_of_12 TOP
-		= render(:partial => "common/steam")
-		= image_tag( 'product-page/eat-cup.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
-	.right-enjoy.blue-bg.span_9_of_12
-		%h3.product-text.white.centered.span_12_of_12 FOR BEVERAGES THAT ARE TOO HOT TO DRINK AND DON'T HAVE A FROTH LAYER
+	%table#actual-table-enjoy
 		%tr
-			%td
-				#drink.span_3_of_12
-					.cssanimations
-						.steam
-							= render(:partial => "common/steam")
-					= image_tag( 'product-page/drink-coffee.png', alt: "drink", :class => "drink-image span_12_of_12")
-					%span.drink-text COFFEE
-			%td
-				#drink.span_3_of_12
-					.cssanimations
-						.steam
-							= render(:partial => "common/steam")
-					= image_tag( 'product-page/drink-tea.png', alt: "drink", :class => "drink-image span_12_of_12")
-					%span.drink-text TEA
-			%td
-				#drink.span_3_of_12
-					.cssanimations
-						.steam
-							= render(:partial => "common/steam")
-					= image_tag( 'product-page/drink-milk.png', alt: "drink", :class => "drink-image span_12_of_12")
-					%span.drink-text MILK
-			%td
-				#drink.span_3_of_12
-					.cssanimations
-						.steam
-							= render(:partial => "common/steam")
-					= image_tag( 'product-page/drink-hot-cider.png', alt: "drink", :class => "drink-image span_12_of_12")
-					%span.drink-text HOT CIDER
+			%td.one.orange-bg
+				%h2.enjoy-text.white.centered.span_12_of_12 TOP
+				= render(:partial => "common/steam")
+				= image_tag( 'product-page/eat-cup.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
+			%td.two
+				.right-enjoy.blue-bg.span_12_of_12
+					%h3.product-text.white.centered.span_12_of_12 FOR BEVERAGES THAT ARE TOO HOT TO DRINK AND DON'T HAVE A FROTH LAYER
 
-#enjoy-panel
-	.left-enjoy.orange-bg.span_3_of_12
-		%h2.enjoy-text.white.centered.span_12_of_12 DIP
-		= render(:partial => "common/steam")
-		= image_tag( 'product-page/eat-dip.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
-	.right-enjoy.blue-bg.span_9_of_12
-		%h3.product-text.white.centered.span_12_of_12 FOR ALL HOT BEVERAGES
+					#drink.span_3_of_12
+						.cssanimations
+							.steam
+								= render(:partial => "common/steam")
+						= image_tag( 'product-page/drink-coffee.png', alt: "drink", :class => "drink-image cup span_12_of_12")
+						%span.drink-text COFFEE
+
+					#drink.span_3_of_12
+						.cssanimations
+							.steam
+								= render(:partial => "common/steam")
+						= image_tag( 'product-page/drink-tea.png', alt: "drink", :class => "drink-image cup span_12_of_12")
+						%span.drink-text TEA
+
+					#drink.span_3_of_12
+						.cssanimations
+							.steam
+								= render(:partial => "common/steam")
+						= image_tag( 'product-page/drink-milk.png', alt: "drink", :class => "drink-image cup span_12_of_12")
+						%span.drink-text MILK
+
+					#drink.span_3_of_12
+						.cssanimations
+							.steam
+								= render(:partial => "common/steam")
+						= image_tag( 'product-page/drink-hot-cider.png', alt: "drink", :class => "drink-image cup span_12_of_12")
+						%span.drink-text HOT CIDER
 		%tr
-			%td.span_4_of_12
-				#drink.span_4_of_12
-					.cssanimations
-						.steam
-							= render(:partial => "common/steam")
-					= image_tag( 'product-page/drink-espresso-dip.png', alt: "drink", :class => "drink-image span_10_of_12")
-					%span.drink-text ESPRESSO
-			%td.span_4_of_12
-				#drink.span_4_of_12
-					.cssanimations
-						.steam
-							= render(:partial => "common/steam")
-					= image_tag( 'product-page/drink-mocha-dip.png', alt: "drink", :class => "drink-image span_10_of_12")
-					%span.drink-text MOCHA
-			%td.span_4_of_12
-				#drink.span_4_of_12
-					.cssanimations
-						.steam
-							= render(:partial => "common/steam")
-					= image_tag( 'product-page/drink-cappuccino-dip.png', alt: "drink", :class => "drink-image span_10_of_12")
-					%span.drink-text CAPPUCCINO
-
-#enjoy-panel
-	.left-enjoy.orange-bg.span_3_of_12
-		%h2.enjoy-text.white.centered.span_12_of_12 SNACK
-		= image_tag( 'product-page/eat-bite.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12", :style => "padding-bottom: 1.2em")
-
-	.right-enjoy.blue-bg.span_9_of_12
-		%h3.product-text.white.centered.span_12_of_12 WITHOUT ANY BEVERAGE
+			%td.one.orange-bg
+				%h2.enjoy-text.white.centered.span_12_of_12 DIP
+				= render(:partial => "common/steam")
+				= image_tag( 'product-page/eat-dip.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
+			%td.two
+				.right-enjoy.blue-bg.span_12_of_12
+					%h3.product-text.white.centered.span_12_of_12 FOR ALL HOT BEVERAGES
+					#drink.span_4_of_12
+						.cssanimations
+							.steam
+								= render(:partial => "common/steam")
+						= image_tag( 'product-page/drink-espresso-dip.png', alt: "drink", :class => "drink-image span_12_of_12")
+						%span.drink-text ESPRESSO
+					
+					#drink.span_4_of_12
+						.cssanimations
+							.steam
+								= render(:partial => "common/steam")
+						= image_tag( 'product-page/drink-mocha-dip.png', alt: "drink", :class => "drink-image span_12_of_12")
+						%span.drink-text MOCHA
+					
+					#drink.span_4_of_12
+						.cssanimations
+							.steam
+								= render(:partial => "common/steam")
+						= image_tag( 'product-page/drink-cappuccino-dip.png', alt: "drink", :class => "drink-image span_12_of_12")
+						%span.drink-text CAPPUCCINO
 		%tr
-			%td
-				#drink.span_6_of_12
-					= image_tag( 'product-page/bike.png', alt: "drink", :class => "drink-image span_10_of_12")
-					%span.drink-text ON THE RUN
-			%td
-				#drink.span_6_of_12
-					= image_tag( 'product-page/chair.png', alt: "drink", :class => "drink-image span_10_of_12")
-					%span.drink-text SITTING DOWN
+			%td.one.orange-bg
+				%h2.enjoy-text.white.centered.span_12_of_12 SNACK
+				= image_tag( 'product-page/eat-bite.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
+			%td.two
+				.right-enjoy.blue-bg.span_12_of_12
+					%h3.product-text.white.centered.span_12_of_12 WITHOUT ANY BEVERAGE
+					#drink.span_6_of_12
+						= image_tag( 'product-page/bike.png', alt: "drink", :class => "drink-image span_12_of_12")
+						%span.drink-text ON THE RUN
+					
+					#drink.span_6_of_12
+						= image_tag( 'product-page/chair.png', alt: "drink", :class => "drink-image span_12_of_12")
+						%span.drink-text SITTING DOWN
 
 // Header-Panel --------------------------------------------------*
 #header-panel.lt-gray-bg.span_12_of_12

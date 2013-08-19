@@ -15,7 +15,7 @@ $(document).ready(function () {
             }); // end hover
     }); // end each
 
-    $('#gallery a').click(function (evt) {
+    $('#gallery a').mouseover(function (evt) {
         //don't follow link
         evt.preventDefault();
         //get path to new image
@@ -54,7 +54,7 @@ $(document).ready(function () {
         else if (newImage[0].src == "http://localhost:3000/assets/history6.jpg")
         {
             $('#text h2').text("AND BEYOND...");
-            $('#text p').text("Rip van Wafels is proudly stocked at coffee shops, offices, and specialty stores around the country. From Providence to Palo Alto, Americans learn that a short break goes a long way—one Rip van Wafel at a time.");
+            $('#text p').text("Rip Van Wafels is proudly stocked at coffee shops, offices, and specialty stores around the country. From Providence to Palo Alto, Americans learn that a short break goes a long way—one Rip van Wafel at a time.");
         };
 
 
@@ -92,12 +92,12 @@ $(document).ready(function () {
         //add to the #photo div
         $('#photo').prepend(newImage);
         //fade in new image
-        newImage.fadeIn(50);
+        newImage.fadeIn(0);
 
         //fade out old image and remove from DOM
         oldImage.fadeOut(0, function () {
             $(this).remove();
         });
     }); // end click
-    $('#gallery a:first').click();
+    $('#gallery a:first').mouseover();
 }); // end ready
