@@ -41,7 +41,7 @@ h1
 h2
   font-family: $sans-serif
   font-style: normal
-  font-weight: 300
+  font-weight: 400
 h3
   font-family: $sans-serif
   font-style: normal
@@ -84,12 +84,12 @@ ul.nav li
   background-color: #FCC
   border: solid 1px #C66
 
-
 $blue: #3399cc
 .blue
   color: $blue
 $white: white
-
+.white
+  color: $white
 $dkgray: #575757
 .dkgray
   color: $dkgray
@@ -104,6 +104,12 @@ $orange: #ff6633
 .bold
   font-weight: 700
 
+.mdeium
+  font-weight: 400
+
+.light
+  font-weight: 200
+
 html, body
   height: 100%
   text-decoration: none !important
@@ -116,6 +122,8 @@ a
   margin-left: auto
   margin-right: auto
   position: relative
+
+#steam-drinks-2
 
 #steam-little-cups
   margin-left: 10%
@@ -188,9 +196,13 @@ a
   height: 800px
   .insignia
     float: right
-    padding: 6em 3em
+    padding: 2em 3em
     position-relative
-    width: 180px
+    width: 240px
+    transform: rotate(30deg)
+    -ms-transform: rotate(30deg) /* IE 9 */
+    -webkit-transform: rotate(30deg) /* Safari and Chrome */
+    
   .headline
     .video-text 
       margin-left: auto
@@ -364,7 +376,7 @@ a
 
   .animation-element
     width: 80%
-    padding: 4em 1em 
+    padding: 4em 1em 0em 1em
     margin-top: 3em
     margin-left: auto
     margin-right: auto
@@ -384,7 +396,7 @@ a
     padding-right: 2em
     padding-bottom: 1.5em
     font-size: 1.25em
-    font-weight: 300
+    font-weight: 400
     color: white
 
 #actual-table td:nth-child(even)  
@@ -465,8 +477,9 @@ a
         position: absolute
         z-index: 3
         text-align: center
-        margin-top: 7em
+        margin-top: 4em
         font-weight: 700
+        font-size: 3.3em
         
         
     .right-panel
@@ -504,8 +517,9 @@ a
         position: absolute
         z-index: 3
         text-align: center
-        margin-top: 7em
+        margin-top: 4em
         font-weight: 700
+        font-size: 3.3em
 
       
 // Coffeeshop-Footer-Panel --------------------------------------------------*
@@ -545,6 +559,10 @@ a
       .header-logo 
         width: 12em
         vertical-align: middle
+
+      .header-logocurrent
+        width: 12em
+        vertical-align: middle
         
       .header-nav
         margin: 2em
@@ -552,9 +570,17 @@ a
         text-decoration: none
         height: 1em
         display: inline
-
         &:hover 
-          color: $orange
+          color: $blue
+
+      .header-navcurrent
+        margin: 2em
+        color: $orange
+        text-decoration: none
+        height: 1em
+        display: inline
+        &:hover 
+          color: $blue
 
 
 // Footer --------------------------------------------------*
@@ -931,6 +957,7 @@ td:hover
     font-size: 1.5em
 
 // Our-Team-Panel --------------------------------------------------*
+//TODO: get team images and Marco's text
 #team-panel
   border-top: 0.5em double $blue
   overflow: hidden
@@ -944,8 +971,8 @@ td:hover
     .bio-image-rip
       border-radius: 50%
       float: left
-      margin-left: -5em
-      margin-top: -5em
+      margin-left: -7em
+      margin-top: -7em
     .bio-image-marco
       border-radius: 50%
       float: right
