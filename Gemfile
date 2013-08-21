@@ -13,9 +13,9 @@ gem 'better_errors'
 gem 'binding_of_caller'
 gem 'hub'
 gem 'pg'
+gem 'compass-rails'
 
 group :assets do
-  gem 'compass-rails'
   gem 'animation'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
