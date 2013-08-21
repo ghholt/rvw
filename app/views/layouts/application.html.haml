@@ -21,12 +21,7 @@
       / Image swap
       %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", :type => "text/javascript"}
         %script{:src => "image_swap.js", :type => "text/javascript"}
-
-    / Slideshow
-    / Include the plugin *after* the jQuery library
-    / Include the basic styles
-    = stylesheet_link_tag "demo", :media => "all"
-    
+            
     / Meta
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
       %title 
@@ -56,38 +51,3 @@
     / ! end of #container
 
 /TODO: add a favicon in here somewhere
-
-/ Slideshow
-%script.secret-source
-:javascript
-  jQuery(document).ready(function($) {
-    $('#banner-slide').bjqs({
-    // width and height need to be provided to enforce consistency
-    // if responsive is set to true, these values act as maximum dimensions
-    width : 1280,
-    height : 620,
-
-    // animation values
-    animtype : 'slide', // accepts 'fade' or 'slide'
-    animduration : 450, // how fast the animation are
-    animspeed : 4000, // the delay between each slide
-    automatic : true, // automatic
-
-    // control and marker configuration
-    showcontrols : true, // show next and prev controls
-    centercontrols : true, // center controls verically
-    nexttext : 'Next', // Text for 'next' button (can use HTML)
-    prevtext : 'Prev', // Text for 'previous' button (can use HTML)
-    showmarkers : true, // Show individual slide markers
-    centermarkers : true, // Center markers horizontally
-
-    // interaction values
-    keyboardnav : true, // enable keyboard navigation
-    hoverpause : true, // pause the slider on hover
-
-    // presentational options
-    usecaptions : true, // show captions for images using the image title tag
-    randomstart : true, // start slider at random slide
-    responsive : true // enable responsive capabilities (beta)
-    });
-  });
