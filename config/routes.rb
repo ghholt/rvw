@@ -5,6 +5,4 @@ RipVanWafels::Application.routes.draw do
   match '/store', :to => "pages#store", :as => "store"
   match '/wholesale', :to => "pages#wholesale", :as => "wholesale"
   match '/about', :to => "pages#about", :as => "about"
-  match '/blank', :to => "pages#blank", :as => "blank", :layout => false
-
 end
