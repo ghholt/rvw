@@ -79,6 +79,8 @@ RipVanWafels::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
 
+  # config/environments/production.rb
+  config.assets.compile = true
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
