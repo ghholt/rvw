@@ -4,12 +4,10 @@
 		%li.nav.span_2_of_12
 			= link_to image_tag( 'rvw-logo_off.png', alt: "home", :class => "header-logo img-swap"), root_path
 		%li.nav.span_2_of_12
-			= link_to_active_class("WAFELS", 'current', wafel_path, class: 'span_2_of_12 header-nav')
+			= link_to_active_class("WAFELS", 'current', wafel_path, class: 'span_2_of_12 header-nav medium')
 		%li.nav.span_2_of_12
-			= link_to_active_class("SHOP", 'current', store_path, class: 'span_2_of_12 header-nav')
+			= link_to_active_class("SHOP", 'current', store_path, class: 'span_2_of_12 header-nav medium')
 		%li.nav.span_2_of_12 
-			= link_to_active_class("ABOUT US", 'current', about_path, class: 'span_2_of_12 header-nav')
-/ %li.nav.span_2_of_12 
-/ 	= link_to "slideshow", wholesale_path, :class => 'header-nav span_2_of_1'
-//TODO: get this to work
-//			= link_to_active_class(image_tag("rvw-logo_off.png", alt: "home", :class => "img-swap header-logo"), 'current', root_path, class: 'header-logo')
+			= link_to "WHOLESALE", wholesale_path, :class => 'header-nav medium span_2_of_1'
+		%li.nav.span_2_of_12 
+			= link_to_active_class("ABOUT US", 'current', about_path, class: 'span_2_of_12 header-nav medium')

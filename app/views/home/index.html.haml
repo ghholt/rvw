@@ -4,7 +4,7 @@
 	.play
 		= link_to image_tag( 'buttons/play-button_off.png', alt: "home", :class => "img-swap span_12_of_12"), root_path
 
-	= image_tag( 'rvw-stamp.png', alt: "Stamp", :class => "insignia span_12_of_12")
+	= image_tag( 'stamping.png', alt: "Stamp", :class => "insignia span_12_of_12")
 
 // Header-Panel --------------------------------------------------*	
 #header.span_12_of_12
@@ -17,30 +17,22 @@
 #wafel-panel.orange-bg.span_12_of_12
 
 	= image_tag( 'ingredient-icons.png', alt: "ingredients", :class => "ingredient-icons span_2_of_12")
-
 	.centered-wafel.span_6_of_12
-
 		%p.wafel-pattern WAFEL PATTERN (BAKED)
-
 		= image_tag( 'wafel-in-half.png', alt: "Learn More", :class => "wafel-in-half span_10_of_12")
-
 		%p.wafel-filling FILLING (CHEWY)
 
 	.centered.span_12_of_12
-		%h2.white.medium 
-			ONLY 150 CALORIES...
-/ %span{:style => "font-weight: 700"}8g 
-/ OF SUGAR AND 
-/ %span{:style => "font-weight: 700"}150 
-/ CALORIES, 
-/ %span{:style => "font-weight: 700"}ALL NATURAL 
-/ INGREDIENTS. 
-/ %span.tk-futura-pt Question?
-
+		%h2.white.medium
+			%span{:style => "font-weight: 300"}Only 
+			%span{:style => "font-weight: 700"}150 
+			%span{:style => "font-weight: 300"}CALORIES,
+			%span{:style => "font-weight: 700"}ALL NATURAL 
+			%span{:style => "font-weight: 300"}INGREDIENTS
 
 // Cup-Panel --------------------------------------------------*
 / TODO: add an animation here
-#cup-panel.gray-bg.span_12_of_12
+#cup-panel.lt-gray-bg.span_12_of_12
 	%h2.explanation-text.dkgray WHEN YOUR COFFEE IS TOO HOT TO DRINK
 
 	.centered-cup.span_9_of_12
@@ -55,72 +47,67 @@
 	%h2.explanation-text.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
 
 	.learn-more
-		= link_to image_tag( 'buttons/learn-more-button_off.png', alt: "home", :class => "header-logo img-swap span_8_of_12"), about_path
+		= link_to image_tag( 'buttons/learn-more-button_off.png', alt: "home", :class => "header-logo img-swap span_8_of_12"), wafel_path
 
 // Break-Animation-Panel ----------------------------------------*
 / TODO: add an animation here
 / TODO: Finalize steam placement
 #break-animation-panel
-	.panel-content
+	%table#actual-table
+		%tr
+			%td.blue-bg{:style => "border-left: none"}
+				= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "clock")
+			%td.orange-bg
+				.animation-element.span_3_of_12
+					#steam-little-cups
+						= render(:partial => "common/steam")
+						= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "cup span_10_of_12")
+					%p.animation-text THE STEAM IS WARMING THE FILLING
 
-%table#actual-table
-	%tr
-		%td
-			= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "clock")
-		%td
-			.animation-element.span_3_of_12
-				#steam-little-cups
-					= render(:partial => "common/steam")
-					= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "cup span_10_of_12")
-				%p.animation-text THE STEAM IS WARMING THE FILLING
+			%td.blue-bg
+				.animation-element.span_3_of_12
+					#steam-little-cups
+						= render(:partial => "common/steam")
+						= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "cup span_10_of_12")
+					%p.animation-text THE WAFEL IS CAPTURING THE AROMA
 
-		%td
-			.animation-element.span_3_of_12
-				#steam-little-cups
-					= render(:partial => "common/steam")
-					= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "cup span_10_of_12")
-				%p.animation-text THE WAFEL IS CAPTURING THE AROMA
-
-		%td
-			.animation-element.span_3_of_12
-				#steam-little-cups
-					= render(:partial => "common/steam")
-					= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "cup span_10_of_12")
-				%p.animation-text READY
-
-
+			%td.orange-bg{:style => "border-right: none"}
+				.animation-element.span_3_of_12
+					#steam-little-cups
+						= render(:partial => "common/steam")
+						= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "cup span_10_of_12")
+					%p.animation-text
+						%span{:style => "opacity: 0"} test
+						%br/
+						%span{:style => "font-size: 1.25em"} READY
 
 // Coffeeshop-Header-Panel --------------------------------------*
 #coffeeshop-header-panel.lt-gray-bg.span_12_of_12
 	.panel-content.span_12_of_12
-		%h2.coffeeshop-text.dkgray.span_12_of_12 WE BELIEVE A SHORT BREAK CAN GO A LONG WAY
-
+		%h1.coffeeshop-text.dkgray.span_12_of_12 WE BELIEVE A SHORT BREAK GOES A LONG WAY
 
 // Coffeeshop-Panel ----------------------------------------------*
-#coffeeshop-panel.gray-bg.span_12_of_12
+#coffeeshop-panel.lt-gray-bg.span_12_of_12
 	.coffeeshop-images
-		.left-panel.span_6_of_12
+		.left-panel.lt-gray-bg.span_6_of_12
 			.shop-button
 				= link_to image_tag( 'buttons/shop-online-button_off.png', alt: "home", :class => "header-logo img-swap span_12_of_12"), store_path
 			%h1.overlay-text.span_6_of_12 ENJOY AT HOME
-			= image_tag( 'coffee-break-1.jpg', alt: "dutch-girl", :class => "dutch-girl")
+			= link_to image_tag( 'coffee-break-1.jpg', alt: "dutch-girl", :class => "dutch-girl"), store_path
 
 		.right-panel.span_6_of_12
 			.shop-button
 				= link_to image_tag( 'buttons/wholesale-button_off.png', alt: "home", :class => "header-logo img-swap span_12_of_12"), store_path
 			%h1.overlay-text.span_6_of_12 ENJOY AT A SHOP
-			= image_tag( 'coffee-break-2.jpg', alt: "dutch-girl", :class => "dutch-girl")
-
+			= link_to image_tag( 'coffee-break-2.jpg', alt: "dutch-girl", :class => "dutch-girl"), wholesale_path
 // TODO: get the image here.
-
 
 
 // Coffeeshop-Footer-Panel --------------------------------------------------*
 #coffeeshop-footer-panel.lt-gray-bg.span_12_of_12
+	%h2.carriers.dkgray.span_12_of_12 SOME PLACES THAT CARRY US
 	.panel-content.span_10_of_12
-		= image_tag( 'shop1.png', alt: "shop1", :class => "shop span_2_of_12")
 		= image_tag( 'shop2.png', alt: "shop2", :class => "shop span_2_of_12")
 		= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_2_of_12")
-		= image_tag( 'shop4.png', alt: "shop4", :class => "shop span_2_of_12")
 		= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_2_of_12")
 		= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_2_of_12")

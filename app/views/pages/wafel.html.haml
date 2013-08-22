@@ -26,7 +26,7 @@
 							.steam
 								= render(:partial => "common/steam")
 						= image_tag( 'product-page/drink-coffee.png', alt: "drink", :class => "drink-image cup span_12_of_12")
-						%span.drink-text COFFEE
+						%span.drink-text COFFEE/AMERICANO
 
 					#drink.span_3_of_12
 						.cssanimations
@@ -75,14 +75,13 @@
 							.steam-drinks-2
 								= render(:partial => "common/steam")
 						= image_tag( 'product-page/drink-cappuccino-dip.png', alt: "drink", :class => "drink-image span_12_of_12")
-						%span.drink-text CAPPUCCINO
+						%span.drink-text CAPPUCCINO/LATTE
 		%tr
 			%td.one.orange-bg
 				%h2.enjoy-text.white.centered.span_12_of_12 SNACK
 				= image_tag( 'product-page/eat-bite.png', alt: "way-to-eat", :class => "way-to-eat span_10_of_12")
 			%td.two
 				.right-enjoy.blue-bg.span_12_of_12
-					%h3.product-text.white.centered.span_12_of_12 WITHOUT ANY BEVERAGE
 					#drink.span_6_of_12
 						= image_tag( 'product-page/bike.png', alt: "drink", :class => "drink-image span_12_of_12")
 						%span.drink-text ON THE RUN
@@ -92,25 +91,26 @@
 						%span.drink-text SITTING DOWN
 
 // Header-Panel --------------------------------------------------*
-#header-panel.lt-gray-bg.span_12_of_12
-	%h2.share-text.span_12_of_12 SHARE WITH US SECTION
+/ #header-panel.lt-gray-bg.span_12_of_12
+/ 	%h2.share-text.span_12_of_12 SHARE WITH US SECTION
+/MAYBE ADD THIS BACK LATER
 
-// Video-Panel --------------------------------------------------*
-#video-panel.video-bg.span_12_of_12
-	.headline.span_12_of_12 
-		%h1.video-text.span_6_of_12
-			RIP VAN WAFEL 
-			IS A SPECIAL WAFEL PRODUCED 
-			BY AN UNIQUE PROCESS
-	.play2
-		= link_to image_tag( 'buttons/play-button_off.png', alt: "home", :class => "img-swap span_12_of_12"), root_path
+/ // Video-Panel --------------------------------------------------*
+/ #video-panel.video-bg.span_12_of_12
+/ .headline.span_12_of_12 
+/ %h1.video-text.span_6_of_12
+/ RIP VAN WAFEL 
+/ IS A SPECIAL WAFEL PRODUCED 
+/ BY AN UNIQUE PROCESS
+/ .play2
+/ = link_to image_tag( 'buttons/play-button_off.png', alt: "home", :class => "img-swap span_12_of_12"), root_path
 
 // Header-Panel --------------------------------------------------*
 #header-panel.white-bg.span_12_of_12
 	.headline.span_12_of_12
 		%h2.mission-text.span_10_of_12 
 			WE BELIEVE TAKING A QUALITY BREAK ALSO MEANS INDULGING RESPONSIBLY. 
-			EACH RIP VAN WAFEL CONTAINS ONLY 8g OF SUGAR AND IS 150 CALORIES. 
+			EACH RIP VAN WAFEL IS ONLY 150 CALORIES. 
 			RIP VAN WAFELS ARE CRAFTED WITH QUALITY INGREDIENTS.
 
 
@@ -209,7 +209,10 @@
 #nutrition-panel.span_12_of_12
 	#nutrition-column.rvw.span_4_of_12
 		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
-		%h3.nutrient-text Rip Van Wafels
+		%h3.nutrient-text 
+			Rip Van Wafels
+			CARAMEL FILLED
+			COCOA FILLED
 
 	#nutrition-column.span_4_of_12
 		%p.nutrient-text CALORIES
@@ -232,7 +235,7 @@
 		= render(:partial => "common/steam")
 		= image_tag( 'product-page/nutrient-energybar_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
 		%p.nutrient-text ODWALLA
-	%p.footnote.span_12_of_12 * Nutrition figures are taken from the food section from the Starbucks website
 //TODO: Change this to Odwalla
+//TODO: Add the bar charts and caramel filled needs to be added. 
 
 	

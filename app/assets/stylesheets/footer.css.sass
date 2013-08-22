@@ -1,0 +1,52 @@
+$blue: #3399cc
+.blue
+  color: $blue
+
+$white: white
+.white
+  color: $white
+
+$dkgray: #575757
+.dkgray
+  color: $dkgray
+
+$orange: #ff6633
+.orange
+  color: $orange
+
+// Footer --------------------------------------------------*
+#footer
+  border-top: thick double $blue
+  position: absolute
+  .contact-text
+    margin-left: 4em
+    padding-top: 2em
+    padding-bottom: 3em
+    display: inline-block
+    float: left
+  .social-icons
+    position: relative
+    display: inline-block
+    float: left
+    padding: 2em 0
+    .social-logo
+      padding-left: 0.5em
+      &:hover
+        opacity: 0.6
+        cursor: pointer
+  .footer-logo
+    display: inline-block
+    float: right
+    padding: 2em 2em
+    width: 15.75em
+  .footer-text 
+    color: $dkgray
+    font-size: 1.25em
+    font-weight: 300
+    .contact
+      color: $blue
+      font-weight: 300
+  .address
+    font-size: 0.75em
+    padding-bottom: 2em
+    color: $dkgray

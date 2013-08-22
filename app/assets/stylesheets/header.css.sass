@@ -1,0 +1,57 @@
+$blue: #3399cc
+.blue
+  color: $blue
+
+$white: white
+.white
+  color: $white
+
+$dkgray: #575757
+.dkgray
+  color: $dkgray
+
+$orange: #ff6633
+.orange
+  color: $orange
+
+// Header --------------------------------------------------*
+#header
+  background: $white
+  z-index: 9999999999
+  display: block
+  height: auto
+
+  ul.header-list
+    list-style: none
+    .nav
+      display: inline
+      position: relative
+
+      .header-logo 
+        width: 12em
+        vertical-align: top
+      .header-logocurrent
+        width: 12em
+        vertical-align: top
+        
+      .header-nav
+        margin: 2em
+        color: $blue
+        text-decoration: none
+        height: 1em
+        display: inline
+        font-size: 1.5em
+        vertical-align: bottom
+        &:hover 
+          color: $orange
+
+      .header-navcurrent
+        margin: 2em
+        color: $orange
+        text-decoration: none
+        height: 1em
+        display: inline
+        font-size: 1.5em
+        vertical-align: bottom
+        &:hover 
+          color: $blue

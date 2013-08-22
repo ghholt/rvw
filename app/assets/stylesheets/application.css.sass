@@ -7,56 +7,65 @@
 $sans-serif: 'futura-pt', sans-serif
 
 
+.spacing20
+  letter-spacing: 30px
+
 // TODO: switch this to Futura
 .light
   font-family: $sans-serif
   font-style: normal
   font-weight: 300
-.light-italic
-  font-family: $sans-serif
-  font-style: italic
-  font-weight: 300
+
 .book
   font-family: $sans-serif
   font-style: normal
   font-weight: 400
-.book-italic
+
+.medium
   font-family: $sans-serif
-  font-style: italic
-  font-weight: 400
+  font-style: normal
+  font-weight: 500
+
 .bold
   font-family: $sans-serif
   font-style: normal
   font-weight: 700
-.bold-italic
-  font-family: $sans-serif
-  font-style: italic
-  font-weight: 700
-
 
 h1
   font-family: $sans-serif
   font-style: normal
   font-weight: 400
+  letter-spacing: 0.15em
+
 h2
   font-family: $sans-serif
   font-style: normal
   font-weight: 400
+  letter-spacing: 0.15em
+
 h3
   font-family: $sans-serif
   font-style: normal
   font-weight: 400
+  letter-spacing: 0.15em
+
 p 
   font-family: $sans-serif
   font-style: normal
   font-weight: 400
+  letter-spacing: 0.15em
+
+a
+  font-family: $sans-serif
+  text-decoration: none
+
 span 
   font-family: $sans-serif
 
 li
   font-family: $sans-serif
   font-style: normal
-  font-weight: 700
+  letter-spacing: 0.15em
   list-style: none
 
 
@@ -87,9 +96,11 @@ ul.nav li
 $blue: #3399cc
 .blue
   color: $blue
+
 $white: white
 .white
   color: $white
+
 $dkgray: #575757
 .dkgray
   color: $dkgray
@@ -112,10 +123,11 @@ $orange: #ff6633
 
 html, body
   height: 100%
+  width: 100%
   text-decoration: none !important
 
-a
-  text-decoration: none
+.cup
+  z-index: 999999
 
 #steam
   display: inline-block
@@ -124,6 +136,8 @@ a
   position: relative
 
 #steam-drinks-2
+  margin-left: 10%
+
 
 #steam-little-cups
   margin-left: 10%
@@ -132,8 +146,6 @@ a
   // margin-left: 10%
   display: inline-block
 
-.cup
-  z-index: 999999
 
 // Backgrounds --------------------------------------------------*
 .lt-gray-bg
@@ -149,7 +161,7 @@ a
 
 .video-bg
   // background
-  background-image: url(backgrounds/video-panel.jpg)
+  background-image: url(background.jpg)
   position: relative 
   top: 0 
   left: 0 
@@ -158,6 +170,8 @@ a
   margin: 0 auto 
   min-width: 50%
   min-height: 50%
+  background-position: center bottom /*Positioning*/
+  background-repeat: no-repeat /*Prevent showing multiple background images*/
 
 .orange-bg
   position: relative
@@ -188,20 +202,19 @@ a
   padding: 0px
   background-color: $blue
 
-
-
 // Video-Panel --------------------------------------------------*
-
 #video-panel
   height: 800px
+
   .insignia
+    opacity: 0.7
     float: right
     padding: 2em 3em
     position-relative
     width: 240px
-    transform: rotate(30deg)
-    -ms-transform: rotate(30deg) /* IE 9 */
-    -webkit-transform: rotate(30deg) /* Safari and Chrome */
+    transform: rotate(15deg)
+    -ms-transform: rotate(15deg) /* IE 9 */
+    -webkit-transform: rotate(15deg) /* Safari and Chrome */
     
   .headline
     .video-text 
@@ -214,41 +227,16 @@ a
       font-size: 3em
       font-weight: 300
       margin-top: 0
-  .play2
-    padding-top: 2em
-    .sprite
-      margin-left: auto
-      margin-right: auto
-      display: block
-      width: 8em
-      height: 8em
-      overflow: hidden
-      background: url('buttons/play-button.png') -8em -8em
-      background-size: contain
-
-      &:hover
-        background: url('buttons/play-button-hover.png') -8em -8em
-        background-size: contain
-        cursor: pointer
 
   .play
-    padding-top: 22em
+    padding-top: 20em
     margin-left: auto
     margin-right: auto
     display: block
-    width: 8em
-    height: 8em
-  .play2
-    padding-top: 8em
-    margin-left: auto
-    margin-right: auto
-    display: block
-    width: 8em
-    height: 8em
-
+    width: 10em
+    height: 10em
 
 // Wafel-Panel --------------------------------------------------*
-
 #wafel-panel
   padding: 2em 0
   margin-top: 1em
@@ -285,10 +273,7 @@ a
       right: 0px
       font-weight: 300
 
-
-
 // Cup-Panel --------------------------------------------------*
-
 #cup-panel
   position: relative
   padding: 3em 0
@@ -315,137 +300,63 @@ a
 
   .learn-more
     position: absolute
-    bottom: 2em
+    bottom: 1.5em
     right: 2em
     float: right
 
-    .sprite
-      margin-left: auto
-      margin-right: auto
-      display: block
-      width: 8em
-      height: 8em
-      overflow: hidden
-      background: url('buttons/learn-more-button.png') -8em -8em
-      background-size: contain
-
-      &:hover
-        background: url('buttons/learn-more-button-hover.png') -8em -8em
-        background-size: contain
-        cursor: pointer
-
-
-// Break-Panel --------------------------------------------------*
-
-#break-panel
-  position: relative
-  
-  .panel-content
-    padding: 4em 0
-
-    .break-text
-      position: relative
-      margin-left: auto
-      margin-right: auto
-      display: block
-
-      text-align: center
-
-
 // Break-Animation-Panel --------------------------------------------------*
-
 #break-animation-panel
-  position: relative
-
-  // background
-  left: 0px
-  right: 0px
-  padding: 0px
-  background-image: url(backgrounds/break-animation-panel.jpg)
-  background-size: 100%
-  background-repeat: repeat
-
-#actual-table
-  border-collapse: collapse 
-
-#actual-table td  
-  width: 20% 
-  padding: 10px 
-  vertical-align: top
-  position: relative
-
-  .animation-element
-    width: 80%
-    padding: 4em 1em 0em 1em
-    margin-top: 3em
-    margin-left: auto
-    margin-right: auto
-    display: block
-
-  .clock
-    width: 100%
-    padding: 1em 1em 
-    margin-top: 5em
-    margin-left: auto
-    margin-right: auto
-    display: block
-
-  .animation-text
-    text-align: center
-    padding-left: 2em
-    padding-right: 2em
-    padding-bottom: 1.5em
-    font-size: 1.25em
-    font-weight: 400
-    color: white
-
-#actual-table td:nth-child(even)  
-  // background
-  left: 0px
-  right: 0px
-  padding: 0px
-  background-image: url(backgrounds/animation_panel_orange.jpg)
-  background-size: 100%
-  background-repeat: repeat
-
-  
-#actual-table td:nth-child(odd)  
-  // background
-  left: 0px
-  right: 0px
-  padding: 0px
-  background-image: url(backgrounds/animation_panel_blue.jpg)
-  background-size: 100%
-  background-repeat: repeat
-
-
+  #actual-table td  
+    width: 20%  
+    vertical-align: top
+    position: relative
+    border-right: 0.3em solid white
+    border-left: 0.3em solid white
+    .animation-element
+      width: 80%
+      padding: 4em 1em 0em 1em
+      margin-top: 3em
+      margin-left: auto
+      margin-right: auto
+      display: block
+    .clock
+      width: 100%
+      padding: 1em 1em 
+      margin-top: 5em
+      margin-left: auto
+      margin-right: auto
+      display: block
+    .animation-text
+      text-align: center
+      padding-left: 2em
+      padding-right: 2em
+      padding-bottom: 1.5em
+      font-size: 1.25em
+      font-weight: 400
+      color: white
 
 // Coffeeshop-Header-Panel --------------------------------------------------*
-
 #coffeeshop-header-panel
   .panel-content
     padding: 1em 0
-
     .coffeeshop-text
-      position: relative
-      margin-left: auto
-      margin-right: auto
+      margin: 0 0 
       display: block
-
       text-align: center
-
+      font-size: 2.25em
       color: $dkgray
 
-
 // Coffeeshop-Panel --------------------------------------------------*
-
 #coffeeshop-panel
   .coffeeshop-images
     display: block
-
     .left-panel
       left: 0
       display: inline-block
+      opacity: 0.9
+      &:hover
+        opacity: 1
+        cursor: pointer
       .dutch-girl
         width: 100%
         position: relative
@@ -454,23 +365,8 @@ a
         z-index: 3
         margin-left: 42%
         left: -4em
-        margin-top: 38%
+        margin-top: 28%
         width: 8em
-
-        .sprite
-          margin-left: auto
-          margin-right: auto
-          display: block
-          width: 8em
-          height: 8em
-          overflow: hidden
-          background: url('buttons/shop-online-button.png') -8em -8em
-          background-size: contain
-
-          &:hover
-            background: url('buttons/shop-online-button-hover.png') -8em -8em
-            background-size: contain
-            cursor: pointer
 
       .overlay-text
         color: $white
@@ -479,13 +375,16 @@ a
         text-align: center
         margin-top: 4em
         font-weight: 700
-        font-size: 3.3em
-        
+        font-size: 3em
         
     .right-panel
       right: 0
       display: inline-block
       float: right
+      opacity: 0.9
+      &:hover
+        opacity: 1
+        cursor: pointer
       .dutch-girl
         width: 100%
       .shop-button
@@ -493,24 +392,8 @@ a
         z-index: 3
         margin-left: 42%
         right: 4em
-        margin-top: 38%
+        margin-top: 28%
         width: 8em
-
-
-        .sprite
-          margin-left: auto
-          margin-right: auto
-          display: block
-          width: 8em
-          height: 8em
-          overflow: hidden
-          background: url('buttons/wholesale-button.png') -8em -8em
-          background-size: contain
-
-          &:hover
-            background: url('buttons/wholesale-button-hover.png') -8em -8em
-            background-size: contain
-            cursor: pointer
 
       .overlay-text
         color: $white
@@ -519,119 +402,32 @@ a
         text-align: center
         margin-top: 4em
         font-weight: 700
-        font-size: 3.3em
+        font-size: 3em
 
-      
 // Coffeeshop-Footer-Panel --------------------------------------------------*
-
 #coffeeshop-footer-panel
   position: relative
-
+  
+  .carriers
+    padding-top: 2em
+    margin: 0
+    display: block
+    text-align: center
   .panel-content
-    padding-top: 1em
-    padding-bottom: 5em
     position: relative
     margin-left: auto
     margin-right: auto
     display: block
-
+    padding-top: 1em
+    padding-bottom: 5em
     .shop
       padding: 0 2.5em
       margin-left: auto
       margin-right: auto
 
-
-// Header --------------------------------------------------*
-
-#header
-  background: $white
-  z-index: 9999999999
-  display: block
-  height: auto
-
-  ul.header-list
-    list-style: none
-    .nav
-      display: inline
-      position: relative
-      vertical-align: middle
-
-      .header-logo 
-        width: 12em
-        vertical-align: middle
-
-      .header-logocurrent
-        width: 12em
-        vertical-align: middle
-        
-      .header-nav
-        margin: 2em
-        color: $blue
-        text-decoration: none
-        height: 1em
-        display: inline
-        &:hover 
-          color: $blue
-
-      .header-navcurrent
-        margin: 2em
-        color: $orange
-        text-decoration: none
-        height: 1em
-        display: inline
-        &:hover 
-          color: $blue
-
-
-// Footer --------------------------------------------------*
-
-#footer
-  border-top: thick double $blue
-  position: absolute
-
-  .contact-text
-    margin-left: 4em
-    padding-top: 2em
-    padding-bottom: 3em
-    display: inline-block
-    float: left
-
-
-  .social-icons
-    position: relative
-    display: inline-block
-    float: left
-    padding: 2em 0
-    .social-logo
-      padding-left: 0.5em
-      &:hover
-        opacity: 0.6
-        cursor: pointer
-
-  .footer-logo
-    display: inline-block
-    float: right
-    padding: 2em 2em
-
-  .footer-text 
-    color: $dkgray
-    font-size: 1.25em
-    font-weight: 300
-
-    .contact
-      color: $blue
-      font-weight: 300
-
-  .address
-    font-size: 0.75em
-    padding-bottom: 2em
-    color: $dkgray
-
-
-
-// Wafels Page --------------------------------------------------*
-//TODO: Refactor to new stylesheet
-
+//---------------------------------------------------------------*
+// WAFELS PAGE --------------------------------------------------*
+//---------------------------------------------------------------*
 
 // Header-Panel --------------------------------------------------*
 #header-panel
@@ -737,23 +533,23 @@ a
 // Ingredients-Panel --------------------------------------------------*
 
 // hover to text animation
-td
-  position: relative
-  margin: 0px
-  background-image: url(backgrounds/break-panel.jpg)
-  background-size: 100%
-  background-repeat: repeat
+// td
+//   position: relative
+//   margin: 0px
+//   background-image: url(backgrounds/break-panel.jpg)
+//   background-size: 100%
+//   background-repeat: repeat
   
-  #one p span 
-    display: none
+//   #one p span 
+//     display: none
 
 
-td:hover 
-  position: relative
-  margin: 0px
-  background-image: url(backgrounds/wafel-panel.jpg)
-  background-size: 100%
-  background-repeat: repeat
+// td:hover 
+//   position: relative
+//   margin: 0px
+//   background-image: url(backgrounds/wafel-panel.jpg)
+//   background-size: 100%
+//   background-repeat: repeat
 
   #one p span
     display: block
