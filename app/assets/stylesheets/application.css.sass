@@ -431,12 +431,7 @@ html, body
 
 // Header-Panel --------------------------------------------------*
 #header-panel
-  padding: 2em 0
-
-  .share-text
-    text-align: center
-    color: $dkgray
-    font-weight: 400
+  padding: 1em 0
   .headline
     .mission-text
       margin-left: auto
@@ -482,6 +477,12 @@ html, body
       margin-left: auto
       margin-right: auto
       display: block
+
+    .or 
+      display: inline-block
+      text-align: right
+      vertical-align: top 
+      margin-top: 5em
 
   .enjoy-text
     color: $white
@@ -531,47 +532,39 @@ html, body
 
 
 // Ingredients-Panel --------------------------------------------------*
-
-// hover to text animation
-// td
-//   position: relative
-//   margin: 0px
-//   background-image: url(backgrounds/break-panel.jpg)
-//   background-size: 100%
-//   background-repeat: repeat
-  
-//   #one p span 
-//     display: none
-
-
-// td:hover 
-//   position: relative
-//   margin: 0px
-//   background-image: url(backgrounds/wafel-panel.jpg)
-//   background-size: 100%
-//   background-repeat: repeat
-
-  #one p span
-    display: block
-    height: 100%
-    width: 100%
-    
-    // font
-    font-size: 1.25em
-    color: white
-
-  #one p img
-    display: none
-  
-
-#one p
-  display: inline
-  height: 100%
-  width: 100%
-
-
 #ingredients-panel
+  #actual-table-ingredients td
+    position: relative
+    margin: 0px
+    background-image: url(backgrounds/break-panel.jpg)
+    background-size: 100%
+    background-repeat: repeat
+    #one p span 
+      display: none
+
+  #actual-table-ingredients td:hover 
+    position: relative
+    margin: 0px
+    background-image: url(backgrounds/wafel-panel.jpg)
+    background-size: 100%
+    background-repeat: repeat
+
+    #one p span
+      display: block
+      height: 100%
+      width: 100%
+      // font
+      font-size: 2em
+      color: white
+
+    #one p img
+      display: none
   
+    #one p
+      display: inline
+      height: 100%
+      width: 100%
+ 
 #actual-table-ingredients
   border-collapse: collapse 
   width: 100%
@@ -579,7 +572,6 @@ html, body
 #actual-table-ingredients td  
   width: 16.66666666%
   border: 5px solid $white
-
 
   .ingredient 
     margin-right: auto
@@ -645,7 +637,6 @@ html, body
 
 
 // Nutrition-Panel --------------------------------------------------*
-
 // Image swap
 .fader
   display: inline-block
@@ -716,7 +707,8 @@ html, body
 
 // Header-Panel --------------------------------------------------* 
 #header.span_12_of_12  
-#short-break.lt-gray-bg.span_12_of_12
+#short-break
+  margin-top: 1.2em
   %h2.short-break.span_8_of_12 
   %h3.short-break.span_10_of_12
   %h2.short-break.span_8_of_12 
@@ -729,7 +721,6 @@ html, body
     %li.nav.span_2_of_12
 
 // Slideshow-Panel --------------------------------------------------*
-//See the gallery.css styles
 
 // Enhance-the-Break-Panel --------------------------------------------------*
 #enhance-the-break
@@ -803,13 +794,6 @@ html, body
       .person-facts 
         font-weight: 200
 
-
-
-// #container .slideshow
-//   margin-left: auto
-//   margin-right: auto
-
-
 .description-right
   right: 0
   display: block
@@ -839,8 +823,6 @@ html, body
 #photo
 
 #text
-
-
 
 // Wholesale-Page --------------------------------------------------*
 
@@ -943,3 +925,27 @@ html, body
         margin: 3em 0
         position: relative
 
+//Location-Panel --------------------------------------------------*
+#location-container
+  border-top: 0.5em double $blue
+  padding-bottom: 3em
+  #location-panel
+    display: block
+    margin: 0 auto
+    height: 20em
+    #location-panel-left
+      display: inline-block
+      .visit-us
+        display: block
+        text-align: center
+        color: $dkgray
+      #map_canvas
+        display: block
+        margin: 0 auto
+        height: 15em
+    #location-panel-right
+      display: inline-block
+      .join-us
+        display: block
+        text-align: center
+        color: $dkgray
