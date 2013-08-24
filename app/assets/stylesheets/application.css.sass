@@ -451,12 +451,10 @@ html, body
     color: $dkgray
 
 // Enjoy-Panel --------------------------------------------------*
-
 #enjoy-panel
   margin: 0.25em 0.25em 0.25em 0em
   display: inline-block
   width: 100%
-
   #actual-table-enjoy
   border-collapse: collapse 
   #actual-table-enjoy td.one
@@ -530,6 +528,17 @@ html, body
         text-align: center
         font-size: 1.2em
 
+    .warning-text
+      float: right
+      text-align: right
+      padding-right: 6em
+      color: white
+      font-size: 0.75em
+      padding-top: 1em
+      &:hover
+        opacity: 0.8
+        cursor: pointer
+
 
 // Ingredients-Panel --------------------------------------------------*
 #ingredients-panel
@@ -592,14 +601,9 @@ html, body
   right: 0
   display: inline-block
   float: left
-
-  // background
-  left: 0px
-  right: 0px
   padding: 0px
-  background-image: url(backgrounds/animation_panel_orange.jpg)
-  background-size: 100%
-  background-repeat: repeat
+  &:hover
+    opacity: 0.8
 
   .ingredient-text
     text-align: center
@@ -612,14 +616,9 @@ html, body
   left: 0
   display: inline-block
   float: right
-
-  // background
-  left: 0px
-  right: 0px
   padding: 0px
-  background-image: url(backgrounds/animation_panel_blue.jpg)
-  background-size: 100%
-  background-repeat: repeat
+  &:hover
+    opacity: 0.8
 
   .ingredient-text
     text-align: center
@@ -691,6 +690,52 @@ html, body
         position: relative
         vertical-align: middle
         padding: 2em 0em 
+//Location-Panel --------------------------------------------------*
+#location-container
+  border-top: 0.5em double $blue
+  padding-bottom: 3em
+  #location-panel
+    display: block
+    margin: 0 auto
+    height: 20em
+    #location-panel-left
+      display: inline-block
+      vertical-align: top
+      .visit-us
+        display: block
+        text-align: center
+        color: $dkgray
+      #map_canvas
+        display: block
+        margin: 0 auto
+        height: 15em
+    #location-panel-right
+      display: inline-block
+      vertical-align: top
+      .join-us
+        display: block
+        text-align: center
+        color: $dkgray
+
+#locations-panel
+  border-top: 0.5em double $blue
+  border-bottom: 0.5em double $blue
+  padding: 2em 0
+  
+  .location-text
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+.position-link
+  display: block
+  padding: 1em 0
+  font-size: 1.25em
+  font-weight: 700
+  text-align: center
+  color: $blue
+  &:hover
+    opacity: 0.8
 
 // Five-Minutes-Panel --------------------------------------------------* 
 #five-minutes-panel
@@ -860,16 +905,6 @@ html, body
       color: $dkgray
 
 // Slideshow-Panel --------------------------------------------------*
-#locations-panel
-  border-top: 0.5em double $blue
-  border-bottom: 0.5em double $blue
-  padding: 2em 0
-  .location-text
-    margin-left: auto
-    margin-right: auto
-    text-align: center
-
-// Slideshow-Panel --------------------------------------------------*
 .content-wholesale
   padding: 1em 0em 
   border-top: 0.5em double $blue
@@ -924,28 +959,3 @@ html, body
         vertical-align: top
         margin: 3em 0
         position: relative
-
-//Location-Panel --------------------------------------------------*
-#location-container
-  border-top: 0.5em double $blue
-  padding-bottom: 3em
-  #location-panel
-    display: block
-    margin: 0 auto
-    height: 20em
-    #location-panel-left
-      display: inline-block
-      .visit-us
-        display: block
-        text-align: center
-        color: $dkgray
-      #map_canvas
-        display: block
-        margin: 0 auto
-        height: 15em
-    #location-panel-right
-      display: inline-block
-      .join-us
-        display: block
-        text-align: center
-        color: $dkgray

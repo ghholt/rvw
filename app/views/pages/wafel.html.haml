@@ -43,6 +43,8 @@
 								= render(:partial => "common/steam")
 						= image_tag( 'product-page/drink-hot-cider.png', alt: "drink", :class => "drink-image cup span_12_of_12")
 						%span.drink-text{:style => "padding-left: 2em"} HOT CIDER
+					%a{:href => "#dialog", :name => "modal"}
+						%p2.warning-text.span_12_of_12 DON'T SIT YOUR WAFEL TOO LONG
 		%tr
 			%td.one.orange-bg
 				%h2.enjoy-text.white.centered.span_12_of_12 DIP
@@ -171,13 +173,16 @@
 %table#actual-table-portions
 	%tr
 		%td
-			#caramel-panel.orange-bg.span_12_of_12
-				%h2.ingredient-text.span_12_of_12 CARAMEL
+			%a{:href => "#dialog1", :name => "modal"}
+				#caramel-panel.orange-bg.span_12_of_12
+					%h2.ingredient-text.span_12_of_12 CARAMEL
 			
 		%td
-			#cocoa-panel.blue-bg.span_12_of_12
-				%h2.ingredient-text.span_12_of_12 COCOA
-		
+			%a{:href => "#dialog2", :name => "modal"}
+				#cocoa-panel.blue-bg.span_12_of_12
+					%h2.ingredient-text.span_12_of_12 COCOA
+
+
 
 // Header-Panel --------------------------------------------------*
 #nutrition-panel-header.white-bg.span_12_of_12
@@ -220,4 +225,20 @@
 //TODO: Change this to Odwalla
 //TODO: Add the bar charts and caramel filled needs to be added. 
 
+
+	
+/Modals
+#boxes
+	#dialog.window
+		%a.close{:href => "#"} Close
+		= image_tag( 'product-page/popup-wafel.jpg', alt: "ingredient", :class => "ingredient span_12_of_12")
+		
+	#dialog1.window
+		%a.close{:href => "#"} Close
+		= image_tag( 'product-page/popup-caramel.jpg', alt: "ingredient", :class => "ingredient span_12_of_12")
+
+	#dialog2.window
+		%a.close{:href => "#"} Close
+		= image_tag( 'product-page/popup-chocolate.jpg', alt: "ingredient", :class => "ingredient span_12_of_12")
+	#mask
 	

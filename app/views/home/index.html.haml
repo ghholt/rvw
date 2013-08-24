@@ -1,12 +1,11 @@
 // Video-Panel --------------------------------------------------*
-/ TODO: add the video here
 #video-panel.video-bg.span_12_of_12
 	.play
 		%a{:href => "#dialog", :name => "modal"}
 			= image_tag( 'buttons/play-button_off.png', alt: "home", :class => "img-swap span_12_of_12")
 	
 	= image_tag( 'stamping.png', alt: "Stamp", :class => "insignia span_12_of_12")
-	
+
 /Video Modal
 #boxes
 	#dialog.window
@@ -14,15 +13,11 @@
 		%iframe{:allowfullscreen => "", :frameborder => "0", :height => "100%", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/72865676", :webkitallowfullscreen => "", :width => "100%"}
 	#mask
 
-
-
 // Header-Panel --------------------------------------------------*	
 #header.span_12_of_12
 	= render(:partial => "common/header")
 
-
 // Wafel-Panel --------------------------------------------------*
-
 / TODO: add an animation here
 #wafel-panel.orange-bg.span_12_of_12
 
@@ -111,7 +106,6 @@
 			%h1.overlay-text.span_6_of_12 ENJOY AT A SHOP
 			= link_to image_tag( 'coffee-break-2.jpg', alt: "dutch-girl", :class => "dutch-girl"), wholesale_path
 // TODO: get the image here.
-
 
 // Coffeeshop-Footer-Panel --------------------------------------------------*
 #coffeeshop-footer-panel.lt-gray-bg.span_12_of_12
