@@ -28,7 +28,6 @@
 		%h2.bold.dkgray HERE ARE SOME LOCATIONS THAT ARE A GOOD FIT:
 // Slideshow-Panel --------------------------------------------------*
 / %li#slide
-
 /TODO: get image for 6th option
 /TODO: get logos in here
 .content.-wholesale.lt-gray-bg
@@ -73,11 +72,12 @@
 		#learn.span_8_of_12
 			AND WOULD YOU LIKE TO LEARN MORE ABOUT OUR PRODUCT OFFERING, PRICING & LOGISTICS?
 			%br/
-			PLEASE FILL OUT THE FORM SO WE CAN GET BACK TO YOU WITH THE APPROPRIATE INFORMATION.
-			= link_to "DISTRIBUTION", "https://podio.com/webforms/5238022/410474", :target => "_blank"
-			= link_to "SALES", "https://podio.com/webforms/5238163/410473", :target => "_blank"
+			PLEASE FILL OUT THE 
+			= link_to "DISTRIBUTION", "https://podio.com/webforms/5238022/410474", :target => "_blank", :class => "wholesale-form"
+			OR 
+			= link_to "SALES", "https://podio.com/webforms/5238163/410473", :target => "_blank", :class => "wholesale-form"
+			FORMS SO WE CAN GET BACK TO YOU WITH THE APPROPRIATE INFORMATION.
 			
-
 // Contact-Panel --------------------------------------------------*
 #contact-panel.lt-gray-bg.span_12_of_12
 	%h2.contact-header.span_6_of_12 IF YOU LIKE TO PLACE AN ORDER OR SIMPLY HAVE A CHAT WITH US, PLEASE GET IN TOUCH:
@@ -89,8 +89,3 @@
 		#contact.span_6_of_12
 			= image_tag( 'wholesale-page/contact-mail.png', alt: "contact", :class => "contact-image span_2_of_12")
 			%span.contact-text.blue.span_3_of_12 SALE@RIPVANWAFELS.COM
-
-
-
-	
-

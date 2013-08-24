@@ -186,46 +186,72 @@
 
 // Header-Panel --------------------------------------------------*
 #nutrition-panel-header.white-bg.span_12_of_12
-	%h2.nutrition-text.span_12_of_12 SEE HOW WE COMPARE WITH EVERYDAY PRODUCTS YOU KNOW
+	%h2.nutrition-text.span_12_of_12 MOUSE OVER A SNACK ON THE RIGHT TO SEE HOW WE COMPARE WITH EVERYDAY PRODUCTS YOU KNOW
 
 // Nutrition-Panel --------------------------------------------------*
+#nutrition-panel.span_10_of_12
+	#nutrition-column1.span_4_of_12
+		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+		%h3.nutrition-title Rip Van Wafels
+		%p.nutrition-text CARAMEL FILLED
+		%p.nutrition-text COCOA FILLED
+	#nutrition-column2.span_4_of_12
+		#muffin
+			%p.nutrient-title.span_8_of_12 CALORIES
+			= image_tag( 'product-page/nutrition/muffin_calories.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
 
-/ Image swap
-/ = image_tag( 'product-page/rvw_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_1_of_12")
+			%p.nutrient-title.span_8_of_12 FAT
+			= image_tag( 'product-page/nutrition/muffin_fat.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
 
-#nutrition-panel.span_12_of_12
-	#nutrition-column.rvw.span_4_of_12
-		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
-		%h3.nutrient-text 
-			Rip Van Wafels
-			CARAMEL FILLED
-			COCOA FILLED
+			%p.nutrient-title.span_8_of_12 SUGAR
+			= image_tag( 'product-page/nutrition/muffin_sugar.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+		#cake
+			%p.nutrient-title.span_8_of_12 CALORIES
+			= image_tag( 'product-page/nutrition/odwalla_calories.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
 
-	#nutrition-column.span_4_of_12
-		%p.nutrient-text CALORIES
-		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+			%p.nutrient-title.span_8_of_12 FAT
+			= image_tag( 'product-page/nutrition/odwalla_fat.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
 
-		%p.nutrient-text FAT
-		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
+			%p.nutrient-title.span_8_of_12 SUGAR
+			= image_tag( 'product-page/nutrition/odwalla_sugar.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
 
-		%p.nutrient-text SUGAR
-		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-fact span_8_of_12")
-	#nutrition-column.rvw.span_4_of_12
-		= image_tag( 'product-page/nutrient-muffin_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
-		%p.nutrient-text MUFFIN
-		= render(:partial => "common/steam")
-		= image_tag( 'product-page/nutrient-croissant_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
-		%p.nutrient-text CAKE
-		= render(:partial => "common/steam")
-		= image_tag( 'product-page/nutrient-cake_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
-		%p.nutrient-text CROISSANT
-		= render(:partial => "common/steam")
-		= image_tag( 'product-page/nutrient-energybar_off.png', alt: "nutrient-fact", :class => "nutrient-fact img-swap span_8_of_12")
-		%p.nutrient-text ODWALLA
+		#croissant
+			%p.nutrient-title.span_8_of_12 CALORIES
+			= image_tag( 'product-page/nutrition/croissant_calories.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+
+			%p.nutrient-title.span_8_of_12 FAT
+			= image_tag( 'product-page/nutrition/croissant_fat.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+
+			%p.nutrient-title.span_8_of_12 SUGAR
+			= image_tag( 'product-page/nutrition/croissant_sugar.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+		#odwalla
+			%p.nutrient-title.span_8_of_12 CALORIES
+			= image_tag( 'product-page/nutrition/clif_calories.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+
+			%p.nutrient-title.span_8_of_12 FAT
+			= image_tag( 'product-page/nutrition/clif_fat.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+
+			%p.nutrient-title.span_8_of_12 SUGAR
+			= image_tag( 'product-page/nutrition/clif_sugar.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+
+	#nutrition-column3.span_4_of_12
+		#nutrient1
+			= image_tag( 'product-page/nutrient-muffin_off.png', alt: "nutrient-fact", :class => "nutrient-image img-swap span_8_of_12")
+			%p.nutrient-title MUFFIN
+
+		#nutrient2
+			= image_tag( 'product-page/nutrient-odwalla_off.png', alt: "nutrient-fact", :class => "nutrient-image img-swap span_8_of_12")
+			%p.nutrient-title ODWALLA
+
+		#nutrient3
+			= image_tag( 'product-page/nutrient-cake_off.png', alt: "nutrient-fact", :class => "nutrient-image img-swap span_8_of_12")
+			%p.nutrient-title CROISSANT
+
+		#nutrient4
+			= image_tag( 'product-page/nutrient-energybar_off.png', alt: "nutrient-fact", :class => "nutrient-image img-swap span_8_of_12")
+			%p.nutrient-title CLIF BAR
+		
 //TODO: Change this to Odwalla
-//TODO: Add the bar charts and caramel filled needs to be added. 
-
-
 	
 /Modals
 #boxes
@@ -241,4 +267,26 @@
 		%a.close{:href => "#"} Close
 		= image_tag( 'product-page/popup-chocolate.jpg', alt: "ingredient", :class => "ingredient span_12_of_12")
 	#mask
-	
+
+
+:javascript
+	$("#nutrient1").mouseover(function () {
+			$('#muffin').toggleClass('active');
+		}).mouseout(function(){
+			$('#muffin').toggleClass('active');
+		});
+	$("#nutrient2").mouseover(function () {
+			$('#cake').toggleClass('active');
+		}).mouseout(function(){
+			$('#cake').toggleClass('active');
+		});
+	$("#nutrient3").mouseover(function () {
+			$('#croissant').toggleClass('active');
+		}).mouseout(function(){
+			$('#croissant').toggleClass('active');
+		});
+	$("#nutrient4").mouseover(function () {
+			$('#odwalla').toggleClass('active');
+		}).mouseout(function(){
+			$('#odwalla').toggleClass('active');
+		});

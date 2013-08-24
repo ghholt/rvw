@@ -646,26 +646,112 @@ html, body
   display: none
 
 #nutrition-panel
-  padding: 2em 0
-
-  #nutrition-column
+  display: block
+  margin-left: auto
+  margin-right: auto
+  #nutrition-column1
     display: inline-block
-
-    .nutrient-fact
-      margin-right: auto
-      margin-left: auto
+    vertical-align: top
+    .nutrient-image
       display: block
-
-    .nutrient-text
+      margin-left: auto
+      margin-right: auto
+      padding-top: 10em
+    .nutrition-title
       text-align: center
       color: $blue
-  .footnote
-    text-align: center
-    font-size: 0.75em
-    padding-bottom: 2em
-    color: $dkgray
+      font-size: 2em
+      font-weight: 700
 
+    .nutrition-text
+      text-align: center
+      color: $blue
 
+  #nutrition-column2
+    display: inline-block
+    height: 100px
+    vertical-align: top
+
+    //Nutrition facts
+    #muffin
+      display: none
+      position: relative
+      vertical-align: top
+
+    #muffin.active
+      display: block
+
+    #cake
+      display: none
+      position: relative
+      vertical-align: top
+
+    #cake.active
+      display: block
+
+    #croissant
+      display: none
+      position: relative
+      vertical-align: top
+
+    #croissant.active
+      display: block
+
+    #odwalla
+      display: none
+      position: relative
+      vertical-align: top
+
+    #odwalla.active
+      display: block
+
+    .nutrient-title
+      display: block
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      color: $blue
+    .nutrient-image
+      display: block
+      margin-left: auto
+      margin-right: auto
+
+  #nutrition-column3
+    display: inline-block
+    vertical-align: top
+    #nutrient1
+      .nutrient-image
+        display: block
+        margin-left: auto
+        margin-right: auto
+      .nutrient-title
+        text-align: center
+        color: $blue
+    #nutrient2
+      .nutrient-image
+        display: block
+        margin-left: auto
+        margin-right: auto
+      .nutrient-title
+        text-align: center
+        color: $blue
+    #nutrient3
+      .nutrient-image
+        display: block
+        margin-left: auto
+        margin-right: auto
+      .nutrient-title
+        text-align: center
+        color: $blue
+    #nutrient4
+      .nutrient-image
+        display: block
+        margin-left: auto
+        margin-right: auto
+      .nutrient-title
+        text-align: center
+        color: $blue
+        
 // About Page --------------------------------------------------*
 //TODO: Refactor to new stylesheet
 #about-panel-nav
@@ -934,6 +1020,12 @@ html, body
     #learn
       margin-left: auto
       margin-right: auto
+      .wholesale-form
+        color: $orange
+        font-weight: 700
+        &:hover
+          cursor: pointer
+          opacity: 0.8
 
 
 // Contact-Panel --------------------------------------------------*
