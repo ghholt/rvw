@@ -2,9 +2,19 @@
 / TODO: add the video here
 #video-panel.video-bg.span_12_of_12
 	.play
-		= link_to image_tag( 'buttons/play-button_off.png', alt: "home", :class => "img-swap span_12_of_12"), root_path
-
+		%a{:href => "#dialog", :name => "modal"}
+			= image_tag( 'buttons/play-button_off.png', alt: "home", :class => "img-swap span_12_of_12")
+	
 	= image_tag( 'stamping.png', alt: "Stamp", :class => "insignia span_12_of_12")
+	
+/Video Modal
+#boxes
+	#dialog.window
+		%a.close{:href => "#"} Close
+		%iframe{:allowfullscreen => "", :frameborder => "0", :height => "100%", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/72865676", :webkitallowfullscreen => "", :width => "100%"}
+	#mask
+
+
 
 // Header-Panel --------------------------------------------------*	
 #header.span_12_of_12

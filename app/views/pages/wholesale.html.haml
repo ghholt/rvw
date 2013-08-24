@@ -66,38 +66,6 @@
 			%h2 This is the initial title. 
 			%p this is the initial paragraph.
 
-
-
-
-/ // Slideshow-Panel --------------------------------------------------*
-
-/ #container.slideshow.span_10_of_12
-/ 	#banner-slide
-/ 		%ul.bjqs
-/ 			%li
-/ 				%a{:href => ""}
-/ 					= image_tag( 'about-page/timeline/timelineimage0.jpg', alt: "timeline", :class => "timeline-image", :title => "One")
-/ 					.description-right
-/ 						%h2 BLAH BLAH
-/ 						%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-/ 			%li
-/ 				.description-right
-/ 					%h2 BLAH BLAH
-/ 					%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-/ 					= image_tag( 'about-page/timeline/timelineimage1.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-/ 			%li
-/ 				.slide-content
-/ 					= image_tag( 'about-page/timeline/timelineimage2.png', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-/ 					.description-right
-/ 						%h2 BLAH BLAH
-/ 						%span Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
-/ 			%li= image_tag( 'about-page/timeline/timelineimage3.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-/ 			%li= image_tag( 'about-page/timeline/timelineimage4.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-/ 			%li= image_tag( 'about-page/timeline/timelineimage5.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-/ 			%li= image_tag( 'about-page/timeline/timelineimage6.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-/ 			%li= image_tag( 'about-page/timeline/timelineimage7.jpg', alt: "timeline", :class => "timeline-image", :title => "this is the title")
-
-
 // Learn-More-Panel --------------------------------------------------*
 #learnmore-panel.lt-gray-bg.span_12_of_12
 	#learn
@@ -106,7 +74,9 @@
 			AND WOULD YOU LIKE TO LEARN MORE ABOUT OUR PRODUCT OFFERING, PRICING & LOGISTICS?
 			%br/
 			PLEASE FILL OUT THE FORM SO WE CAN GET BACK TO YOU WITH THE APPROPRIATE INFORMATION.
-
+			= link_to "DISTRIBUTION", "https://podio.com/webforms/5238022/410474", :target => "_blank"
+			= link_to "SALES", "https://podio.com/webforms/5238163/410473", :target => "_blank"
+			
 
 // Contact-Panel --------------------------------------------------*
 #contact-panel.lt-gray-bg.span_12_of_12

@@ -3,3 +3,11 @@
 
 this will be shopify
 
+
+/ #dialog is the id of a DIV defined in the code below
+%a{:href => "#dialog", :name => "modal"} VIDEO MODAL
+#boxes
+	#dialog.window
+		%a.close{:href => "#"} Close
+		%iframe{:allowfullscreen => "", :frameborder => "0", :height => "100%", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/72865676", :webkitallowfullscreen => "", :width => "100%"}
+	#mask
