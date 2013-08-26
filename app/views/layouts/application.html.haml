@@ -38,6 +38,8 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
 
+
+
     / Meta
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
       %title 
@@ -53,8 +55,13 @@
         = stylesheet_link_tag "12cols", :media => "all"
         = stylesheet_link_tag "steam", :media => "all"
         = stylesheet_link_tag "gallery", :media => "all"
+
         = javascript_include_tag "application"
         = javascript_include_tag "modal"
+
+        = javascript_include_tag "jquery.slide-deck", :media => "all"
+        = javascript_include_tag "jquery.transit", :media => "all"
+
         = csrf_meta_tags
         = yield(:head)
 

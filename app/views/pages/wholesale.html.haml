@@ -1,4 +1,3 @@
-//TODO: add shopify in here 
 // Header-Panel --------------------------------------------------*	
 #header.span_12_of_12
 	= render(:partial => "common/header")
@@ -8,7 +7,7 @@
 		%h2.header.centered.span_12_of_12 
 			ARE YOU A
 		#distributor.span_5_of_12
-			= image_tag( 'wholesale-page/wholesaler1.png', alt: "wholesaler", :class => "wholesaler span_12_of_12")
+			= link_to image_tag( 'wholesale-page/wholesaler1.png', alt: "wholesaler", :class => "wholesaler span_12_of_12"), "https://podio.com/webforms/5238022/410474", :target => "_blank"
 			%h2.wholesale-title.span_12_of_12
 				DISTRIBUTOR
 				%br/
@@ -16,7 +15,7 @@
 						
 		%h2.or.span_2_of_12 OR
 		#distributor.span_5_of_12
-			= image_tag( 'wholesale-page/wholesaler2.png', alt: "wholesaler", :class => "wholesaler span_12_of_12")
+			= link_to image_tag( 'wholesale-page/wholesaler2.png', alt: "wholesaler", :class => "wholesaler span_12_of_12"), "https://podio.com/webforms/5238163/410473", :target => "_blank"
 			%h2.wholesale-title.span_12_of_12 
 				RETAIL/FOOD 
 				%br/
@@ -27,43 +26,101 @@
 		%h2.dkgray WE SUPPLY A NUMBER OF DISTRIBUTORS, RETAILERS AND FOOD PROVIDERS.
 		%h2.bold.dkgray HERE ARE SOME LOCATIONS THAT ARE A GOOD FIT:
 // Slideshow-Panel --------------------------------------------------*
-/ %li#slide
-/TODO: get image for 6th option
-/TODO: get logos in here
-.content.-wholesale.lt-gray-bg
-	.main.lt-gray-bg
-		#gallery.span_10_of_12
-			%a{:href => "#{asset_path 'timelineimage1.jpg'}", :id => 'this'}
-				#thumbnail.span_2_of_12 
-					= image_tag "shop-1_off.png", :class => "thumbnail img-swap span_12_of_12", :title => "COFFEESHOPS"
-					%p.title COFFEESHOPS
-			/
-			%a{:href => "#{asset_path 'timelineimage2.jpg'}", :id => 'this'}
-				#thumbnail.span_2_of_12			
-					= image_tag "shop-2_off.png", :class => "thumbnail img-swap span_12_of_12", :title => "OFFICES"
-					%p.title OFFICES
-			/
-			%a{:href => "#{asset_path 'timelineimage3.jpg'}", :id => 'this'}
-				#thumbnail.span_2_of_12			
-					= image_tag "shop-3_off.png", :class => "thumbnail img-swap span_12_of_12", :title => "SPECIALTY SHOPS"
-					%p.title SPECIALTY SHOPS
-			/
-			%a{:href => "#{asset_path 'timelineimage4.jpg'}", :id => 'this'}
-				#thumbnail.span_2_of_12			
-					= image_tag "shop-4_off.png", :class => "thumbnail img-swap span_12_of_12", :title => "SPORTS SHOPS"
-					%p.title SPORTS SHOPS
-			/
-			%a{:href => "#{asset_path 'timelineimage5.jpg'}", :id => 'this'}
-				#thumbnail.span_2_of_12			
-					= image_tag "shop-5_off.png", :class => "thumbnail img-swap span_12_of_12", :title => "HOTELS"
-					%p.title HOTELS
-			/
-	#gallery.span_10_of_12
-		#photo.timeline-image.span_5_of_12
-		%span.filler.span_1_of_12
-		#text.description-right.span_5_of_12
-			%h2 This is the initial title. 
-			%p this is the initial paragraph.
+
+#slideshow-panel.lt-gray-bg.span_12_of_12
+	#gallery
+		.nav.border-bottom
+			%a.direct.span_1_of_12{:href => "#A"} 
+				.shop-type
+					= image_tag "wholesale-page/shop-1_off.png", :class => "shop-image img-swap span_12_of_12"
+					%p.shop-text COFFEESHOPS
+			%a.direct.span_1_of_12{:href => "#B"} 
+				.shop-type
+					= image_tag "wholesale-page/shop-2_off.png", :class => "shop-image img-swap span_12_of_12"
+					%p.shop-text OFFICES
+			%a.direct.span_1_of_12{:href => "#C"} 
+				.shop-type
+					= image_tag "wholesale-page/shop-3_off.png", :class => "shop-image img-swap span_12_of_12"
+					%p.shop-text SPECIALTY
+			%a.direct.span_1_of_12{:href => "#D"} 
+				.shop-type
+					= image_tag "wholesale-page/shop-4_off.png", :class => "shop-image img-swap span_12_of_12"
+					%p.shop-text SPORTS SHOPS
+			%a.direct.span_1_of_12{:href => "#E"} 
+				.shop-type
+					= image_tag "wholesale-page/shop-5_off.png", :class => "shop-image img-swap span_12_of_12"
+					%p.shop-text HOTELS
+			%a.direct.span_1_of_12{:href => "#F"} 
+				.shop-type
+					= image_tag "wholesale-page/shop-6_off.png", :class => "shop-image img-swap span_12_of_12"
+					%p.shop-text OTHER
+
+			%a.previous{:href => "#"}
+				= image_tag('about-page/previous_arrow.png', alt: "next", :class => "arrow")
+			%a.next{:href => "#"}
+				= image_tag('about-page/next_arrow.png', alt: "previous", :class => "arrow")
+				
+		.slide-deck.span_10_of_12
+			#A.slide.span_10_of_12{"data-position" => "1", "data-transition" => "horizontal"}
+				= image_tag( 'wholesale-page/timeline/shop-1.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 COFFEESHOPS
+					%p Rip van Wafels are great by the counter in a coffee shop. Compact, shelf stable and easy to spot, they have been added to some of the best coffee shops in the country:
+					= image_tag( 'shop2.png', alt: "shop2", :class => "shop span_3_of_12")
+					= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_3_of_12")
+					= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_3_of_12")
+					= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_3_of_12")
+
+			#B.slide.span_10_of_12{"data-position" => "2", "data-transition" => "horizontal"}
+				= image_tag( 'wholesale-page/timeline/shop-2.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 OFFICES
+					%p Rip van Wafels are great to have by the coffee at your office. We supply a number of companies that place our product by their coffee bars.
+					= image_tag( 'wholesale-page/timeline/office-1.png', alt: "office", :class => "shop span_3_of_12")
+					= image_tag( 'wholesale-page/timeline/office-2.png', alt: "office", :class => "shop span_3_of_12")
+					= image_tag( 'wholesale-page/timeline/office-3.png', alt: "office", :class => "shop span_3_of_12")
+					= image_tag( 'wholesale-page/timeline/office-4.png', alt: "office", :class => "shop span_3_of_12")
+
+			#C.slide.span_10_of_12{"data-position" => "3", "data-transition" => "horizontal"}
+				= image_tag( 'wholesale-page/timeline/shop-3.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 SPECIALTY
+					%p Rip van Wafels are an easy grab and go item, by the coffee or near check out.
+					= image_tag( 'wholesale-page/timeline/specialty-1.png', alt: "specialty", :class => "shop span_3_of_12")
+					= image_tag( 'wholesale-page/timeline/specialty-2.png', alt: "specialty", :class => "shop span_3_of_12")
+
+			#D.slide.span_10_of_12{"data-position" => "4", "data-transition" => "horizontal"}
+				= image_tag( 'wholesale-page/timeline/shop-4.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 SPORTS SHOPS
+					%p Rip van Wafels makes for a great in between snack whether on a long bike ride or on a run. The carbohydrate content will give you a little energy boost and they are easy to store.
+					= image_tag( 'wholesale-page/timeline/sport-1.png', alt: "sports", :class => "shop span_3_of_12")
+					= image_tag( 'wholesale-page/timeline/sport-2.png', alt: "sports", :class => "shop span_3_of_12")
+					= image_tag( 'wholesale-page/timeline/sport-3.png', alt: "sports", :class => "shop span_3_of_12")
+
+
+			#E.slide.span_10_of_12{"data-position" => "5", "data-transition" => "horizontal"}
+				= image_tag( 'wholesale-page/timeline/shop-5.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 HOTELS
+					%p Rip van Wafels makes for a great complimentary hotel room item or mini bar snack.
+
+			#F.slide.span_10_of_12{"data-position" => "6", "data-transition" => "horizontal"}
+				= image_tag( 'wholesale-page/timeline/shop-6.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 OTHER
+					%p.span_8_of_12
+						WE'D LOVE TO HEAR FROM YOU! PLEASE FILL OUT THE 
+						= link_to "DISTRIBUTION", "https://podio.com/webforms/5238022/410474", :target => "_blank", :class => "wholesale-form"
+						OR 
+						= link_to "SALES", "https://podio.com/webforms/5238163/410473", :target => "_blank", :class => "wholesale-form"
+						FORMS SO WE CAN GET BACK TO YOU WITH THE APPROPRIATE INFORMATION.
 
 // Learn-More-Panel --------------------------------------------------*
 #learnmore-panel.lt-gray-bg.span_12_of_12
@@ -89,3 +146,35 @@
 		#contact.span_6_of_12
 			= image_tag( 'wholesale-page/contact-mail.png', alt: "contact", :class => "contact-image span_2_of_12")
 			%span.contact-text.blue.span_3_of_12 SALE@RIPVANWAFELS.COM
+
+
+:javascript
+	$(document).ready(function () {
+		var $sections = $('.slide-deck .slide')
+
+		$sections.slideDeck({ speed: 1000 })
+
+		$('.nav a.direct').on('click', function(event) {
+		  event.preventDefault()
+		  var match = this.href.match(/#(.*)$/)
+		  $sections.change(match[1])
+		})
+
+		$('.nav a.previous').on('click', function(event) {
+		  event.preventDefault()
+		  $sections.previous()
+		})
+
+		$('.nav a.next').on('click', function(event) {
+		  event.preventDefault()
+		  $sections.next()
+		})
+
+		var $message = $('#message')
+
+		$sections.on('exited', function(event, incomming) {
+		  $message.html(this.id + ' has exited and was replaced by ' + incomming.id)
+		})
+	});
+
+

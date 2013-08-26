@@ -1,10 +1,9 @@
 #header.span_12_of_12
 	= render(:partial => "common/header")
 
-/ #dialog is the id of a DIV defined in the code below
-%a{:href => "#dialog", :name => "modal"} VIDEO MODAL
-#boxes
-	#dialog.window
-		%a.close{:href => "#"} Close
-		%iframe{:allowfullscreen => "", :frameborder => "0", :height => "100%", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/72865676", :webkitallowfullscreen => "", :width => "100%"}
-	#mask
+#product-page.lt-gray-bg
+	#product.span_6_of_12
+		%iframe.shopify-widget{:frameborder => "0", :height => "661", :scrolling => "no", :src => "http://widgets.shopifyapps.com/products/box-of-f-16-packets?shop=rip-van-wafels.myshopify.com&style=artgallery&image-size=grande&text-color=%23575757&button-bg-color=%23ff6633&button-text=ADD+TO+CART&destination=checkout", :width => "600"}
+
+	#product.span_6_of_12
+		%iframe.shopify-widget{:frameborder => "0", :height => "661", :scrolling => "no", :src => "http://widgets.shopifyapps.com/products/case-of-4-boxes-30-savings?shop=rip-van-wafels.myshopify.com&style=artgallery&image-size=grande&text-color=%23575757&button-bg-color=%23ff6633&destination=checkout", :width => "600"}

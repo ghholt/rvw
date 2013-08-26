@@ -121,6 +121,9 @@ $orange: #ff6633
 .light
   font-weight: 200
 
+.border-bottom
+  border-bottom: thick double $blue
+
 html, body
   height: 100%
   width: 100%
@@ -353,7 +356,7 @@ html, body
     .left-panel
       left: 0
       display: inline-block
-      opacity: 0.9
+      opacity: 0.7
       &:hover
         opacity: 1
         cursor: pointer
@@ -381,7 +384,7 @@ html, body
       right: 0
       display: inline-block
       float: right
-      opacity: 0.9
+      opacity: 0.7
       &:hover
         opacity: 1
         cursor: pointer
@@ -407,7 +410,6 @@ html, body
 // Coffeeshop-Footer-Panel --------------------------------------------------*
 #coffeeshop-footer-panel
   position: relative
-  
   .carriers
     padding-top: 2em
     margin: 0
@@ -751,7 +753,7 @@ html, body
       .nutrient-title
         text-align: center
         color: $blue
-        
+
 // About Page --------------------------------------------------*
 //TODO: Refactor to new stylesheet
 #about-panel-nav
@@ -969,6 +971,8 @@ html, body
 
     #distributor
       display: inline-block
+      &:hover
+        opacity: 0.8
       .wholesale-title
         text-align: center
         display: block
@@ -995,13 +999,6 @@ html, body
   padding: 1em 0em 
   border-top: 0.5em double $blue
   border-bottom: 0.5em double $blue
-  .main
-    #gallery
-      .thumbnail 
-
-  #gallery
-    #photo
-    #text .description-right
 
 
 // Learn-More-Panel --------------------------------------------------*
@@ -1051,3 +1048,132 @@ html, body
         vertical-align: top
         margin: 3em 0
         position: relative
+
+//---------------------------------------------------------------*
+// STORE PAGE --------------------------------------------------*
+//---------------------------------------------------------------*
+
+#product-page
+  margin-top: 1em 
+  border-top: thick double $blue
+  #product 
+    display: inline-block
+    vertical-align: top
+
+//---------------------------------------------------------------*
+// SLIDESHOWS  --------------------------------------------------*
+//---------------------------------------------------------------*
+
+#slideshow-panel
+  #gallery
+    padding: 1em 0em
+    margin-left: auto
+    margin-right: auto
+    height: 30em
+    //NAV
+    .nav
+      .direct
+        padding: 1.75em
+        color: $blue
+        font-weight: 700
+        &:hover
+          color: $orange
+      .previous
+        position: absolute
+        padding-top: 13em
+        left: 2em
+        .arrow
+          width: 1em
+          &:hover
+            opacity: 0.7
+
+      .next
+        position: absolute
+        padding-top: 13em
+        right: 2em
+        .arrow
+          width: 1em
+          &:hover
+            opacity: 0.7
+    //SLIDES
+    .slide-deck .slide
+      height: 600px
+
+    .slide-deck .slide
+      position: absolute
+
+    .slide-deck
+      margin: 20px 0px
+      position: relative
+      overflow: hidden
+      height: 25em
+      display: block
+      margin: auto auto 
+      padding-top: 2em
+
+      .slide
+        display: inline-block
+        margin-left: auto
+        margin-right: auto
+        .slide-image
+          display: inline-block
+          vertical-align: top
+        .filler
+          display: inline-block
+          vertical-align: top
+          height: 1em
+        .slide-text
+          display: inline-block
+          vertical-align: top
+          h2 
+            font-weight: 700
+            color: $dkgray
+          p 
+            font-weight: 200
+            color: $dkgray
+
+
+
+#slideshow-panel
+  height: 600px
+  #gallery
+    padding: 1em 0em
+    margin-left: auto
+    margin-right: auto
+    height: 30em
+    //NAV
+    .nav
+      .direct .shop-type
+        color: $blue
+        font-weight: 700
+        display: inline-block
+        width: 12%
+        .shop-text
+          text-align: center
+          display: block
+        
+        &:hover
+          color: $orange
+        .thumbnail
+          display: inline-block
+        #thumbnail
+          display: inline-block
+
+      .previous
+        position: absolute
+        padding-top: 13em
+        left: 2em
+        .arrow
+          width: 1em
+          &:hover
+            opacity: 0.7
+
+      .next
+        position: absolute
+        padding-top: 13em
+        right: 2em
+        .arrow
+          width: 1em
+          &:hover
+            opacity: 0.7
+    

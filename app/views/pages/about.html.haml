@@ -4,7 +4,7 @@
 
 // Short-Break-Panel --------------------------------------------------*
 #short-break.lt-gray-bg.span_12_of_12
-	%h1.short-break.orange.centered.span_6_of_12 
+	%h1.short-break.orange.centered.span_10_of_12 
 		%span{:style => "font-weight: 700"} OUR VISION 
 		%span{:style => "font-weight: 200; font-size: .5em"}IS TO 
 		%span{:style => "font-weight: 700"}REVOLUTIONIZE 
@@ -18,47 +18,98 @@
 
 
 // Slideshow-Panel --------------------------------------------------*
-.content.lt-gray-bg
+#slideshow-panel.lt-gray-bg.span_12_of_12
 	#gallery.span_10_of_12
-		#photo.timeline-image.span_5_of_12
-			= image_tag "history1.jpg", :class => "thumbnail span_12_of_12"
-		%span.filler.span_1_of_12
-		#text.description-right.span_5_of_12
-			%h2 WHERE ARE THE WAFELS? 
-			%p Amsterdam native Rip Pruisken arrives at Brown University. Rip heads to the dining hall for koffietijd—a midmorning coffee break enjoyed with a warm wafel. Finding decent coffee but no wafels, Rip is horrified to learn that most America is without his favorite snack. 
+		.nav
+			%a.previous{:href => "#"}
+				= image_tag('about-page/previous_arrow.png', alt: "next", :class => "arrow")
+			%a.next{:href => "#"}
+				= image_tag('about-page/next_arrow.png', alt: "previous", :class => "arrow")
 
-	.main
-		#gallery.span_10_of_12
-			%a{:href => "#{asset_path 'history1.jpg'}", :id => 'this'}
-				#thumbnail-about1.span_1_of_12
-					= image_tag "history1.jpg", :class => "thumbnail span_12_of_12"
-					%p.title 2006
-			/
-			%a{:href => "#{asset_path 'history2.jpg'}", :id => 'this'}
-				#thumbnail-about.span_1_of_12
-					= image_tag "history2.jpg", :class => "thumbnail span_12_of_12"
-					%p.title 2009
-			/
-			%a{:href => "#{asset_path 'history3.jpg'}", :id => 'this'}
-				#thumbnail-about.span_1_of_12
-					= image_tag "history3.jpg", :class => "thumbnail span_12_of_12"
-					%p.title 2010
-			/
-			%a{:href => "#{asset_path 'history4.jpg'}", :id => 'this'}
-				#thumbnail-about.span_1_of_12
-					= image_tag "history4.jpg", :class => "thumbnail span_12_of_12"
-					%p.title 2011
-			/
-			%a{:href => "#{asset_path 'history5.jpg'}", :id => 'this'}
-				#thumbnail-about.span_1_of_12
-					= image_tag "history5.jpg", :class => "thumbnail span_12_of_12"
-					%p.title 20012
-			/
-			%a{:href => "#{asset_path 'history6.jpg'}", :id => 'this'}
-				#thumbnail-about.span_1_of_12
-					= image_tag "history6.jpg", :class => "thumbnail span_12_of_12"
-					%p.title 2013
-			/
+		.slide-deck
+			#A.slide.span_10_of_12{"data-position" => "1", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history1.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 WHERE ARE THE WAFELS?
+					%p Amsterdam native Rip Pruisken arrives at Brown University. Rip heads to the dining hall for koffietijd—a midmorning coffee break enjoyed with a warm wafel. Finding decent coffee but no wafels, Rip is horrified to learn that most America is without his favorite snack.
+
+			#B.slide.span_10_of_12{"data-position" => "2", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history2.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 STARTING OUT OF A DORM ROOM?
+					%p Three years  and 1,625 wafel-less koffietijds later, Rip’s had enough. He buys a waffle iron and begins pressing the first batch of homemade stroopwafels in his dorm. His cookies are inedible. Undeterred, he tries again...and again.
+			#C.slide.span_10_of_12{"data-position" => "3", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history3.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 VISITING WAFEL FACTORIES IN HOLLAND?
+					%p Rip visits Holland to learn from the wafel masters.
+
+			#D.slide.span_10_of_12{"data-position" => "4", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history4.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 FIRST SALE ON THE MAIN GREEN
+					%p Rip sets up shop on the campus Main Green and slings handmade wafels to kids on their way to class. One strange day in late April, hundreds of confused-looking students pour onto the quad clamoring for a bite. He can’t keep up with demand.
+			#E.slide.span_10_of_12{"data-position" => "5", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history5.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 WILLY WONKA ASSEMBLY LINE
+					%p After raising funds Rip recruits a group of engineering students to design an automated press that cranks out 150 wafels an hour. Rip Van Wafels is born.
+
+			#F.slide.span_10_of_12{"data-position" => "6", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history6.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 MARCO COMES BACK FROM BRAZIL
+					%p Enter Marco. Arriving from a semester abroad in Brazil, Marco is inspired to create something (lots of sun and caipirinhas had something to do with it).
+			#G.slide.span_10_of_12{"data-position" => "7", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history7.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 MARCO & RIP WIN THE BROWN BUSINESS PLAN COMPETITION
+					%p At a party in early February, Marco and Rip talk about joining forces to expand Rip van Wafels around the country. Together Rip and Marco enter and win the Brown Business Plan Competition and raise enough seed money to expand beyond College Hill. 
+
+			#H.slide.span_10_of_12{"data-position" => "8", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history8.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 HUSTLING AND GETTING THINGS OFF THE GROUND
+					%p Marco and Rip hustle Rip van Wafels around the country living solely off coffee and wafels. After many parking tickets, numerous couches surfed, and more than a handful of college parties, Rip van Wafels begins gaining notice.
+			#I.slide.span_10_of_12{"data-position" => "9", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history9.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 MOVING TO SF
+					%p Inspired by the coffee renaissance in Northern California, Rip Van Wafels relocates to to San Francisco. 
+
+			#J.slide.span_10_of_12{"data-position" => "10", "data-transition" => "horizontal"}
+				= image_tag( 'about-page/history/history10.jpg', alt: "history", :class => "slide-image span_5_of_12")
+				.filler.span_1_of_12
+				.slide-text.span_6_of_12
+					%h2 AND BEYOND...
+					%p Rip van Wafels is proudly stocked at coffee shops, offices, and specialty stores around the country. From Providence to Palo Alto, Americans learn that a short break goes a long way—one Rip van Wafel at a time.
+
+		.nav
+			%a.direct{:href => "#A"} 2006
+			
+			%a.direct{:href => "#B"} 2009
+			%a.direct{:href => "#C"} 2009
+			
+			%a.direct{:href => "#D"} 2010
+			%a.direct{:href => "#E"} 2010
+
+			%a.direct{:href => "#F"} 2011
+			%a.direct{:href => "#G"} 2011
+
+			%a.direct{:href => "#H"} 2012
+			%a.direct{:href => "#I"} 2012
+
+			%a.direct{:href => "#J"} 2013
+
 
 // Our-Team-Panel --------------------------------------------------*
 #team-panel.lt-gray-bg
@@ -95,5 +146,33 @@
 			= link_to "MARKETING REP", "https://podio.com/webforms/4934165/385560", :class =>"position-link", :target => "_blank"
 			= link_to "AMSTERDAM SAMPLING GIRL", "https://podio.com/webforms/4943834/386304", :class =>"position-link", :target => "_blank"
 			= link_to "CREATE YOUR OWN POSITION", "https://podio.com/webforms/4944012/386322", :class =>"position-link", :target => "_blank"
-	
+
+:javascript
+	$(document).ready(function () {
+		var $sections = $('.slide-deck .slide')
+
+		$sections.slideDeck({ speed: 1000 })
+
+		$('.nav a.direct').on('click', function(event) {
+		  event.preventDefault()
+		  var match = this.href.match(/#(.*)$/)
+		  $sections.change(match[1])
+		})
+
+		$('.nav a.previous').on('click', function(event) {
+		  event.preventDefault()
+		  $sections.previous()
+		})
+
+		$('.nav a.next').on('click', function(event) {
+		  event.preventDefault()
+		  $sections.next()
+		})
+
+		var $message = $('#message')
+
+		$sections.on('exited', function(event, incomming) {
+		  $message.html(this.id + ' has exited and was replaced by ' + incomming.id)
+		})
+	});
 
