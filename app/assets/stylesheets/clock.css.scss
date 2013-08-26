@@ -1,0 +1,155 @@
+body { 
+	font-size: 30px;
+}
+
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} { @content; }
+	@-moz-keyframes #{$name} { @content; }
+	@-o-keyframes #{$name} { @content; }
+	@keyframes #{$name} { @content; }
+}
+@mixin animation($val) {
+	@include experimental(animation, $val);
+}
+$clock-width: 10em;
+$clock-background-color: white;
+$clock-border-color: #ccc;
+/** Color de los indicadores de las 0,3,6 y 9 */
+$clock-indicator-color: darken($clock-border-color, 10%);
+/** Color de las agujas */
+$clock-pointer-color: darken($clock-border-color, 50%);
+
+$animation-timing: steps; // [steps|linear]
+.css-clock {
+	/** No usar el modelo de caja estándar de la w3c, usar el alternativo */
+	// @include box-sizing(border-box);
+
+	/** Necesario para posicionar los pseudoelementos y elementos internos correctamente */
+	position: relative;
+
+	width: $clock-width;
+	height: $clock-width;
+	border: .25em solid #ccc;
+	background: $clock-background-color;
+	@include border-radius($clock-width);
+
+	// Pequeño punto en el centro
+	@include background-image(radial-gradient(circle, $clock-pointer-color, $clock-pointer-color 3%, $clock-background-color 3%, $clock-background-color));
+	
+
+	// Los cuatro punteros de las 12, 3, 6 y 9
+	&::before,
+	&::after {
+		content: "";
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+	
+		/** su anchura será un 2.5% del reloj */
+		width: .025 * $clock-width;
+		height: $clock-width;
+
+		/** Centrado absoluto */
+		margin-top: - $clock-width / 2;
+		margin-left: - .025 * $clock-width / 2;
+
+		/** Aquí el truco: ocultamos lo que queremos con un gradiente de fondo*/
+		@include background-image(
+			// un círculo del color $clock-indicator-color del 75 al 90%
+			radial-gradient(circle, transparent, transparent 75%, $clock-indicator-color 75%, $clock-indicator-color 90%, transparent 90%, transparent)
+		);
+	}
+
+	/** Por defecto lo hemos hecho vertical, vamos a hacer el horizontal sólo con :after */
+	&::after {
+		@include transform(rotate(90deg));
+	}
+}
+
+[class*="css-clock-pointer-"] {
+	/** centrarlo */
+	position: absolute;
+	left: 50%;
+
+	/** Usamos bottom para centrar automáticamente hacia arriba */
+	bottom: 50%;
+
+	@include transform(rotate(0));
+	@include transform-origin(50%, 100%);
+	background: $clock-pointer-color;
+	z-index: 1;
+}
+
+/** Los segundos: serán más finos, y tendrá la correspondiente animación */
+.css-clock-pointer-seconds {
+	// 42,5% de altura
+	height: .425 * $clock-width;
+
+	width: .01 * $clock-width;
+	margin-left: -.01 * $clock-width / 2;
+
+	@if $animation-timing == steps {
+		// sólo incluiremos steps() en los segundos, para simular el efecto frecuente
+		// En el resto usaremos linear porque en el caso de los minutos queda feo (IMO), y las horas sería difícil verlas mover
+		@include animation(rotate 60s steps(60, end) infinite);
+	} @else {
+		@include animation(rotate 60s linear infinite);
+	}
+}
+
+.css-clock-pointer-minutes {
+	// 40% de altura
+	height: .4 * $clock-width;
+
+	width: .02 * $clock-width;
+	margin-left: -.02 * $clock-width / 2;
+
+		@include animation(rotate 3600s linear infinite);
+}
+.css-clock-pointer-hours {
+	// 35% de altura
+	height: .35 * $clock-width;
+
+	width: .025 * $clock-width;
+	margin-left: -.025 * $clock-width / 2;
+
+	@include animation(rotate (3600 * 24s) linear infinite);
+}
+
+@-moz-keyframes rotate {
+	from {
+		-moz-transform: rotate(0);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-o-keyframes rotate {
+	from {
+		-o-transform: rotate(0);
+	}
+	to {
+		-o-transform: rotate(360deg);
+	}
+}
+// ms y firefox 15+ soportan la estándar
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

@@ -22,12 +22,16 @@
 #wafel-panel.orange-bg.span_12_of_12
 
 	= image_tag( 'ingredient-icons.png', alt: "ingredients", :class => "ingredient-icons span_2_of_12")
+	%p.wafel-pattern.white WAFEL PATTERN (BAKED)
+	
 	.centered-wafel.span_6_of_12
-		%p.wafel-pattern WAFEL PATTERN (BAKED)
-		= image_tag( 'wafel-in-half.png', alt: "Learn More", :class => "wafel-in-half span_10_of_12")
-		%p.wafel-filling FILLING (CHEWY)
+		= image_tag( 'wafel-back.png', alt: "Learn More", :class => "wafel-in-half1 span_10_of_12")
+		= image_tag( 'wafel-front.png', alt: "Learn More", :class => "wafel-in-half2 span_10_of_12")
+	
+	%p.wafel-filling.white FILLING (CHEWY)
 
-	.centered.span_12_of_12
+
+	.centered.span_12_of_12.benefits
 		%h2.white.medium
 			%span{:style => "font-weight: 300"}Only 
 			%span{:style => "font-weight: 700"}150 
@@ -40,13 +44,15 @@
 #cup-panel.lt-gray-bg.span_12_of_12
 	%h2.explanation-text.dkgray WHEN YOUR COFFEE IS TOO HOT TO DRINK
 
-	.centered-cup.span_9_of_12
+	.centered-cup.span_8_of_12
 		#steam-big-cups.span_6_of_12
 			= render(:partial => "common/steam")
+			= image_tag( 'wafel-top1.png', alt: "wafel", :class => "wafel-top span_5_of_12")
 			= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup cup span_12_of_12")
 		%span.filler.span_1_of_12
 		#steam-big-cups.span_6_of_12
 			= render(:partial => "common/steam")
+			= image_tag( 'wafel-top2.png', alt: "wafel", :class => "wafel-top span_5_of_12")
 			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup cup span_12_of_12")
 		
 	%h2.explanation-text.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
@@ -62,21 +68,21 @@
 		%tr
 			%td.blue-bg{:style => "border-left: none"}
 				= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "clock")
-			%td.orange-bg
+			%td.animation-cell1.orange-bg
 				.animation-element.span_3_of_12
 					#steam-little-cups
 						= render(:partial => "common/steam")
 						= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "cup span_10_of_12")
 					%p.animation-text THE STEAM IS WARMING THE FILLING
 
-			%td.blue-bg
+			%td.animation-cell2.blue-bg
 				.animation-element.span_3_of_12
 					#steam-little-cups
 						= render(:partial => "common/steam")
 						= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "cup span_10_of_12")
 					%p.animation-text THE WAFEL IS CAPTURING THE AROMA
 
-			%td.orange-bg{:style => "border-right: none"}
+			%td.animation-cell3.orange-bg{:style => "border-right: none"}
 				.animation-element.span_3_of_12
 					#steam-little-cups
 						= render(:partial => "common/steam")
@@ -115,3 +121,55 @@
 		= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_2_of_12")
 		= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_2_of_12")
 		= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_2_of_12")
+
+:javascript
+	$(window).scroll(function(e) {
+		var scrollTop = $(window).scrollTop();
+			if (scrollTop > 450) {
+				$(".wafel-in-half1").addClass('move-left');
+				$(".wafel-in-half2").addClass('move-right');
+				$(".ingredient-icons").addClass('active');
+				$(".benefits").addClass('active');
+				$(".wafel-pattern").addClass('active');
+				$(".wafel-filling").addClass('active');
+			};
+			if (scrollTop > 1150) {
+				$(".wafel-top").addClass('move-top');
+				$(".explanation-text").addClass('active');
+			};
+			if (scrollTop > 1750) {
+				setTimeout(function() {  
+					$('.animation-cell1').removeClass('orange-bg').addClass('blue-bg'); 
+				}, 1000)
+				setTimeout(function() {  
+					$('.animation-cell2').removeClass('blue-bg').addClass('orange-bg'); 
+				}, 3000)
+				setTimeout(function() {  
+					$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
+				}, 5000)
+			};
+			if (scrollTop > 950) {
+				$(".wafel-in-half1").removeClass('move-left');
+				$(".wafel-in-half2").removeClass('move-right');
+				$(".ingredient-icons").removeClass('active');
+				$(".benefits").removeClass('active');
+				$(".wafel-pattern").removeClass('active');
+				$(".wafel-filling").removeClass('active');
+			};
+			if (scrollTop > 1750) {
+				$(".wafel-top").removeClass('move-top');
+				$(".explanation-text").removeClass('active');
+			};
+			if (scrollTop > 2100) {
+				setTimeout(function() {  
+					$('.animation-cell1').removeClass('blue-bg').addClass('orange-bg'); 
+				}, 1000)
+				setTimeout(function() {  
+					$('.animation-cell2').removeClass('orange-bg').addClass('blue-bg'); 
+				}, 3000)
+				setTimeout(function() {  
+					$('.animation-cell3').removeClass('blue-bg').addClass('orange-bg'); 
+				}, 5000)
+			};
+		}); 
+	(e)

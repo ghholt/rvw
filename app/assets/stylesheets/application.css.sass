@@ -249,23 +249,95 @@ html, body
 #wafel-panel
   padding: 2em 0
   margin-top: 1em
+  height: 600px
   
   .ingredient-icons
     float: right
     top: 0 
     right: 0
+    opacity: 0
+  .ingredient-icons.active
+    opacity: 1
+    -webkit-transition: all 2.5s ease
+    -o-transition: all 2.5s ease
+    -moz-transition: all 2.5s ease
+    transition: all 2.5s ease
+
+
+  .benefits 
+    position: absolute
+    bottom: 0 
+    opacity: 0
+  .benefits.active
+    opacity: 1
+    -webkit-transition: all 3.5s ease
+    -o-transition: all 3.5s ease
+    -moz-transition: all 3.5s ease
+    transition: all 3.5s ease
+
+  .wafel-pattern
+    position: absolute
+    margin-left: 20%
+    padding-top: 3em
+    opacity: 0
+  .wafel-pattern.active
+    opacity: 1
+    -webkit-transition: all 4.5s ease
+    -o-transition: all 4.5s ease
+    -moz-transition: all 4.5s ease
+    transition: all 4.5s ease
+
+  .wafel-filling
+    position: absolute
+    margin-left: 65%
+    padding-top: 30em
+    opacity: 0
+  .wafel-filling.active
+    opacity: 1
+    -webkit-transition: all 4.5s ease
+    -o-transition: all 4.5s ease
+    -moz-transition: all 4.5s ease
+    transition: all 4.5s ease
+
 
   .centered-wafel
-    position: relative
-    margin-left: auto
-    margin-right: auto
+    position: absolute
     display: block
+    margin-left: 35%
     color: white
     padding: 3em 0
 
+
+    .wafel-in-half1
+      top: 0 
+      position: absolute
+      height: 25em
+      width: 25em
+      padding-top: 5em
+
+    .wafel-in-half2
+      top: 0 
+      position: absolute
+      height: 25em
+      width: 25em
+      padding-top: 5em
+
+    .move-left
+      margin-left: -100px
+      -webkit-transition: all 1.5s ease
+      -o-transition: all 1.5s ease
+      -moz-transition: all 1.5s ease
+      transition: all 1.5s ease
+
+    .move-right
+      margin-left: 100px
+      -webkit-transition: all 1.5s ease
+      -o-transition: all 1.5s ease
+      -moz-transition: all 1.5s ease
+      transition: all 1.5s ease
+
+
     img.wafel-in-half
-      margin-left: auto
-      margin-right: auto
       display: block
 
     .wafel-pattern
@@ -290,6 +362,15 @@ html, body
   .explanation-text
     padding-left: 2em
     color: $dkgray
+    opacity: 0
+  .explanation-text.active
+    opacity: 1
+    -webkit-transition: all 4.5s ease
+    -o-transition: all 4.5s ease
+    -moz-transition: all 4.5s ease
+    transition: all 4.5s ease
+
+
 
   .centered-cup
     padding: 4em 0
@@ -297,15 +378,30 @@ html, body
     margin-left: auto
     margin-right: auto
     display: block
+    margin-top: 3em
+
+    .wafel-top
+      position: absolute
+      margin-left: 8%
+      top: -3em
+
+    .move-top
+      top: 2.5em
+      -webkit-transition: all 2.5s ease
+      -o-transition: all 2.5s ease
+      -moz-transition: all 2.5s ease
+      transition: all 2.5s ease
 
     .red-full-cup
       margin-right: 5em
+      margin-left: -5em
 
     .cup-padding
       display: inline-block
       height: 200px
 
     .red-half-cup
+      margin-left: -5em
 
   .learn-more
     position: absolute
@@ -321,6 +417,13 @@ html, body
     position: relative
     border-right: 0.3em solid white
     border-left: 0.3em solid white
+    .animation-cell1.activegs
+      margin: 0px
+      padding: 0px
+      background-image: url(backgrounds/break-panel.jpg)
+      background-size: 100%
+      background-repeat: repeat
+
     .animation-element
       width: 80%
       padding: 4em 1em 0em 1em
@@ -343,6 +446,7 @@ html, body
       font-size: 1.25em
       font-weight: 400
       color: white
+
 
 // Coffeeshop-Header-Panel --------------------------------------------------*
 #coffeeshop-header-panel
