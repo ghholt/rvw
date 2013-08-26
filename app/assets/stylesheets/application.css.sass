@@ -124,6 +124,12 @@ $orange: #ff6633
 .border-bottom
   border-bottom: thick double $blue
 
+.height600
+  height: 600px
+
+.height900
+  height: 900px
+
 html, body
   height: 100%
   width: 100%
@@ -1072,6 +1078,7 @@ html, body
     height: 30em
     //NAV
     .nav
+      padding: 2em 0
       .direct
         padding: 1.75em
         color: $blue
@@ -1135,14 +1142,16 @@ html, body
 
 
 #slideshow-panel
-  height: 600px
   #gallery
     padding: 1em 0em
     margin-left: auto
     margin-right: auto
-    height: 30em
+    height: 60em
+    overflow: hidden
     //NAV
     .nav
+      display: block
+      margin: auto auto
       .direct .shop-type
         color: $blue
         font-weight: 700
@@ -1158,22 +1167,3 @@ html, body
           display: inline-block
         #thumbnail
           display: inline-block
-
-      .previous
-        position: absolute
-        padding-top: 13em
-        left: 2em
-        .arrow
-          width: 1em
-          &:hover
-            opacity: 0.7
-
-      .next
-        position: absolute
-        padding-top: 13em
-        right: 2em
-        .arrow
-          width: 1em
-          &:hover
-            opacity: 0.7
-    
