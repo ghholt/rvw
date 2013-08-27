@@ -127,6 +127,9 @@ $orange: #ff6633
 .height600
   height: 600px
 
+.height850
+  height: 850px
+
 .height900
   height: 900px
 
@@ -359,18 +362,27 @@ html, body
   position: relative
   padding: 3em 0
 
-  .explanation-text
+  .explanation1-text
     padding-left: 2em
     color: $dkgray
     opacity: 0
-  .explanation-text.active
+  .explanation-text1.active
     opacity: 1
     -webkit-transition: all 4.5s ease
     -o-transition: all 4.5s ease
     -moz-transition: all 4.5s ease
     transition: all 4.5s ease
 
-
+  .explanation-text2
+    padding-left: 2em
+    color: $dkgray
+    opacity: 0
+  .explanation-text2.active
+    opacity: 1
+    -webkit-transition: all 4.5s ease
+    -o-transition: all 4.5s ease
+    -moz-transition: all 4.5s ease
+    transition: all 4.5s ease
 
   .centered-cup
     padding: 4em 0
@@ -1169,6 +1181,20 @@ html, body
   #product 
     display: inline-block
     vertical-align: top
+
+#coming-soon
+  display: block
+  margin-left: auto
+  margin-right: auto
+  #left
+    display: inline-block
+    .coming-soon
+      display: inline-block
+  #right
+    display: inline-block
+    float: right
+    .coming-soon
+      display: inline-block
 
 //---------------------------------------------------------------*
 // SLIDESHOWS  --------------------------------------------------*

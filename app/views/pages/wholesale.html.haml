@@ -10,24 +10,21 @@
 			= link_to image_tag( 'wholesale-page/wholesaler1.png', alt: "wholesaler", :class => "wholesaler span_12_of_12"), "https://podio.com/webforms/5238022/410474", :target => "_blank"
 			%h2.wholesale-title.span_12_of_12
 				DISTRIBUTOR
-				%br/
-				%span.wholesale-title{:style => "opacity: 0"} test
 						
 		%h2.or.span_2_of_12 OR
+
 		#distributor.span_5_of_12
 			= link_to image_tag( 'wholesale-page/wholesaler2.png', alt: "wholesaler", :class => "wholesaler span_12_of_12"), "https://podio.com/webforms/5238163/410473", :target => "_blank"
 			%h2.wholesale-title.span_12_of_12 
-				RETAIL/FOOD 
-				%br/
-				SERVICE PROVIDER 
+				RETAILER
 // locations-Panel --------------------------------------------------*
 #locations-panel.lt-gray-bg
 	.location-text.span_10_of_12
-		%h2.dkgray WE SUPPLY A NUMBER OF DISTRIBUTORS, RETAILERS AND FOOD PROVIDERS.
+		%h2.dkgray WE SUPPLY A NUMBER OF DISTRIBUTORS AND RETAILERS AROUND THE COUNTRY.
 		%h2.bold.dkgray HERE ARE SOME LOCATIONS THAT ARE A GOOD FIT:
 // Slideshow-Panel --------------------------------------------------*
 
-#slideshow-panel.lt-gray-bg.height900.span_12_of_12
+#slideshow-panel.lt-gray-bg.height850.span_12_of_12
 	#gallery
 		.nav.border-bottom.span_12_of_12
 			%a.direct.span_1_of_12{:href => "#A"} 
@@ -56,7 +53,7 @@
 					%p.shop-text OTHER
 				
 		.slide-deck.height800.span_10_of_12
-			#A.slide.span_10_of_12{"data-position" => "1", "data-transition" => "horizontal"}
+			#A.slide.span_12_of_12{"data-position" => "1", "data-transition" => "horizontal"}
 				= image_tag( 'wholesale-page/timeline/shop-1.jpg', alt: "history", :class => "slide-image span_5_of_12")
 				.filler.span_1_of_12
 				.slide-text.span_6_of_12
@@ -67,7 +64,7 @@
 					= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_3_of_12")
 					= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_3_of_12")
 
-			#B.slide.span_10_of_12{"data-position" => "2", "data-transition" => "horizontal"}
+			#B.slide.span_12_of_12{"data-position" => "2", "data-transition" => "horizontal"}
 				= image_tag( 'wholesale-page/timeline/shop-2.jpg', alt: "history", :class => "slide-image span_5_of_12")
 				.filler.span_1_of_12
 				.slide-text.span_6_of_12
@@ -78,7 +75,7 @@
 					= image_tag( 'wholesale-page/timeline/office-3.png', alt: "office", :class => "shop span_3_of_12")
 					= image_tag( 'wholesale-page/timeline/office-4.png', alt: "office", :class => "shop span_3_of_12")
 
-			#C.slide.span_10_of_12{"data-position" => "3", "data-transition" => "horizontal"}
+			#C.slide.span_12_of_12{"data-position" => "3", "data-transition" => "horizontal"}
 				= image_tag( 'wholesale-page/timeline/shop-3.jpg', alt: "history", :class => "slide-image span_5_of_12")
 				.filler.span_1_of_12
 				.slide-text.span_6_of_12
@@ -87,7 +84,7 @@
 					= image_tag( 'wholesale-page/timeline/specialty-1.png', alt: "specialty", :class => "shop span_3_of_12")
 					= image_tag( 'wholesale-page/timeline/specialty-2.png', alt: "specialty", :class => "shop span_3_of_12")
 
-			#D.slide.span_10_of_12{"data-position" => "4", "data-transition" => "horizontal"}
+			#D.slide.span_12_of_12{"data-position" => "4", "data-transition" => "horizontal"}
 				= image_tag( 'wholesale-page/timeline/shop-4.jpg', alt: "history", :class => "slide-image span_5_of_12")
 				.filler.span_1_of_12
 				.slide-text.span_6_of_12
@@ -98,14 +95,14 @@
 					= image_tag( 'wholesale-page/timeline/sport-3.png', alt: "sports", :class => "shop span_3_of_12")
 
 
-			#E.slide.span_10_of_12{"data-position" => "5", "data-transition" => "horizontal"}
+			#E.slide.span_12_of_12{"data-position" => "5", "data-transition" => "horizontal"}
 				= image_tag( 'wholesale-page/timeline/shop-5.jpg', alt: "history", :class => "slide-image span_5_of_12")
 				.filler.span_1_of_12
 				.slide-text.span_6_of_12
 					%h2 HOTELS
 					%p Rip van Wafels makes for a great complimentary hotel room item or mini bar snack.
 
-			#F.slide.span_10_of_12{"data-position" => "6", "data-transition" => "horizontal"}
+			#F.slide.span_12_of_12{"data-position" => "6", "data-transition" => "horizontal"}
 				= image_tag( 'wholesale-page/timeline/shop-6.jpg', alt: "history", :class => "slide-image span_5_of_12")
 				.filler.span_1_of_12
 				.slide-text.span_6_of_12
@@ -122,7 +119,7 @@
 	#learn
 	%h2.learn-text.blue.span_12_of_12
 		#learn.span_8_of_12
-			AND WOULD YOU LIKE TO LEARN MORE ABOUT OUR PRODUCT OFFERING, PRICING & LOGISTICS?
+			WOULD YOU LIKE TO LEARN MORE ABOUT OUR PRODUCT OFFERING, PRICING & LOGISTICS?
 			%br/
 			PLEASE FILL OUT THE 
 			= link_to "DISTRIBUTION", "https://podio.com/webforms/5238022/410474", :target => "_blank", :class => "wholesale-form"

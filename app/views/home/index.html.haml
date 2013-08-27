@@ -18,7 +18,6 @@
 	= render(:partial => "common/header")
 
 // Wafel-Panel --------------------------------------------------*
-/ TODO: add an animation here
 #wafel-panel.orange-bg.span_12_of_12
 
 	= image_tag( 'ingredient-icons.png', alt: "ingredients", :class => "ingredient-icons span_2_of_12")
@@ -40,9 +39,8 @@
 			%span{:style => "font-weight: 300"}INGREDIENTS
 
 // Cup-Panel --------------------------------------------------*
-/ TODO: add an animation here
 #cup-panel.lt-gray-bg.span_12_of_12
-	%h2.explanation-text.dkgray WHEN YOUR COFFEE IS TOO HOT TO DRINK
+	%h2.explanation-text1.dkgray WHEN YOUR COFFEE IS TOO HOT TO DRINK
 
 	.centered-cup.span_8_of_12
 		#steam-big-cups.span_6_of_12
@@ -53,20 +51,21 @@
 			= image_tag( 'wafel-top2.png', alt: "wafel", :class => "wafel-top span_5_of_12")
 			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup cup span_12_of_12")
 		
-	%h2.explanation-text.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
+	%h2.explanation-text2.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
 
 	.learn-more
 		= link_to image_tag( 'buttons/learn-more-button_off.png', alt: "home", :class => "header-logo img-swap span_8_of_12"), wafel_path
 
 // Break-Animation-Panel ----------------------------------------*
-/ TODO: add an animation here
-/ TODO: Finalize steam placement
 #break-animation-panel
 	%table#actual-table
 		%tr
 			%td.blue-bg{:style => "border-left: none"}
-				= image_tag( 'animation_panel/clock animation.gif', alt: "clock", :class => "clock")
-			%td.animation-cell1.orange-bg
+				.css-clock
+					.css-clock-pointer-seconds
+					.css-clock-pointer-minutes
+					.css-clock-pointer-hours
+			%td.animation-cell1.blue-bg
 				.animation-element.span_3_of_12
 					#steam-little-cups
 						= render(:partial => "common/steam")
@@ -80,7 +79,7 @@
 						= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "cup span_10_of_12")
 					%p.animation-text THE WAFEL IS CAPTURING THE AROMA
 
-			%td.animation-cell3.orange-bg{:style => "border-right: none"}
+			%td.animation-cell3.blue-bg{:style => "border-right: none"}
 				.animation-element.span_3_of_12
 					#steam-little-cups
 						= render(:partial => "common/steam")
@@ -109,16 +108,16 @@
 				= link_to image_tag( 'buttons/wholesale-button_off.png', alt: "home", :class => "header-logo img-swap span_12_of_12"), store_path
 			%h1.overlay-text.span_6_of_12 ENJOY AT A SHOP
 			= link_to image_tag( 'coffee-break-2.jpg', alt: "dutch-girl", :class => "dutch-girl"), wholesale_path
-// TODO: get the image here.
 
 // Coffeeshop-Footer-Panel --------------------------------------------------*
 #coffeeshop-footer-panel.lt-gray-bg.span_12_of_12
-	%h2.carriers.dkgray.span_12_of_12 SOME PLACES THAT CARRY US
+	%h2.carriers.dkgray.span_12_of_12 SELECTED CLIENTS
 	.panel-content.span_10_of_12
 		= image_tag( 'shop2.png', alt: "shop2", :class => "shop span_2_of_12")
 		= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_2_of_12")
 		= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_2_of_12")
 		= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_2_of_12")
+//remove coffee bar 
 
 :javascript
 	$(window).scroll(function(e) {
@@ -133,17 +132,24 @@
 			};
 			if (scrollTop > 1150) {
 				$(".wafel-top").addClass('move-top');
-				$(".explanation-text").addClass('active');
+				setTimeout(function() {  
+					$(".explanation-text1").addClass('active');
+				}, 1000)
+				setTimeout(function() {  
+					$(".explanation-text2").addClass('active');
+				}, 3000)
 			};
 			if (scrollTop > 1750) {
 				setTimeout(function() {  
-					$('.animation-cell1').removeClass('orange-bg').addClass('blue-bg'); 
+					$('.animation-cell1').removeClass('blue-bg').addClass('orange-bg'); 
 				}, 1000)
 				setTimeout(function() {  
+					$('.animation-cell1').removeClass('orange-bg').addClass('blue-bg');
 					$('.animation-cell2').removeClass('blue-bg').addClass('orange-bg'); 
 				}, 3000)
 				setTimeout(function() {  
-					$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
+					$('.animation-cell2').removeClass('orange-bg').addClass('blue-bg');
+					$('.animation-cell3').removeClass('blue-bg').addClass('orange-bg'); 
 				}, 5000)
 			};
 			if (scrollTop > 950) {
@@ -156,18 +162,15 @@
 			};
 			if (scrollTop > 1750) {
 				$(".wafel-top").removeClass('move-top');
-				$(".explanation-text").removeClass('active');
+				setTimeout(function() {
+					$(".explanation-text1").removeClass('active');
+					$(".explanation-text2").removeClass('active');
+				}, 1000)
 			};
 			if (scrollTop > 2100) {
 				setTimeout(function() {  
-					$('.animation-cell1').removeClass('blue-bg').addClass('orange-bg'); 
+					$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
 				}, 1000)
-				setTimeout(function() {  
-					$('.animation-cell2').removeClass('orange-bg').addClass('blue-bg'); 
-				}, 3000)
-				setTimeout(function() {  
-					$('.animation-cell3').removeClass('blue-bg').addClass('orange-bg'); 
-				}, 5000)
 			};
 		}); 
 	(e)

@@ -34,7 +34,7 @@
 						.cssanimations
 							.steam
 								= render(:partial => "common/steam")
-						= image_tag( 'product-page/drink-milk.png', alt: "drink", :class => "drink-image cup span_12_of_12")
+						= image_tag( 'product-page/drink-hot-chocolate.png', alt: "drink", :class => "drink-image cup span_12_of_12")
 						%span.drink-text{:style => "padding-left: 2em"} MILK
 
 					#drink.span_3_of_12
@@ -85,7 +85,7 @@
 					%h2.or.white.span_1_of_12 OR
 					#drink.span_6_of_12
 						= image_tag( 'product-page/chair.png', alt: "drink", :class => "drink-image span_12_of_12")
-						%span.drink-text SITTING DOWN
+						%span.drink-text CHILLING OUT
 
 // Header-Panel --------------------------------------------------*
 #header-panel.white-bg.span_12_of_12
@@ -182,17 +182,18 @@
 				#cocoa-panel.blue-bg.span_12_of_12
 					%h2.ingredient-text.span_12_of_12 COCOA
 
-
+//Can these highlight the others in that section. 
 
 // Header-Panel --------------------------------------------------*
 #nutrition-panel-header.white-bg.span_12_of_12
-	%h2.nutrition-text.span_12_of_12 MOUSE OVER A SNACK ON THE RIGHT TO SEE HOW WE COMPARE WITH EVERYDAY PRODUCTS YOU KNOW
+	%h2.nutrition-text.span_12_of_12 HOVER OVER A SNACK ON THE RIGHT TO SEE HOW WE COMPARE WITH EVERYDAY PRODUCTS YOU KNOW
 
 // Nutrition-Panel --------------------------------------------------*
 #nutrition-panel.span_10_of_12
 	#nutrition-column1.span_4_of_12
 		= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
-		%h3.nutrition-title Rip Van Wafels
+		%h3.nutrition-title 
+			= image_tag( 'rip-van-wafel-title.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
 		%p.nutrition-text CARAMEL FILLED
 	#nutrition-column2.span_4_of_12
 		#muffin
