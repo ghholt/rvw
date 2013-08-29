@@ -139,7 +139,7 @@ html, body
   text-decoration: none !important
 
 .cup
-  z-index: 999999
+  z-index: 999
 
 #steam
   display: inline-block
@@ -362,7 +362,7 @@ html, body
   position: relative
   padding: 3em 0
 
-  .explanation1-text
+  .explanation-text1
     padding-left: 2em
     color: $dkgray
     opacity: 0
@@ -423,12 +423,16 @@ html, body
 
 // Break-Animation-Panel --------------------------------------------------*
 #break-animation-panel
+  height: 28em
+  #actual-table
+    width: 100%
   #actual-table td  
     width: 20%  
     vertical-align: top
     position: relative
     border-right: 0.3em solid white
     border-left: 0.3em solid white
+    height: 28em
     .animation-cell1.activegs
       margin: 0px
       padding: 0px
@@ -443,6 +447,16 @@ html, body
       margin-left: auto
       margin-right: auto
       display: block
+      #steam-little-cups
+        #cup-steam
+          position: absolute
+          width: inherit
+          left: 60%
+        .animation-cup
+          position: absolute
+          left: 1em
+          top: 5em
+
     .clock
       width: 100%
       padding: 1em 1em 
@@ -458,6 +472,8 @@ html, body
       font-size: 1.25em
       font-weight: 400
       color: white
+      position: absolute
+      bottom: 1em
 
 
 // Coffeeshop-Header-Panel --------------------------------------------------*
@@ -580,10 +596,53 @@ html, body
   display: inline-block
   width: 100%
   #actual-table-enjoy
-  border-collapse: collapse 
+    border-collapse: collapse 
+    width: 100%
   #actual-table-enjoy td.one
     width: 25%
     border: 0.5em solid white
+    .way-to-eat1
+      margin-left: auto
+      margin-right: auto
+      display: block
+      position: absolute
+      z-index: 999
+      bottom: 4em
+    .enjoy-text1
+      color: $white
+      font-size: 2.5em
+      margin: 0 0
+      top: 2em
+      position: absolute
+
+    .way-to-eat2
+      margin-left: auto
+      margin-right: auto
+      display: block
+      position: absolute
+      z-index: 999
+      bottom: 0em
+    .enjoy-text2
+      color: $white
+      font-size: 2.5em
+      margin: 0 0
+      top: 1em
+      position: absolute
+
+    .way-to-eat3
+      position: absolute
+      z-index: 999
+      bottom: 0em
+      height: 17em
+      width: 17em
+      left: 2em
+    .enjoy-text3
+      color: $white
+      font-size: 2.5em
+      margin: 0 0
+      top: 1em
+      position: absolute
+
   #actual-table-enjoy td.two 
     width: 75% 
     padding: 10px 
@@ -591,77 +650,88 @@ html, body
     position: relative
     border: 0.5em solid white
     background-image: url(backgrounds/break-panel.jpg)
-
-    .animation-element
-      width: 80%
-      padding: 4em 1em 
-      margin-top: 3em
-      margin-left: auto
-      margin-right: auto
-      display: block
-
-    .or 
-      display: inline-block
-      text-align: right
-      vertical-align: top 
-      margin-top: 5em
-
-  .enjoy-text
-    color: $white
-    font-size: 2.5em
-    margin: 0 0
-
-  .left-enjoy
-    padding: 2em 0
-    // left: 0
-    display: inline-block
-    
-
-    .way-to-eat
-      margin-left: auto
-      margin-right: auto
-      display: block
-
-  .right-enjoy
-    padding: 2em 0em
-    right: 0
-    display: inline-block
-    float: right
-
-
-    .product-text
-      color: $white
-      font-weight: 300
-
-    .way-to-eat
-      margin-left: auto
-      margin-right: auto
-      display: block
+    height: 25em
 
     #drink
       display: inline-block
+      #steam-block-little-cups
+        position: absolute
+        width: inherit
+        top: 10em
+        #cup-steam
+          position: absolute
+          width: inherit
+          left: 60%
 
+      .right
+        right: 3em 
+      .left
+        left: 3em
       .drink-image
-        display: inline-block
-        margin-left: auto
-        margin-right: auto
+        top: 7em
+        position: absolute
+      .drink-image2
+        top: 5em
+        position: absolute
+        padding-left: 2em
+      .drink-image3
+        top: 4em
+        position: absolute
 
       .drink-text
         display: block
         color: $white
         text-align: center
         font-size: 1.2em
+        position: absolute
+        bottom: 1.5em
+        width: inherit
 
-    .warning-text
+      .dialog-box
+        position: absolute
+        bottom: 0.25em
+        font-size: 0.75em
+        right: 2em
+        color: white
+
+    .right-enjoy
+      padding: 2em 0em
+      right: 0
+      display: inline-block
       float: right
-      text-align: right
-      padding-right: 6em
-      color: white
-      font-size: 0.75em
-      padding-top: 1em
-      &:hover
-        opacity: 0.8
-        cursor: pointer
+
+    #dialog
+      position: absolute
+      .warning-text
+        color: white
+        font-size: 0.75em
+        padding-top: 1em
+
+        &:hover
+          opacity: 0.8
+          cursor: pointer
+
+    // .animation-element
+    //   width: 80%
+    //   padding: 4em 1em 
+    //   margin-top: 3em
+    //   margin-left: auto
+    //   margin-right: auto
+    //   display: block
+
+    .or 
+      display: inline-block
+      top: 7em
+      position: absolute
+      left: 52%
+
+  .left-enjoy
+    padding: 2em 0
+    // left: 0
+    display: inline-block
+    .product-text
+      color: $white
+      font-weight: 300
 
 
 // Ingredients-Panel --------------------------------------------------*
@@ -1196,6 +1266,39 @@ html, body
     .coming-soon
       display: inline-block
 
+.shopify-widget
+  display: block
+  margin-left: auto
+  margin-right: auto
+  padding-top: 3em
+  #product-form
+    .widget-captions
+      .widget-buttons 
+        input [type='submit']
+          cursor: pointer
+          margin: 0
+          padding: 10px 30px
+          font-weight: bold
+          font-size: 18px
+          border-radius: 0px
+          outline: 0
+          background: transparent
+          color: $dkgray
+          border: 3px solid $blue
+
+    .shopify-widget .widget-buttons input[type='submit']
+      cursor: pointer
+      margin: 0
+      padding: 10px 30px
+      font-weight: bold
+      font-size: 18px
+      border-radius: 0px
+      outline: 0
+      background: transparent
+      color: $dkgray
+      border: 3px solid $blue
+
+
 //---------------------------------------------------------------*
 // SLIDESHOWS  --------------------------------------------------*
 //---------------------------------------------------------------*
@@ -1220,7 +1323,7 @@ html, body
         padding-top: 13em
         left: 2em
         .arrow
-          width: 1em
+          width: 3em
           &:hover
             opacity: 0.7
 
@@ -1229,7 +1332,7 @@ html, body
         padding-top: 13em
         right: 2em
         .arrow
-          width: 1em
+          width: 3em
           &:hover
             opacity: 0.7
     //SLIDES

@@ -21,13 +21,13 @@
 #wafel-panel.orange-bg.span_12_of_12
 
 	= image_tag( 'ingredient-icons.png', alt: "ingredients", :class => "ingredient-icons span_2_of_12")
-	%p.wafel-pattern.white WAFEL PATTERN (BAKED)
+	%p.wafel-pattern.white BAKED WAFEL
 	
 	.centered-wafel.span_6_of_12
-		= image_tag( 'wafel-back.png', alt: "Learn More", :class => "wafel-in-half1 span_10_of_12")
-		= image_tag( 'wafel-front.png', alt: "Learn More", :class => "wafel-in-half2 span_10_of_12")
+		= image_tag( 'wafel-back.png', alt: "Learn More", :class => "wafel-in-half2 span_10_of_12")
+		= image_tag( 'wafel-front.png', alt: "Learn More", :class => "wafel-in-half1 span_10_of_12")
 	
-	%p.wafel-filling.white FILLING (CHEWY)
+	%p.wafel-filling.white CHEWY FILLING
 
 
 	.centered.span_12_of_12.benefits
@@ -60,7 +60,7 @@
 #break-animation-panel
 	%table#actual-table
 		%tr
-			%td.blue-bg{:style => "border-left: none"}
+			%td.orange-bg{:style => "border-left: none"}
 				.css-clock
 					.css-clock-pointer-seconds
 					.css-clock-pointer-minutes
@@ -68,26 +68,29 @@
 			%td.animation-cell1.blue-bg
 				.animation-element.span_3_of_12
 					#steam-little-cups
-						= render(:partial => "common/steam")
-						= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "cup span_10_of_12")
+						#cup-steam
+							= render(:partial => "common/steam")
+						= image_tag( 'animation_panel/white-half-cup-with-wafel.png', alt: "clock", :class => "cup animation-cup span_11_of_12")
 					%p.animation-text THE STEAM IS WARMING THE FILLING
 
 			%td.animation-cell2.blue-bg
 				.animation-element.span_3_of_12
 					#steam-little-cups
-						= render(:partial => "common/steam")
-						= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "cup span_10_of_12")
+						#cup-steam
+							= render(:partial => "common/steam")
+						= image_tag( 'animation_panel/white-half-cup-with-wafel2.png', alt: "clock", :class => "cup animation-cup span_11_of_12")
 					%p.animation-text THE WAFEL IS CAPTURING THE AROMA
 
 			%td.animation-cell3.blue-bg{:style => "border-right: none"}
 				.animation-element.span_3_of_12
 					#steam-little-cups
-						= render(:partial => "common/steam")
-						= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "cup span_10_of_12")
+						#cup-steam
+							= render(:partial => "common/steam")
+						= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "cup animation-cup span_11_of_12")
 					%p.animation-text
 						%span{:style => "opacity: 0"} test
 						%br/
-						%span{:style => "font-size: 1.25em"} READY
+						%span{:style => "font-size: 1.25em; left: 100%; position: absolute; bottom: 1.5em;"} READY
 
 // Coffeeshop-Header-Panel --------------------------------------*
 #coffeeshop-header-panel.lt-gray-bg.span_12_of_12
@@ -137,7 +140,7 @@
 				}, 1000)
 				setTimeout(function() {  
 					$(".explanation-text2").addClass('active');
-				}, 3000)
+				}, 2000)
 			};
 			if (scrollTop > 1750) {
 				setTimeout(function() {  
@@ -151,6 +154,9 @@
 					$('.animation-cell2').removeClass('orange-bg').addClass('blue-bg');
 					$('.animation-cell3').removeClass('blue-bg').addClass('orange-bg'); 
 				}, 5000)
+				setTimeout(function() {  
+					$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
+				}, 8000)
 			};
 			if (scrollTop > 950) {
 				$(".wafel-in-half1").removeClass('move-left');
@@ -170,7 +176,7 @@
 			if (scrollTop > 2100) {
 				setTimeout(function() {  
 					$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
-				}, 1000)
+				}, 0000)
 			};
 		}); 
 	(e)
