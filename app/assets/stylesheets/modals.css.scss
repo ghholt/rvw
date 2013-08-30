@@ -6,10 +6,15 @@
   display:none;
   top: 0;
 }
-  
+
+.window {
+  left: 25%;
+
+}
+
 #boxes .window {
   position:fixed;
-  width: 90%;
+  width: 75%;
   height: auto;
   display:none;
   z-index:999999;
@@ -18,7 +23,7 @@
 
 /* Customize your modal window here, you can add background image too */
 #boxes #dialog {
-  width: 70%; 
+  width: 50%; 
   height: 40em;
 }
 

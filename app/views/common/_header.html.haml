@@ -2,7 +2,11 @@
 #header.span_12_of_12
 	%ul.header-list
 		%li.nav.span_2_of_12
-			= link_to image_tag( 'rvw-logo_off.png', alt: "home", :class => "header-logo img-swap"), root_path
+			- if current_page?(root_path)
+				= link_to image_tag( 'rvw-logo_on.png', alt: "home", :class => "header-logo img-swap"), root_path
+			- else
+				= link_to image_tag( 'rvw-logo_off.png', alt: "home", :class => "header-logo img-swap"), root_path
+					
 		%li.nav.span_2_of_12
 			= link_to_active_class("WAFELS", 'current', wafel_path, class: 'span_2_of_12 medium header-nav')
 		%li.nav.span_2_of_12

@@ -221,7 +221,7 @@ html, body
   .insignia
     opacity: 0.7
     float: right
-    padding: 2em 3em
+    margin: 2em 3em
     position-relative
     width: 240px
     transform: rotate(15deg)
@@ -269,7 +269,7 @@ html, body
 
   .benefits 
     position: absolute
-    bottom: 0 
+    bottom: 1.5em 
     opacity: 0
   .benefits.active
     opacity: 1
@@ -433,12 +433,15 @@ html, body
     border-right: 0.3em solid white
     border-left: 0.3em solid white
     height: 28em
-    .animation-cell1.activegs
+    position: relative
+    .animation-cell1.active
       margin: 0px
       padding: 0px
       background-image: url(backgrounds/break-panel.jpg)
       background-size: 100%
       background-repeat: repeat
+    .animation-cell1
+      position: relative
 
     .animation-element
       width: 80%
@@ -447,11 +450,13 @@ html, body
       margin-left: auto
       margin-right: auto
       display: block
+      position: relative
       #steam-little-cups
         #cup-steam
           position: absolute
           width: inherit
           left: 60%
+          top: 6em
         .animation-cup
           position: absolute
           left: 1em
@@ -473,7 +478,7 @@ html, body
       font-weight: 400
       color: white
       position: absolute
-      bottom: 1em
+      bottom: -2em
 
 
 // Coffeeshop-Header-Panel --------------------------------------------------*
@@ -561,7 +566,7 @@ html, body
     padding-top: 1em
     padding-bottom: 5em
     .shop
-      padding: 0 2.5em
+      padding: 0 3.5em
       margin-left: auto
       margin-right: auto
 
@@ -584,7 +589,7 @@ html, body
 // Three-Ways-Panel --------------------------------------------------*
 #three-ways-panel
   border-top: thick double $blue
-  margin-top: 10px
+  margin-top: 1em
   .three-ways
     text-align: center
     font-weight: 700
@@ -595,24 +600,29 @@ html, body
   margin: 0.25em 0.25em 0.25em 0em
   display: inline-block
   width: 100%
+  position: relative
   #actual-table-enjoy
     border-collapse: collapse 
     width: 100%
+    position: relative
   #actual-table-enjoy td.one
     width: 25%
     border: 0.5em solid white
+    position: relative
+    .left-relative
+      position: relative
     .way-to-eat1
       margin-left: auto
       margin-right: auto
       display: block
       position: absolute
       z-index: 999
-      bottom: 4em
+      bottom: -8em
     .enjoy-text1
       color: $white
       font-size: 2.5em
-      margin: 0 0
-      top: 2em
+      margin: 1em 0
+      top: -5em
       position: absolute
 
     .way-to-eat2
@@ -621,26 +631,26 @@ html, body
       display: block
       position: absolute
       z-index: 999
-      bottom: 0em
+      bottom: -13em
     .enjoy-text2
       color: $white
       font-size: 2.5em
+      margin-top: -1em
       margin: 0 0
-      top: 1em
+      top: -6em
       position: absolute
 
     .way-to-eat3
       position: absolute
       z-index: 999
       bottom: 0em
-      height: 17em
-      width: 17em
-      left: 2em
+      left: 4.5em
+      top: -6em
     .enjoy-text3
       color: $white
       font-size: 2.5em
       margin: 0 0
-      top: 1em
+      top: -4em
       position: absolute
 
   #actual-table-enjoy td.two 
@@ -651,13 +661,36 @@ html, body
     border: 0.5em solid white
     background-image: url(backgrounds/break-panel.jpg)
     height: 25em
+    position: relative
+    
+    #text-titles
+      position: absolute
+      bottom: -18em
+      .drink-text
+        display: inline-block
+        text-align: center
+        font-size: 1.25em 
+        color: $white
+      #dialog
+        position: absolute
+        width: 75%
+        display: block
+      .warning-text
+        color: white
+        font-size: 0.75em
+        padding-top: 1em
+        text-align: right
+
+        &:hover
+          opacity: 0.8
+          cursor: pointer
 
     #drink
       display: inline-block
       #steam-block-little-cups
         position: absolute
         width: inherit
-        top: 10em
+        top: 9em
         #cup-steam
           position: absolute
           width: inherit
@@ -668,15 +701,16 @@ html, body
       .left
         left: 3em
       .drink-image
-        top: 7em
+        top: 5em
         position: absolute
       .drink-image2
-        top: 5em
+        top: 2em
         position: absolute
         padding-left: 2em
       .drink-image3
-        top: 4em
+        top: 2em
         position: absolute
+        padding-left: 6em
 
       .drink-text
         display: block
@@ -684,7 +718,7 @@ html, body
         text-align: center
         font-size: 1.2em
         position: absolute
-        bottom: 1.5em
+        bottom: 18em
         width: inherit
 
       .dialog-box
@@ -695,43 +729,27 @@ html, body
         color: white
 
     .right-enjoy
-      padding: 2em 0em
+      padding: 1em 0em
       right: 0
       display: inline-block
       float: right
-
-    #dialog
-      position: absolute
-      .warning-text
-        color: white
-        font-size: 0.75em
-        padding-top: 1em
-
-        &:hover
-          opacity: 0.8
-          cursor: pointer
-
-    // .animation-element
-    //   width: 80%
-    //   padding: 4em 1em 
-    //   margin-top: 3em
-    //   margin-left: auto
-    //   margin-right: auto
-    //   display: block
+      position: relative
 
     .or 
       display: inline-block
       top: 7em
       position: absolute
-      left: 52%
+      left: 55%
+      text-align: center
 
   .left-enjoy
     padding: 2em 0
-    // left: 0
     display: inline-block
+    position: relative
     .product-text
       color: $white
       font-weight: 300
+      padding: 1em 0
 
 
 // Ingredients-Panel --------------------------------------------------*
@@ -843,108 +861,115 @@ html, body
   display: block
   margin-left: auto
   margin-right: auto
-  #nutrition-column1
-    display: inline-block
-    vertical-align: top
-    .nutrient-image
-      display: block
-      margin-left: auto
-      margin-right: auto
-      padding-top: 10em
-    .nutrition-title
-      text-align: center
-      color: $blue
-      font-size: 2em
-      font-weight: 700
-
-    .nutrition-text
-      text-align: center
-      color: $blue
-
-  #nutrition-column2
-    display: inline-block
-    height: 100px
-    vertical-align: top
-
-    //Nutrition facts
-    #muffin
-      display: none
-      position: relative
+  #hover-section
+    display: block
+    margin-left: auto
+    margin-right: auto
+    #nutrition-column1
+      display: inline-block
       vertical-align: top
-
-    #muffin.active
-      display: block
-
-    #cake
-      display: none
-      position: relative
-      vertical-align: top
-
-    #cake.active
-      display: block
-
-    #croissant
-      display: none
-      position: relative
-      vertical-align: top
-
-    #croissant.active
-      display: block
-
-    #odwalla
-      display: none
-      position: relative
-      vertical-align: top
-
-    #odwalla.active
-      display: block
-
-    .nutrient-title
-      display: block
-      margin-left: auto
-      margin-right: auto
-      text-align: center
-      color: $blue
-    .nutrient-image
-      display: block
-      margin-left: auto
-      margin-right: auto
-
-  #nutrition-column3
-    display: inline-block
-    vertical-align: top
-    #nutrient1
       .nutrient-image
         display: block
         margin-left: auto
         margin-right: auto
-      .nutrient-title
+        padding-top: 10em
+      .nutrition-title
         text-align: center
         color: $blue
-    #nutrient2
+        font-size: 2em
+        font-weight: 700
+
+      .nutrition-text
+        text-align: center
+        color: $blue
+
+    #nutrition-column2
+      display: inline-block
+      height: 100px
+      vertical-align: top
+      font-size: 1.5em
+
+      //Nutrition facts
+      #muffin
+        display: none
+        position: relative
+        vertical-align: top
+
+      #muffin.active
+        display: block
+
+      #cake
+        display: none
+        position: relative
+        vertical-align: top
+
+      #cake.active
+        display: block
+
+      #croissant
+        display: none
+        position: relative
+        vertical-align: top
+
+      #croissant.active
+        display: block
+
+      #odwalla
+        display: none
+        position: relative
+        vertical-align: top
+
+      #odwalla.active
+        display: block
+
+      .nutrient-title
+        display: block
+        margin-left: auto
+        margin-right: auto
+        text-align: center
+        color: $blue
+        padding-top: 1.5em
+
       .nutrient-image
         display: block
         margin-left: auto
         margin-right: auto
-      .nutrient-title
-        text-align: center
-        color: $blue
-    #nutrient3
-      .nutrient-image
-        display: block
-        margin-left: auto
-        margin-right: auto
-      .nutrient-title
-        text-align: center
-        color: $blue
-    #nutrient4
-      .nutrient-image
-        display: block
-        margin-left: auto
-        margin-right: auto
-      .nutrient-title
-        text-align: center
-        color: $blue
+
+    #nutrition-column3
+      display: inline-block
+      vertical-align: top
+      #nutrient1
+        .nutrient-image
+          display: block
+          margin-left: auto
+          margin-right: auto
+        .nutrient-title
+          text-align: center
+          color: $blue
+      #nutrient2
+        .nutrient-image
+          display: block
+          margin-left: auto
+          margin-right: auto
+        .nutrient-title
+          text-align: center
+          color: $blue
+      #nutrient3
+        .nutrient-image
+          display: block
+          margin-left: auto
+          margin-right: auto
+        .nutrient-title
+          text-align: center
+          color: $blue
+      #nutrient4
+        .nutrient-image
+          display: block
+          margin-left: auto
+          margin-right: auto
+        .nutrient-title
+          text-align: center
+          color: $blue
 
 // About Page --------------------------------------------------*
 //TODO: Refactor to new stylesheet
@@ -989,6 +1014,7 @@ html, body
         display: block
         margin: 0 auto
         height: 15em
+        background-image: url(location.jpg)
     #location-panel-right
       display: inline-block
       vertical-align: top
@@ -1170,6 +1196,7 @@ html, body
         display: block
         font-weight: 700
         color: $dkgray
+        padding-top: 1em
     .wholesaler
       margin-right: auto
       margin-left: auto
@@ -1323,7 +1350,7 @@ html, body
         padding-top: 13em
         left: 2em
         .arrow
-          width: 3em
+          width: 2em
           &:hover
             opacity: 0.7
 
@@ -1332,7 +1359,7 @@ html, body
         padding-top: 13em
         right: 2em
         .arrow
-          width: 3em
+          width: 2em
           &:hover
             opacity: 0.7
     //SLIDES
@@ -1365,6 +1392,7 @@ html, body
         .slide-text
           display: inline-block
           vertical-align: top
+          margin-top: 5%
           h2 
             font-weight: 700
             color: $dkgray
@@ -1385,6 +1413,10 @@ html, body
     .nav
       display: block
       margin: auto auto
+      #shop-types
+        display: block
+        margin-left: auto
+        margin-right: auto
       .direct .shop-type
         color: $blue
         font-weight: 700

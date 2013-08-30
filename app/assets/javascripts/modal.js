@@ -9,6 +9,9 @@ $(document).ready(function() {
         //Get the screen height and width
         var maskHeight = $(document).height();
         var maskWidth = $(window).width();
+
+        $('iframe#video-id').attr('src','http://player.vimeo.com/video/72865676?autoplay=1');
+
     
         //Set height and width to mask to fill up the whole screen
         $('#mask').css({'width':maskWidth,'height':maskHeight});
@@ -35,12 +38,16 @@ $(document).ready(function() {
         //Cancel the link behavior
         e.preventDefault();
         $('#mask, .window').hide();
+
+        $('iframe#video-id').attr('src','');
     });        
     
     //if mask is clicked
     $('#mask').click(function () {
         $(this).hide();
         $('.window').hide();
+
+        $('iframe#video-id').attr('src','');
     });            
     
 });

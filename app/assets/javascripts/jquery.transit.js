@@ -595,7 +595,10 @@
 
       set: function(elem, value) {
         var t = $(elem).css('transform') || new Transform();
-        t.setFromString(prop, value);
+
+        try {
+            t.setFromString(prop, value);
+        } catch (e) {}
 
         $(elem).css({ transform: t });
       }

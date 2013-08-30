@@ -10,7 +10,7 @@
 #boxes
 	#dialog.window
 		%a.close{:href => "#"} Close
-		%iframe{:allowfullscreen => "", :frameborder => "0", :height => "100%", :mozallowfullscreen => "", :src => "//player.vimeo.com/video/72865676", :webkitallowfullscreen => "", :width => "100%"}
+		%iframe#video-id{:allowfullscreen => "", :frameborder => "0", :height => "490px", :mozallowfullscreen => "", :src => "", :webkitallowfullscreen => "", :width => "100%"}
 	#mask
 
 // Header-Panel --------------------------------------------------*	
@@ -46,10 +46,9 @@
 		#steam-big-cups.span_6_of_12
 			= image_tag( 'wafel-top1.png', alt: "wafel", :class => "wafel-top span_5_of_12")
 			= image_tag( 'red-full-cup.png', alt: "red-full-cup", :class => "red-full-cup cup span_12_of_12")
-		%span.filler.span_1_of_12
 		#steam-big-cups.span_6_of_12
-			= image_tag( 'wafel-top2.png', alt: "wafel", :class => "wafel-top span_5_of_12")
-			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup cup span_12_of_12")
+			= image_tag( 'wafel-top2.png', alt: "wafel", :class => "wafel-top span_5_of_12", :style => "padding-left: 4em")
+			= image_tag( 'red-half-cup.png', alt: "red-half-cup", :class => "red-half-cup cup span_12_of_12", :style => "padding-left: 4em")
 		
 	%h2.explanation-text2.dkgray HEAT YOUR WAFEL WHILE YOU WAIT FOR YOUR COFFEE TO COOL DOWN
 
@@ -87,10 +86,10 @@
 						#cup-steam
 							= render(:partial => "common/steam")
 						= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "cup animation-cup span_11_of_12")
-					%p.animation-text
-						%span{:style => "opacity: 0"} test
+					%p.animation-text 
+						%span{:style => "opacity: 0"} THE WAFEL IS CAPTURING 
 						%br/
-						%span{:style => "font-size: 1.25em; left: 100%; position: absolute; bottom: 1.5em;"} READY
+						%span{:style => "font-size: 1.25em;"} READY
 
 // Coffeeshop-Header-Panel --------------------------------------*
 #coffeeshop-header-panel.lt-gray-bg.span_12_of_12
@@ -115,11 +114,10 @@
 // Coffeeshop-Footer-Panel --------------------------------------------------*
 #coffeeshop-footer-panel.lt-gray-bg.span_12_of_12
 	%h2.carriers.dkgray.span_12_of_12 SELECTED CLIENTS
-	.panel-content.span_10_of_12
-		= image_tag( 'shop2.png', alt: "shop2", :class => "shop span_2_of_12")
-		= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_2_of_12")
-		= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_2_of_12")
-		= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_2_of_12")
+	.panel-content.span_8_of_12
+		= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_3_of_12")
+		= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_3_of_12")
+		= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_3q_of_12")
 //remove coffee bar 
 
 :javascript
@@ -137,10 +135,10 @@
 				$(".wafel-top").addClass('move-top');
 				setTimeout(function() {  
 					$(".explanation-text1").addClass('active');
-				}, 1000)
+				}, 0000)
 				setTimeout(function() {  
 					$(".explanation-text2").addClass('active');
-				}, 2000)
+				}, 1000)
 			};
 			if (scrollTop > 1750) {
 				setTimeout(function() {  
@@ -156,9 +154,9 @@
 				}, 5000)
 				setTimeout(function() {  
 					$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
-				}, 8000)
+				}, 6000)
 			};
-			if (scrollTop > 950) {
+			if (scrollTop > 1350) {
 				$(".wafel-in-half1").removeClass('move-left');
 				$(".wafel-in-half2").removeClass('move-right');
 				$(".ingredient-icons").removeClass('active');
@@ -173,10 +171,8 @@
 					$(".explanation-text2").removeClass('active');
 				}, 1000)
 			};
-			if (scrollTop > 2100) {
-				setTimeout(function() {  
-					$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
-				}, 0000)
+			if (scrollTop > 2000) {
+
 			};
 		}); 
 	(e)
