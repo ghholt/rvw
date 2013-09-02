@@ -115,12 +115,14 @@
 #coffeeshop-footer-panel.lt-gray-bg.span_12_of_12
 	%h2.carriers.dkgray.span_12_of_12 SELECTED CLIENTS
 	.panel-content.span_8_of_12
-		= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_3_of_12")
-		= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_3_of_12")
-		= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_3q_of_12")
+		.shops-row.span_10_of_12
+			= image_tag( 'shop3.png', alt: "shop3", :class => "shop span_4_of_12")
+			= image_tag( 'shop5.png', alt: "shop5", :class => "shop span_4_of_12")
+			= image_tag( 'shop6.png', alt: "shop6", :class => "shop span_4_of_12")
 //remove coffee bar 
 
 :javascript
+	var animationThreeStartedOnce = false;
 	$(window).scroll(function(e) {
 		var scrollTop = $(window).scrollTop();
 			if (scrollTop > 450) {
@@ -140,22 +142,6 @@
 					$(".explanation-text2").addClass('active');
 				}, 1000)
 			};
-			if (scrollTop > 1750) {
-				setTimeout(function() {  
-					$('.animation-cell1').removeClass('blue-bg').addClass('orange-bg'); 
-				}, 1000)
-				setTimeout(function() {  
-					$('.animation-cell1').removeClass('orange-bg').addClass('blue-bg');
-					$('.animation-cell2').removeClass('blue-bg').addClass('orange-bg'); 
-				}, 2000)
-				setTimeout(function() {  
-					$('.animation-cell2').removeClass('orange-bg').addClass('blue-bg');
-					$('.animation-cell3').removeClass('blue-bg').addClass('orange-bg'); 
-				}, 3000)
-				setTimeout(function() {  
-					$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
-				}, 4000)
-			};
 			if (scrollTop > 1350) {
 				$(".wafel-in-half1").removeClass('move-left');
 				$(".wafel-in-half2").removeClass('move-right');
@@ -174,5 +160,29 @@
 			if (scrollTop > 2000) {
 
 			};
+			if ((scrollTop > 1800) && (scrollTop < 1900)) {
+				animationThreeStartedOnce = true;
+				if (animationThreeStartedOnce = true) {
+
+					setTimeout(function() {  
+						$('.animation-cell1').removeClass('blue-bg').addClass('orange-bg'); 
+					}, 1000)
+					setTimeout(function() {  
+						$('.animation-cell1').removeClass('orange-bg').addClass('blue-bg');
+						$('.animation-cell2').removeClass('blue-bg').addClass('orange-bg'); 
+					}, 2000)
+					setTimeout(function() {  
+						$('.animation-cell2').removeClass('orange-bg').addClass('blue-bg');
+						$('.animation-cell3').removeClass('blue-bg').addClass('orange-bg'); 
+					}, 3000)
+					setTimeout(function() {  
+						$('.animation-cell3').removeClass('orange-bg').addClass('blue-bg'); 
+					}, 4000)
+					setTimeout(function() {  
+						animationThreeStartedOnce = false; 
+					}, 4500)
+				}
+			};
 		}); 
 	(e)
+

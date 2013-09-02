@@ -6,112 +6,18 @@
 	%h2.three-ways.span_12_of_12 THREE WAYS OF ENJOYING A RIP VAN WAFEL
 
 // Threeways to enjoy Panel ----------------------------------------*
-#enjoy-panel
-	%table#actual-table-enjoy
-		%tr
-			%td.one.orange-bg
-				.left-relative
-					%h2.enjoy-text1.white.centered.span_12_of_12 TOP
-					= render(:partial => "common/steam", :class => "steam-partial")
-					= image_tag( 'product-page/eat-cup.png', alt: "way-to-eat", :class => "way-to-eat1 span_11_of_12")
-			%td.two
-				.right-enjoy.blue-bg.span_12_of_12
-					%h3.product-text.white.centered.span_12_of_12 FOR BEVERAGES THAT ARE TOO HOT TO DRINK AND DON'T HAVE A FROTH LAYER
-					#drink.span_3_of_12
-						#steam-block-little-cups
-							.cssanimations
-								.steam
-									= render(:partial => "common/steam")
-						= image_tag( 'product-page/drink-coffee.png', alt: "drink", :class => "drink-image cup span_3_of_12")
-
-					#drink.span_3_of_12
-						#steam-block-little-cups
-							.cssanimations
-								.steam
-									= render(:partial => "common/steam")
-						= image_tag( 'product-page/drink-tea.png', alt: "drink", :class => "drink-image cup span_3_of_12")
-
-					#drink.span_3_of_12
-						#steam-block-little-cups
-							.cssanimations
-								.steam
-									= render(:partial => "common/steam")
-						= image_tag( 'product-page/drink-hot-chocolate.png', alt: "drink", :class => "drink-image cup span_3_of_12")
-
-					#drink.span_3_of_12
-						#steam-block-little-cups
-							.cssanimations
-								.steam
-									= render(:partial => "common/steam")
-						= image_tag( 'product-page/drink-hot-cider.png', alt: "drink", :class => "drink-image cup span_3_of_12")
-						
-					
-					#text-titles.span_12_of_12
-						%span.drink-text.span_3_of_12 COFFEE/AMERICANO
-						%span.drink-text.span_3_of_12 TEA
-						%span.drink-text.span_3_of_12 MILK / HOT CHOCOLATE
-						%span.drink-text.span_3_of_12 HOT CIDER
-						%a{:href => "#dialog", :name => "modal", :class => "dialog-box"}
-							%p.warning-text.span_11_of_12 DON'T SIT YOUR WAFEL TOO LONG
-
-		%tr
-			%td.one.orange-bg
-				.left-relative
-					%h2.enjoy-text2.white.centered.span_12_of_12{:style => "margin-top: 1em"} DIP
-					= render(:partial => "common/steam")
-					= image_tag( 'product-page/eat-dip.png', alt: "way-to-eat", :class => "way-to-eat2 span_10_of_12")
-			%td.two
-				.right-enjoy.blue-bg.span_12_of_12
-					%h3.product-text.white.centered.span_12_of_12{:style => "margin-top: 0em"} FOR ALL HOT BEVERAGES
-					#drink.span_4_of_12
-						#steam-block-little-cups
-							.cssanimations
-								.steam
-									= render(:partial => "common/steam")
-						= image_tag( 'product-page/drink-espresso-dip.png', alt: "drink", :class => "drink-image2 cup span_3_of_12", :style => "padding-left: 4em")
-					
-					#drink.span_4_of_12
-						#steam-block-little-cups
-							.cssanimations
-								.steam
-									= render(:partial => "common/steam")
-						= image_tag( 'product-page/drink-mocha-dip.png', alt: "drink", :class => "drink-image2 cup span_3_of_12")
-					
-					#drink.span_4_of_12
-						#steam-block-little-cups
-							.cssanimations
-								.steam
-									= render(:partial => "common/steam")
-						= image_tag( 'product-page/drink-cappuccino-dip.png', alt: "drink", :class => "drink-image2 cup span_3_of_12")
-
-					#text-titles.span_12_of_12
-						%span.drink-text.span_4_of_12 ESPRESSO
-						%span.drink-text.span_4_of_12 MOCHA
-						%span.drink-text.span_4_of_12 CAPPUCCINO/LATTE
-
-		%tr
-			%td.one.orange-bg
-				.left-relative
-					%h2.enjoy-text3.white.centered.span_12_of_12 SNACK
-					= image_tag( 'product-page/eat-bite.png', alt: "way-to-eat", :class => "way-to-eat3 span_8_of_12")
-			%td.two
-				.right-enjoy.blue-bg.span_12_of_12
-					#drink.span_5_of_12
-						= image_tag( 'product-page/bike.png', alt: "drink", :class => "drink-image3 left span_5_of_12")
-					%h2.or.white.span_1_of_12 OR
-					#drink.span_6_of_12
-						= image_tag( 'product-page/chair.png', alt: "drink", :class => "drink-image3 right span_5_of_12")
-					#text-titles.span_12_of_12{:style => "bottom: -20em"}
-						%span.drink-text.span_6_of_12 ON THE RUN
-						%span.drink-text.span_6_of_12 CHILLING OUT
+= render(:partial => "common/wafels")
 
 // Header-Panel --------------------------------------------------*
 #header-panel.white-bg.span_12_of_12
 	.headline.span_12_of_12
 		%h2.mission-text.span_10_of_12 
 			WE BELIEVE TAKING A QUALITY BREAK ALSO MEANS INDULGING RESPONSIBLY. 
-			EACH RIP VAN WAFEL IS ONLY 
-			%span{:style => "font-weight: 700"}150 CALORIES. 
+			EACH RIP VAN WAFEL CONTAINS ONLY 
+			%span{:style => "font-weight: 700"}8g* OF SUGAR
+			AND IS ONLY 
+			%span{:style => "font-weight: 700"}150 CALORIES 
+			%br/
 			%br/
 			%span{:style => "font-weight: 700"} RIP VAN WAFELS ARE CRAFTED WITH QUALITY INGREDIENTS:
 
@@ -199,17 +105,17 @@
 //Can these highlight the others in that section. 
 
 // Header-Panel --------------------------------------------------*
-#nutrition-panel-header.white-bg.span_12_of_12
+#nutrition-panel-header.white-bg.span_10_of_12
 	%h2.nutrition-text.span_12_of_12 HOVER OVER A SNACK ON THE RIGHT TO SEE HOW WE COMPARE WITH EVERYDAY PRODUCTS YOU KNOW
 
 // Nutrition-Panel --------------------------------------------------*
 #nutrition-panel.lt-gray-bg.span_12_of_12
 	#hover-section.span_9_of_12
 		#nutrition-column1.span_4_of_12
-			= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
-			%h3.nutrition-title 
-				= image_tag( 'rip-van-wafel-title.png', alt: "nutrient-fact", :class => "span_8_of_12")
-			%p.nutrition-text CARAMEL FILLED
+			= image_tag( 'product-page/rvw.png', alt: "nutrient-fact", :class => "nutrient-image span_12_of_12")
+	
+			= image_tag( 'rip-van-wafel-title.png', alt: "nutrient-fact", :class => "nutrient-image span_8_of_12")
+			%p.nutrition-text CARAMEL FILLED*
 		#nutrition-column2.span_4_of_12
 			#muffin
 				%p.nutrient-title.span_8_of_12 CALORIES

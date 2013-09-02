@@ -3,7 +3,7 @@
 	%ul.header-list
 		%li.nav.span_2_of_12
 			- if current_page?(root_path)
-				= link_to image_tag( 'rvw-logo_on.png', alt: "home", :class => "header-logo img-swap"), root_path
+				= link_to image_tag( 'rvw-logo_on.png', alt: "home", :class => "header-logo"), root_path
 			- else
 				= link_to image_tag( 'rvw-logo_off.png', alt: "home", :class => "header-logo img-swap"), root_path
 					

@@ -1,0 +1,75 @@
+#enjoy-panel-1
+	%table#enjoy-table
+		%tr
+			%td.one.orange-bg.span_3_of_12
+				%h2.title-text-one.white.span_12_of_12 TOP
+				#title-steam
+					= render(:partial => "common/steam", :class => "steam-partial")
+				= image_tag( 'product-page/eat-cup.png', alt: "way-to-eat", :id => "title-cup", :class => "span_11_of_12")
+			%td.two.blue-bg.span_9_of_12
+				%h3.title-text-two.white FOR BEVERAGES THAT ARE TOO HOT TO DRINK AND DON'T HAVE A FROTH LAYER
+				#steam
+					.steam-1.span_3_of_12
+						= render(:partial => "common/steam")
+					.steam-1.span_3_of_12
+						= render(:partial => "common/steam")
+					.steam-1.span_3_of_12
+						= render(:partial => "common/steam")
+					.steam-1.span_3_of_12
+						= render(:partial => "common/steam")
+				#cup
+					= image_tag( 'product-page/drink-coffee.png', alt: "drink", :class => "span_3_of_12")
+					= image_tag( 'product-page/drink-tea.png', alt: "drink", :class => "span_3_of_12")
+					= image_tag( 'product-page/drink-hot-chocolate.png', alt: "drink", :class => "span_3_of_12")
+					= image_tag( 'product-page/drink-hot-cider.png', alt: "drink", :class => "span_3_of_12")
+				#caption
+					%span.caption-1.white.span_3_of_12 COFFEE/AMERICANO
+					%span.caption-1.white.span_3_of_12 TEA
+					%span.caption-1.white.span_3_of_12 MILK / HOT CHOCOLATE
+					%span.caption-1.white.span_3_of_12 HOT CIDER
+#enjoy-panel-2
+	%table#enjoy-table
+		%tr
+			%td.one.orange-bg.span_3_of_12
+				%h2.title-text-one.white.span_12_of_12 DIP
+				#title-steam
+					= render(:partial => "common/steam", :class => "steam-partial")
+				= image_tag( 'product-page/eat-dip.png', alt: "way-to-eat", :id => "title-cup", :class => "span_11_of_12")
+			%td.two.blue-bg.span_9_of_12
+				%h3.title-text-two.white FOR ALL HOT BEVERAGES
+				#steam
+					.steam-1.span_4_of_12
+						= render(:partial => "common/steam")
+					.steam-1.span_4_of_12
+						= render(:partial => "common/steam")
+					.steam-1.span_4_of_12
+						= render(:partial => "common/steam")
+				#cup
+					= image_tag( 'product-page/drink-espresso-dip.png', alt: "drink", :class => "span_4_of_12")
+					= image_tag( 'product-page/drink-mocha-dip.png', alt: "drink", :class => "span_4_of_12")
+					= image_tag( 'product-page/drink-cappuccino-dip.png', alt: "drink", :class => "span_4_of_12")
+				#caption
+					%span.caption-1.white.span_4_of_12 ESPRESSO
+					%span.caption-1.white.span_4_of_12 MOCHA
+					%span.caption-1.white.span_4_of_12 CAPPUCCINO/LATTE
+
+#enjoy-panel-3
+	%table#enjoy-table
+		%tr
+			%td.one.orange-bg.span_3_of_12
+				%h2.title-text-one.white.span_12_of_12 SNACK
+				= image_tag( 'product-page/eat-bite.png', alt: "way-to-eat", :class => "span_12_of_12")
+			%td.two.blue-bg.span_9_of_12
+				#cup
+					%span.block.span_1_of_12
+					= image_tag( 'product-page/bike.png', alt: "drink", :class => "span_5_of_12")
+					%h2.or.white.centered.span_1_of_12 OR
+					= image_tag( 'product-page/chair.png', alt: "drink", :class => "span_5_of_12")
+				#caption
+					%span.caption-1.white.span_6_of_12 ON THE RUN
+					%span.caption-1.white.span_6_of_12 CHILLING OUT
+
+
+
+						
+
