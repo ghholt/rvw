@@ -8,9 +8,9 @@
 
 /Video Modal
 #boxes
-	#dialog.window
+	#dialog.window{:style => "left: 5%, height: 40em"}
 		%a.close{:href => "#"} Close
-		%iframe#video-id{:allowfullscreen => "", :frameborder => "0", :height => "490px", :mozallowfullscreen => "", :src => "", :webkitallowfullscreen => "", :width => "100%"}
+		%iframe#video-id{:allowfullscreen => "", :frameborder => "0", :height => "615px", :mozallowfullscreen => "", :src => "", :webkitallowfullscreen => "", :width => "100%"}
 	#mask
 
 // Header-Panel --------------------------------------------------*	
@@ -87,12 +87,12 @@
 							= render(:partial => "common/steam")
 						= image_tag( 'animation_panel/white-half-cup-with-wafel3.png', alt: "clock", :class => "cup animation-cup span_11_of_12")
 					%p.animation-text 
-						%span{:style => "opacity: 0"} THE WAFEL IS CAPTURING 
-						%br/
 						%span{:style => "font-size: 1.25em;"} READY
+						%br/
+						%span{:style => "opacity: 0"} THE WAFEL IS CAPTURING 
 
 // Coffeeshop-Header-Panel --------------------------------------*
-#coffeeshop-header-panel.lt-gray-bg.span_12_of_12
+#coffeeshop-header-panel.white-bg.span_12_of_12
 	.panel-content.span_12_of_12
 		%h1.coffeeshop-text.dkgray.span_12_of_12 WE BELIEVE A SHORT BREAK GOES A LONG WAY
 
@@ -100,14 +100,10 @@
 #coffeeshop-panel.lt-gray-bg.span_12_of_12
 	.coffeeshop-images
 		.left-panel.lt-gray-bg.span_6_of_12
-			.shop-button
-				= link_to image_tag( 'buttons/shop-online-button_off.png', alt: "home", :class => "header-logo img-swap span_12_of_12"), store_path
 			%h1.overlay-text.span_6_of_12 ENJOY AT HOME
 			= link_to image_tag( 'coffee-break-1.jpg', alt: "dutch-girl", :class => "dutch-girl"), store_path
 
 		.right-panel.span_6_of_12
-			.shop-button
-				= link_to image_tag( 'buttons/wholesale-button_off.png', alt: "home", :class => "header-logo img-swap span_12_of_12"), store_path
 			%h1.overlay-text.span_6_of_12 ENJOY AT A SHOP
 			= link_to image_tag( 'coffee-break-2.jpg', alt: "dutch-girl", :class => "dutch-girl"), wholesale_path
 
