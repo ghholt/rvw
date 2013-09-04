@@ -289,7 +289,7 @@ $orange: #ff6633
 
   .wafel-pattern
     position: absolute
-    margin-left: 20%
+    margin-left: 25%
     padding-top: 3em
     opacity: 0
   .wafel-pattern.active
@@ -482,7 +482,7 @@ $orange: #ff6633
       text-align: center
       padding-left: 2em
       padding-right: 2em
-      padding-bottom: 1.5em
+      padding-bottom: 0em
       font-size: 1.25em
       font-weight: 400
       color: white
@@ -667,13 +667,14 @@ $orange: #ff6633
   width: 50%
 
 #caramel-panel
+  background-image: url(backgrounds/bg-blue.jpg)
   padding: 2em 0
   right: 0
   display: inline-block
   float: left
   padding: 0px
   &:hover
-    opacity: 0.8
+    background-image: url(backgrounds/bg-orange.jpg)
 
   .ingredient-text
     text-align: center
@@ -682,13 +683,14 @@ $orange: #ff6633
     margin: 0.25em 0
 
 #cocoa-panel
+  background-image: url(backgrounds/bg-blue.jpg)
   padding: 2em 0
   left: 0
   display: inline-block
   float: right
   padding: 0px
   &:hover
-    opacity: 0.8
+    background-image: url(backgrounds/bg-orange.jpg)
 
   .ingredient-text
     text-align: center
@@ -1206,7 +1208,7 @@ $orange: #ff6633
     .nav
       padding: 2em 0
       .direct
-        padding: 1.75em
+        padding: 1.75em 0.5em
         color: $blue
         font-weight: 700
         &:hover
@@ -1288,6 +1290,7 @@ $orange: #ff6633
         font-weight: 700
         display: inline-block
         width: 12%
+        min-width: 150px
         .shop-text
           text-align: center
           display: block
