@@ -1225,7 +1225,7 @@ $orange: #ff6633
 // SLIDESHOWS  --------------------------------------------------*
 //---------------------------------------------------------------*
 
-#slideshow-panel
+#slideshow-panel1
   #gallery
     padding: 1em 0em
     margin-left: auto
@@ -1298,12 +1298,11 @@ $orange: #ff6633
 
 
 
-#slideshow-panel
+#slideshow-panel2
   #gallery
     padding: 1em 0em
     margin-left: auto
     margin-right: auto
-    height: 60em
     overflow: hidden
     //NAV
     .nav
@@ -1313,19 +1312,68 @@ $orange: #ff6633
         display: block
         margin-left: auto
         margin-right: auto
-      .direct .shop-type
-        color: $blue
-        font-weight: 700
-        display: inline-block
-        width: 12%
-        min-width: 150px
-        .shop-text
-          text-align: center
+
+        a.direct
+          display: inline-block
+          margin-left: auto
+          margin-right: auto
+
+        .direct .shop-type
+          color: $blue
+          font-weight: 700
           display: block
-        
-        &:hover
-          color: $orange
-        .thumbnail
+
+          .shop-image
+            display: block
+            margin-left: auto
+            margin-right: auto
+
+          .shop-text
+            text-align: center
+            display: block
+          
+          &:hover
+            color: $orange
+          .thumbnail
+            display: inline-block
+          #thumbnail
+            display: inline-block
+
+    //SLIDES
+    .slide-deck .slide
+      height: 600px
+
+    .slide-deck .slide
+      position: absolute
+
+    .slide-deck
+      margin: 20px 0px
+      position: relative
+      overflow: hidden
+      height: 25em
+      display: block
+      margin: auto auto 
+      padding-top: 2em
+
+      .slide
+        display: inline-block
+        margin-left: auto
+        margin-right: auto
+        .slide-image
           display: inline-block
-        #thumbnail
+          vertical-align: top
+        .filler
           display: inline-block
+          vertical-align: top
+          height: 1em
+        .slide-text
+          display: inline-block
+          vertical-align: top
+          margin-top: 5%
+          h2 
+            font-weight: 700
+            color: $dkgray
+          p 
+            font-weight: 200
+            color: $dkgray
+
